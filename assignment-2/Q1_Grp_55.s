@@ -37,7 +37,6 @@ new_line: .asciiz "\n"
 
 # branch to print product after calculation
 print_product:
-    sub $v0, $zero, $v0
     move $s0, $v0                                                   # move product to $s0
 
     # print the promt before printing the product
@@ -97,8 +96,8 @@ multiply_booth:
     # $s0 is the sign bit at 16bit MSB
     add $a1, $a1, $s0                                               # add $s0 to $a1, this will give us the 1st 15 bits of the input with sign bit at 16bit MSB
 
-    # move 16 bits of Q to left by 16 bits
-    sll $a1, $a1, 16                                                # shift left logical $a1 by 1 bit, this will make multiplicand at 1st 16 bits
+    # move bits of Q to left by 16 bits
+    sll $a1, $a1, 16                                                # shift left logical $a1 by 16 bit, this will make multiplicand at 1st 16 bits
 
     # $t0 to store counts
     # $t1 to store previous LSB
@@ -124,6 +123,7 @@ multiply_booth:
         # for cases 00 & 11 xor($t3) will have value 0
         beq $t3, $zero, perform_asr                                 # if $t3 is equal to 0, then jump to perform_asr
         beq $t2, $zero, add_multiplicand                            # if $t2 is equal to 0, then jump to add_multiplicand
+        beq $t1, $zero, sub_multiplicand                            # if $t1 is equal to 0, then jump to sub_multiplicand
 
     # branch for case 10
     sub_multiplicand:
@@ -147,7 +147,7 @@ multiply_booth:
         add $v0, $v0, $t3                                           # add $t3 to $a0
 
         # update previous LSB
-        move $t2, $t1                                               # $t2(LSB of previous product) = $t1(previos LSB)
+        move $t1, $t2                                               # $t2(LSB of previous product) = $t1(previos LSB)
 
         j FOR                                                       # jump to FOR loop
 
