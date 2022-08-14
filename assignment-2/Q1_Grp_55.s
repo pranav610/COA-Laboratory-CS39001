@@ -37,16 +37,29 @@ new_line: .asciiz "\n"
 
 # branch to print product after calculation
 print_product:
+    sub $v0, $zero, $v0
     move $s0, $v0                                                   # move product to $s0
+
+    # print the promt before printing the product
+    li $v0, 4
+    la $a0, product_promt
+    syscall
+
     li $v0, 1                                                       # system call number 1, as we want to print a int
     move $a0, $s0                                                   # $a0 = $s0, store integere in $a0
-    syscall                                                         # system call to print a integer   
+    syscall                                                         # system call to print a integer  
+
+    # print new line character after printing the product
+    li $v0, 4
+    la $a0, new_line
+    syscall
 
     # end of program
     li      $v0, 10         # terminate the program
     syscall
 
 product_is_zero:
+    li      $v0, 1     
     move $a0, $zero                                                 # $a0 = 0, store integere in $a0
     syscall                                                         # system call to print a integer   
 
