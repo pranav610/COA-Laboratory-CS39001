@@ -58,9 +58,19 @@ print_product:
     syscall
 
 product_is_zero:
+    # print the promt before printing the product
+    li $v0, 4
+    la $a0, product_promt
+    syscall
+
     li      $v0, 1     
     move $a0, $zero                                                 # $a0 = 0, store integere in $a0
     syscall                                                         # system call to print a integer   
+
+    # print new line character after printing the product
+    li $v0, 4
+    la $a0, new_line
+    syscall
 
     # end of program
     li      $v0, 10         # terminate the program
