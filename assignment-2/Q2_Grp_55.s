@@ -2,7 +2,7 @@
 # Problem number: 2
 # Semester: Autumn 2022
 # Group_name = "Group 55"
-# Group_members = ["Kulkarni Pranav Suryakant", "Vineet Amol Pippal"]
+# Group_members = ["Kulkarni Pranav Suryakant(20CS30029)", "Vineet Amol Pippal(20CS30058)"]
 
 # This program takes a 10-element array from user, sorts it, prints it and finds the kth largest element in the array.
 

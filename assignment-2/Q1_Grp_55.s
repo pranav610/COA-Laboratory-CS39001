@@ -2,7 +2,7 @@
 # problem number: 1
 # semester: autumn 2022-23
 # group_name = "Group 55"
-# group_members = ["Kulkarni Pranav Suryakant", "Vineet Amol Pipal"]
+# group_members = ["Kulkarni Pranav Suryakant(20CS30029)", "Vineet Amol Pipal(20CS30058)"]
 
 # This program will take two 16-bit integers from the user.
 # Then the program will calculate their product using the 

@@ -2,7 +2,7 @@
 # problem number: 3
 # semester: autumn 2022-23
 # group_name = "Group 55"
-# group_members = ["Kulkarni Pranav Suryakant", "Vineet Amol Pipal"]
+# group_members = ["Kulkarni Pranav Suryakant(20CS30029)", "Vineet Amol Pipal(20CS30058)"]
 
 # This program will allocate memory for two matrices A and B
 # with dimensions m*n and n*m respectively.
