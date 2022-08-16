@@ -57,37 +57,13 @@ print_product:
     li      $v0, 10         # terminate the program
     syscall
 
-product_is_zero:
-    # print the promt before printing the product
-    li $v0, 4
-    la $a0, product_promt
-    syscall
-
-    li      $v0, 1     
-    move $a0, $zero                                                 # $a0 = 0, store integere in $a0
-    syscall                                                         # system call to print a integer   
-
-    # print new line character after printing the product
-    li $v0, 4
-    la $a0, new_line
-    syscall
-
-    # end of program
-    li      $v0, 10         # terminate the program
-    syscall
-
 # branch to calculate product using Booth's algorithm
 multiply_booth:
-    # .if M or Q is 0, then product is 0
-    beq $a0, $zero, product_is_zero                                 # if $a0 is 0, then goto product_is_zero
-    beq $a1, $zero, product_is_zero                                 # if $a1 is 0, then goto product_is_zero
-
-    # convert input to 16-bit 2s complement form
-
+# convert input to 16-bit 2s complement form
     # storing MSB
     srl $s0, $a0, 31                                                # shift right logical $a0 by 31 bits, this will give us the sign bit              
     sll $s0, $s0, 15                                                # shift left logical $s0 by 15 bits, this will give us the sign bit at 16bit MSB
-    
+
     # keeping only 1st 15 bits
     sll $a0, $a0, 17                                                # shift left logical $a0 by 17 bits, this will eliminate 1st 17 bits of the input
     srl $a0, $a0, 17                                                # shift right logical $a0 by 17 bits, this will give us the 1st 15 bits of the input
@@ -106,12 +82,12 @@ multiply_booth:
     # $s0 is the sign bit at 16bit MSB
     add $a1, $a1, $s0                                               # add $s0 to $a1, this will give us the 1st 15 bits of the input with sign bit at 16bit MSB
 
-    # move bits of Q to left by 16 bits
+# move bits of Q to left by 16 bits
     sll $a1, $a1, 16                                                # shift left logical $a1 by 16 bit, this will make multiplicand at 1st 16 bits
 
-    # $t0 to store counts
-    # $t1 to store previous LSB
-    # $t2 to store current LSB
+# $t0 to store counts
+# $t1 to store previous LSB
+# $t2 to store current LSB
     li $t0, 1                                                       # $t0 will store the count of iterations
     li $t1, 0                                                       # previous LSB set to 0
 
