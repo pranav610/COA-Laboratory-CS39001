@@ -21,7 +21,8 @@
 .data
 input_promt: .asciiz "Enter four positive integers m, n, a and r: "
 error_message: .asciiz "Error: Invalid input"
-product_promt: .asciiz "Matrix A: "
+outputA_promt: .asciiz "Matrix A:\n"
+outputB_promt: .asciiz "Matrix B:\n"
 space: .asciiz " "
 new_line: .asciiz "\n"
 ############ data declarations #############
@@ -126,13 +127,47 @@ printMatrix:
 # addresses of two integer arrays A and B. It is to compute the transpose
 # matrix of the matrix A and store in the n × m matrix B
 transposeMatrix:
+    move $t0, $a0                                                       # move m to $t0
+    move $t1, $a1                                                       # move n to $t1
+    move $t2, $a2                                                       # move address of A to $t2
+    move $t3, $a3                                                       # move address of B to $t3
+
+    li $t4, 0                                                           # initialize $t4 to 0, used for loop counter i
+    li $t5, 0                                                           # initialize $t5 to 0, used for loop counter j
+
+    FOR_I_1:
+        li $t5, 0                                                       # set j = 0, at start of the loop for i
+        FOR_J_1:
+            move $t6, $t4                                               # $t6 = $t4(i)
+            mul $t6, $t6, $t1                                           # $t6 = i * (# of columns)
+            add $t6, $t6, $t5                                           # $t6 = i * (# of columns) + j
+            sll $t6, $t6, 2                                             # $t6 = (i*(# of columns)+j)*4   
+            add $t6, $t2, $t6                                           # $t6 = 1st memory of A + (i*(# of columns)+j)*4
+
+            move $t7, $t5                                               # $t7 = $t3(j)
+            mul $t7, $t7, $t0                                           # $t7 = j * (# of rows)
+            add $t7, $t7, $t4                                           # $t7 = j * (# of rows) + i
+            sll $t7, $t7, 2                                             # $t7 = (j*(# of rows)+i)*4
+            add $t7, $t3, $t7                                           # $t7 = 1st memory of B + (j*(# of rows)+i)*4
+
+            lw $t8, 0($t6)                                              # $t8 = A[$s1 + (i*(# of columns)+j)*4]
+            sw $t8, 0($t7)                                              # B[$s1 + (j*(# of rows)+i)*4] = A[$s1 + (i*(# of columns)+j)*4]
+
+            add $t5, $t5, 1                                             # increment j by 1
+            blt $t5, $t1, FOR_J_1                                       # if j < n, go to FOR_J
+
+        add $t4, $t4, 1                                                 # increment i by 1
+        blt $t4, $t0, FOR_I_1                                           # if i < m, go to FOR_I
+
+    jr $ra                                                              # jump to return address $ra
+
 
 # power function, take base (in $a0) and exponent (in $a1) and return the power of base to the exponent
 power:
-    move $v0, $a0                                                       # move base to $v0
+    li $v0, 1                                                           # set $v0 to 1
     FOR:
         beq $a1, $zero, END                                             # if exponent is not equal to 0, then continue loop
-        mul $v0, $v0, $a0                                               # multiply base by itself 
+        mul $v0, $v0, $a0                                               # multiply the output with the base 
         addi $a1, $a1, -1                                               # decrement exponent by 1
         j FOR                                                           # continue loop
     END:
@@ -140,14 +175,19 @@ power:
 
 # main program
 main:
-    # stack and frame pointer initilization
+# stack and frame pointer initilization
     jal initStack                                                       # jump and link to branch initStack
 
-    # making first system call to display prompt for asking input for M
+# making first system call to display prompt for asking input for M
     li $v0, 4                                                           # system call number 4, as we want to print a string
     la $a0, input_promt                                                 # store the string to be printed in $a0
     syscall                                                             # system call to print the string
 
+    li $v0, 4                                                           # system call number 4, as we want to print a string
+    la $a0, new_line                                                    # print a new line
+    syscall                                                             # system call to print a new line
+
+# input for M, N, A and R
     # reading input for m
     li $v0, 5                                                           # system call number 5, as we want to read an integer
     syscall                                                             # system call to read an integer
@@ -173,6 +213,7 @@ main:
     # checking if input for r is less than 0
     blez $t3, throw_negative                                            # if input for r is less than equal to 0, jump to throw_negative
 
+# storing the inouts m,n,a,r in stack
     # pushing input for m to stack
     move $a0, $t0                                                       # store input M in $a0
     jal pushToStack                                                     # jump and link to branch pushToStack
@@ -189,7 +230,7 @@ main:
     # store value of $sp in $s0
     move $s0, $sp                                                       # $s0 = $sp
 
-    # calling function mallocInStack to allocate space for m × n matrix in stack
+# calling function mallocInStack to allocate space for m × n matrix in stack
     lw $t0, 12($s0)                                                     # $t0 = m
     lw $t1, 8($s0)                                                      # $t1 = n
     mul $a0, $t0, $t1                                                   # $a0 = m * n
@@ -198,7 +239,7 @@ main:
     # storing address of matrix in $s1
     move $s1, $v0                                                       # $s1 = $v0
 
-    # calling function mallocInStack to allocate space for n × m matrix in stack
+# calling function mallocInStack to allocate space for n × m matrix in stack
     lw $t0, 12($s0)                                                     # $t0 = m
     lw $t1, 8($s0)                                                      # $t1 = n
     mul $a0, $t0, $t1                                                   # $a0 = n * m
@@ -207,9 +248,8 @@ main:
     # storing address of matrix in $s2
     move $s2, $v0                                                       # $s2 = $v0
 
-    # store iterator i in $s3 
-    li $s3, 0                                                           # $s3 = 0
-    
+# population of matrix A by GP with first term a and common ratio a
+    li $s3, 0                                                           # $s3 = 0, store iterator i in $s3 
     FOR1:
         sll $t1, $s3, 2                                                 # $t1 = $s3 * 4
         add $t1, $s1, $t1                                               # $t1 = $s1 + $t1, $t1 = address of M[i][j]
@@ -225,12 +265,41 @@ main:
         lw $t1, 8($s0)                                                  # $t1 = n
         mul $t0, $t0, $t1                                               # $t0 = m * n   
         blt $s3, $t0, FOR1                                              # if i is less than n * m, then continue loop
-    
+
+# printing matrix A
+    li $v0, 4                                                           # system call number 4, as we want to print a string
+    la $a0, new_line                                                    # print a new line
+    syscall                                                             # system call to print a new line
+
+    li $v0, 4                                                           # system call number 4, as we want to print a string
+    la $a0, outputA_promt                                               # print matrix A
+    syscall                                                             # system call to print a string
+
     lw $a0, 12($s0)                                                     # $a0 = m
     lw $a1, 8($s0)                                                      # $a1 = n
     move $a2, $s1                                                       # $a2 = 1st address of matrix A
     jal printMatrix                                                     # jump and link to branch printMatrix
 
+# transposing matrix A
+    lw $a0, 12($s0)                                                     # $a0 = m
+    lw $a1, 8($s0)                                                      # $a1 = n
+    move $a2, $s1                                                       # $a2 = 1st address of matrix A
+    move $a3, $s2                                                       # $a3 = 1st address of matrix B
+    jal transposeMatrix                                                 # jump and link to branch transposeMatrix
+
+# printing matrix B
+    li $v0, 4                                                           # system call number 4, as we want to print a string
+    la $a0, new_line                                                    # print a new line
+    syscall                                                             # system call to print a new line
+
+    li $v0, 4                                                           # system call number 4, as we want to print a string
+    la $a0, outputB_promt                                               # print matrix B
+    syscall                                                             # system call to print a string
+
+    lw $a0, 8($s0)                                                      # $a0 = n
+    lw $a1, 12($s0)                                                     # $a1 = m
+    move $a2, $s2                                                       # $a2 = 1st address of matrix B
+    jal printMatrix                                                     # jump and link to branch printMatrix
     
     # end of program
     li      $v0, 10                                                     # terminate the program
