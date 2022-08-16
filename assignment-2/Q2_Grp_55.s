@@ -2,7 +2,7 @@
 # Problem number: 2
 # Semester: Autumn 2022
 # Group_name = "Group 55"
-# Group_members = ["Kulkarni Pranav Suryakant(20CS30029)", "Vineet Amol Pippal(20CS30058)"]
+# Group_members = ["Kulkarni Pranav Suryakant", "Vineet Amol Pippal"]
 
 # This program takes a 10-element array from user, sorts it, prints it and finds the kth largest element in the array.
 
@@ -55,9 +55,10 @@ read_array:
     b read_array                            # call read_array again
 
 # function to print the sorted array and to move to find_kth_largest
+# arguments passed: $a0 = address of first element in array, $a1 = number of elements in array
 print_sorted_array:                         
-    la $t0, arr                             # $t0 stores the address of the array
-    move $t1, $s2                           # $t1 stores the value of k initially
+    move $t0, $a0                           # $t0 stores the address of the array
+    move $t1, $a1                           # $t1 stores the value of k initially
 
     la $a0, sort_msg                        # print sort_msg
     li $v0, 4
@@ -69,7 +70,7 @@ print_sorted_array:
         li $v0, 1
         syscall
 
-        la $a0, space
+        la $a0, space                       # print space
         li $v0, 4
         syscall
 
@@ -82,17 +83,19 @@ print_sorted_array:
         la $a0, newline                     # sorted array printed, newline printed    
         syscall
 
-        jal find_k_largest                  # to find and print the kth largest element, find_k_largest called
-
-        li $v0, 10                          ### --- end of program --- ###
-        syscall
+        jr $ra                              # return to main
 
 # function to find the kth largest element in the array and print it
+# arguments passed: $a0 = address of first element in array, $a1 = number of elements in array, $a2 = value of k
 find_k_largest:
-    move $a0, $s1                           # $a0 stores the value of k
-    sub $a0, $s2, $a0                       # $a0 = $s2 - $a0 = n - k
+    move $t0, $a0                           # $t0 stores the address of the array
+    move $t1, $a1                           # $t1 stores the value of k initially
+    move $t2, $a2                           # $t2 stores the number of elements in the array
+
+    move $a0, $t1                           # $a0 stores the value of k
+    sub $a0, $t2, $a0                       # $a0 = $s2 - $a0 = n - k
     sll $a0, $a0, 2                         # $a0 = 4 * ($s2 - $a0) = 4 * (n - k)
-    add $a0, $a0, $s0                       # $a0 = $s0 + 4 * (n - k) = &arr[k]
+    add $a0, $a0, $t0                       # $a0 = $s0 + 4 * (n - k) = &arr[k]
     
     lw $t0, 0($a0)                          # $t0 = arr[k]
 
@@ -101,7 +104,7 @@ find_k_largest:
     syscall                                 # print msg3
 
     li $v0, 1                               # $v0 = 1: to print k
-    move $a0, $s1                           # $a0 <-- k
+    move $a0, $t1                           # $a0 <-- k
     syscall                                 # print k
 
     li $v0, 4                               # $v0 = 4: to print msg4
@@ -112,27 +115,22 @@ find_k_largest:
     move $a0, $t0                           # $a0 <-- t0
     syscall                                 # print t0
 
-    la $a0, newline
-    li $v0, 4
-    syscall
+    la $a0, newline                         # $a0 <-- newline
+    li $v0, 4                               # $v0 = 4: to print newline
+    syscall                                 # print newline
 
-    la $a0, newline
-    li $v0, 4
-    syscall
+    la $a0, newline                         # $a0 <-- newline
+    li $v0, 4                               # $v0 = 4: to print newline
+    syscall                                 # print newline
 
-    jr $ra                                  # transfering control back to print_sorted_array
+    jr $ra                                  # transfering control back to main
 
 # SWAP: swaps two consecutive elements of the array; a[j] and a[j+1]
+# arguments passed: address of values that are to be swapped : $a0 = &a[j], $a1 = &a[j+1]
 SWAP:                                       
-    la $s0, arr                             # $s0 stores the address of the array
-    sub $t3, $s2, 1                         # if j == n-1 we return since we are already at the last element
-    bge $a0, $t3, back                      # a0 stores j
-
-    sll $t6, $a0, 2                         # t6 = 4 * j
-    add $t6, $t6, $s0                       # t6 = &arr[j]
-
-    lw $t3, 0($t6)                          # $t3 stores a[j]
-    lw $t4, 4($t6)                          # $t4 stores a[j+1]
+    lw $t3, 0($a0)                          # $t3 = a[j]
+    lw $t4, 0($a1)                          # $t4 = a[j+1]
+    move $t6, $a0                           # $t6 = &a[j]
 
     bgt $t3, $t4, swap                      # if a[j] > a[j+1] we move to swap the numbers
     jr $ra                                  # else if a[j] <= a[j+1] we return back to sort_array
@@ -143,19 +141,36 @@ SWAP:
         jr $ra                              # control is transferred back to sort_array
 
 # to sort an array in ascending order
+# arguments passed: $a0 = address of first element in array, $a1 = number of elements in array
 sort_array:                                 
+    # saving ra in stack
+    addi $sp, $sp, -4                       # decrementing stack pointer by 4
+    sw $ra, 0($sp)                          # saving ra in stack
+
     li $s4, 0                               # $s4 is the counter for the i loop (outer loop)
+    move $t7, $a0                           # $t7 stores the address of the array (arr)
+    move $t8, $a1                           # $t8 stores the number of elements in the array (n)
 
     for_i:
-        bge $s4, $s2, end_for_i             # if i == n, array has been sorted and we jump to end_for_i
+        add $t9, $t8, -1                    # $t9 = n - 1
+        bge $s4, $t9, end_for_i             # if i == n - 1, array has been sorted and we jump to end_for_i
         li $s5, 0                           # $s5 is the counter for the j loop (inner loop)
 
         for_j:
-            move $t2, $s2                   # stop inner loop when j = n-i = 10-i
+            move $t2, $t8                   # stop inner loop when j = n-i-1 = 10-i-1
             sub $t2, $t2, $s4
-            bge $s5, $t2, end_for_j         # if j == n-i, we jump to end_for_j
+            sub $t2, $t2, 1
+            bge $s5, $t2, end_for_j         # if j == n-i-1, we jump to end_for_j
 
-            move $a0, $s5                   # $a0 stores j
+            # $a0 will store &a[j]
+            sll $t9, $s5, 2                 # $t9 = 4 * j
+            add $t9, $t9, $t7               # $t9 = &arr[j]
+            move $a0, $t9                   # $a0 stores &arr[j]
+
+            # $a1 will store &a[j+1]
+            add $t9, $t9, 4                 # $t9 = &arr[j+1]
+            move $a1, $t9                   # $a1 stores &arr[j+1]
+            
             jal SWAP                        # SWAP function is called to swap a[j] and a[j+1] if a[j] > a[j+1]
 
             add $s5, $s5, 1                 # increment j
@@ -166,8 +181,12 @@ sort_array:
                 b for_i                     # jump to for_i
 
     end_for_i:
-        j print_sorted_array                # sorting has been completed and we jump to print_sorted_array
+        # restoring ra from stack
+        lw $ra, 0($sp)                      # restoring ra from stack
+        addi $sp, $sp, 4                    # incrementing stack pointer by 4
+        jr $ra                              # control is transferred back to main
 
+# label to loop until a valid k is provided by user
 invalid_input:                              # if k is not a valid input
     li $v0, 4                               # print k_msg
     la $a0, k_msg
@@ -175,31 +194,51 @@ invalid_input:                              # if k is not a valid input
 
     li $v0, 5                               # read k again
     syscall
-    move $s1, $v0
+
+    move $s1, $v0                           # $s1 stores the value of k
     bgt $s1, $s2, invalid_input             # until a valid value of k is passed,
     blez $s1, invalid_input                 # loop back to invalid_input
 
-    j sort_array                            # if k is a valid value, proceed to sort the array: control is transferred to sort_array
+    j valid_inp                             # if k is a valid value, proceed to sort the array: control is transferred back to main
 
+# main function
 main:
-    li $v0, 4                               # print msg1
-    la $a0, msg1
-    syscall
+    li $v0, 4                               # v0 <-- 4
+    la $a0, msg1                            # a0 <-- msg1
+    syscall                                 # print msg1
 
     li $s2, 10                              # $s2 stores the number of elements in the array (n)
 
     la $s0, arr                             # $s0 stores the address of the array arr
-    move $a0, $s2
-
+    move $a0, $s2                           # $a0 stores the number of elements in the array (n)
+    
     jal read_array                          # read_array is called to read the array from the user
 
-    li $v0, 4                               # print msg2
-    la $a0, msg2
-    syscall
+    li $v0, 4                               # v0 <-- 4
+    la $a0, msg2                            # a0 <-- msg2
+    syscall                                 # print msg2
 
-    li $v0, 5                               # read k in $s1
-    syscall
-    move $s1, $v0                           
+    li $v0, 5                               # v0 <-- 5
+    syscall                                 # read k from user
+    move $s1, $v0                           # $s1 stores the value of k
 
-    bgt $s1, $s2, invalid_input             # if k > n or if k <= 0, invalid input
+    bgt $s1, $s2, invalid_input             # if k > n or if k <= 0, invalid_input is called until a valid k is provided
+
+    valid_inp:                              # if a valid k was supplied, below code would subsequently be executed
+
+    la $s0, arr                             # $s0 stores the address of the array arr
+    move $a0, $s0                           # $a0 stores the address of the array
+    move $a1, $s2                           # $a1 stores the number of elements in the array
     jal sort_array                          # if k is a valid value, proceed to sort the array: control is transferred to sort_array
+
+    move $a0, $s0                           # $a0 stores the address of the array
+    move $a1, $s2                           # $a1 stores the number of elements in the array
+    jal print_sorted_array                  # control is transferred to print_sorted_array
+
+    move $a0, $s0                           # $a0 stores the address of the array
+    move $a1, $s1                           # $a1 stores the value of k
+    move $a2, $s2                           # $a2 stores the number of elements in the array
+    jal find_k_largest                      # to find and print the kth largest element, find_k_largest(arr, k, n) is called
+
+    li $v0, 10                              ### --- end of program --- ###
+    syscall                                 
