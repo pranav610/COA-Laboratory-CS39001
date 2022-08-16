@@ -1,7 +1,7 @@
 # assignment number: 2
 # problem number: 1
 # semester: autumn 2022-23
-# grouop_name = "Group 55"
+# group_name = "Group 55"
 # group_members = ["Kulkarni Pranav Suryakant", "Vineet Amol Pipal"]
 
 # This program will take two 16-bit integers from the user.

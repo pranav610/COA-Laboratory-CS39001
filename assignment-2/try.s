@@ -1,187 +1,249 @@
 # Assignment No. - 3
-# Problem No. - 1 (Booth's multiplication algorithm)
+# Problem No. - 3 (Find and print transpose of an m x n matrix)
 # Semester - 5 (Autumn 2021-22)
 # Group No. - 30
 # Group Members - Vanshita Garg (19CS10064) & Ashutosh Kumar Singh (19CS30008)
 
 # Data Segment
     .data
-prompt1:                                                                # Prompt for 1st Integer Input 
-    .asciiz "Enter first number: "            
-prompt2:                                                                # Prompt for 2nd Integer Input
-    .asciiz "Enter second number: "
-error1:                                                                 # Error message
-    .asciiz "Error, number should fit in a 16-bit signed integer.\n"
-output:                                                                 # Display Message for output
-    .asciiz "Product of the two numbers is: "
-newline:                                                                # Newline Character
+input_prompt:                                                       # Prompt for reading input
+    .asciiz "Enter four positive integers m, n, a and r: (each integer on a new line) \n"
+A_msg:                                                              # Message for displaying matrix A
+    .asciiz "\nMatrix A: \n"
+B_msg:                                                              # Message for displaying matrix B
+    .asciiz "\nMatrix B (Transpose of matrix A): \n"
+m_lezero_msg:                                                       # Error message if m <= 0 
+    .asciiz "Error, m must be positive.\n"
+n_lezero_msg:                                                       # Error message if n <= 0 
+    .asciiz "Error, n must be positive.\n"
+whitespace:                                                         # Whitespace character
+    .asciiz " "
+newline:                                                            # Newline character
     .asciiz "\n"
 
-# Code Segment starts 
+# Code Segment
 
     .text
     .globl main
 
-# For the main function,
-# $s0 stores a
-# $s1 stores b
-# $t0 stores lower bound of 16-bit signed number
-# $t1 stores upper bound of 16-bit signed number
+# Main function
+# 0($s0) is m
+# -4($s0) is n
+# -8($s0) is a
+# -12($s0) is r
+main:   
+    jal     initStack                           # call initStack to set up stack and frame pointer
+    move    $s0, $sp                            # save stack pointer in $s0
 
-main:
-    li      $t0, -32768                             # lower bound of 16-bit signed number
-    li      $t1, 32767                              # upper bound of 16-bit signed number
+    li      $v0, 4  
+    la      $a0, input_prompt   
+    syscall                                     # print input_prompt on the console
 
-# Ask user to input 1st integer a.
-    la      $a0, prompt1                            # Loads address of prompt1 in a0
-    li      $v0, 4                                  # Loads value 4 in $v0, 4 is the system call code for printing a string to console
-    syscall                                         # prints message prompt1 on the console
+    li      $v0, 5  
+    syscall                                     # read m
+    move    $a0, $v0                            # $a0 = argument for pushToStack function
+    jal     pushToStack                         # push m on the stack
 
-input_a:
-    li      $v0, 5                                  # Loads value 5 in $v0, 5 is the system call code to read an integer from console
-    syscall                                         # reads an integer from the console, stores in $v0
-    move    $s0, $v0                                # $v0 stores the input integer a, here a is moved to $s0
-    blt     $s0, $t0, error_a                       # checks if a < -32768, if yes, jumps to error_a
-    blt     $t1, $s0, error_a                       # checks if a > 32767, if yes, jumps to error_a
-    j       enter_b                                 # unconditional jump to enter_b
+    blez    $v0, m_lezero                       # if m <= 0, it is invalid
 
-error_a:
-    la      $a0, error1                             # Loads address of error1 in a0
-    li      $v0, 4                                  # Loads value 4 in $v0, 4 is the system call code for printing a string to console
-    syscall     
-    j       exit
+    li      $v0, 5  
+    syscall                                     # read n
+    move    $a0, $v0                            # $a0 = argument for pushToStack function
+    jal     pushToStack                         # push n on the stack
 
-# Ask user to input 2nd integer b.
-enter_b:
-    la      $a0, prompt2                            # Loads address of prompt2 in a0
-    li      $v0, 4                                  # Loads value 4 in $v0, 4 is the system call code for printing a string to console
-    syscall                                         # prints message prompt2 on the console
+    blez    $v0, n_lezero                       # if n <= 0, it is invalid
 
-input_b:
-    li      $v0, 5                                  # Loads value 5 in $v0, 5 is the system call code to read an integer from console
-    syscall                                         # reads an integer from the console, stores in $v0
-    move    $s1, $v0                                # $v0 stores the input integer b, here b is moved to $s1
-    blt     $s1, $t0, error_b                       # checks if b < -32768, if yes, jumps to error_b
-    blt     $t1, $s1, error_b                       # checks if b > 32767, if yes, jumps to error_b
-    j       call_multiply_booth                     # unconditional jump to call_multiply_booth
+    li      $v0, 5  
+    syscall                                     # read a
+    move    $a0, $v0                            # $a0 = argument for pushToStack function
+    jal     pushToStack                         # push a on the stack
 
-error_b:
-    la      $a0, error1                             # Loads address of error1 in a0
-    li      $v0, 4                                  # Loads value 4 in $v0, 4 is the system call code for printing a string to console
-    syscall     
-    j       exit
+    li      $v0, 5  
+    syscall                                     # read r
+    move    $a0, $v0                            # $a0 = argument for pushToStack function
+    jal     pushToStack                         # push r on the stack
 
-call_multiply_booth:
-    move    $a0, $s0                                # $a0 stores a and is the 1st arguement to procedue multiply_booth 
-    move    $a1, $s1                                # $a1 stores b and is the 2nd arguement to procedue multiply_booth
-    jal     multiply_booth
+    # Allocate memory for matrix A  
+    lw      $t0, 0($s0)                         # $t0 = m
+    lw      $t1, -4($s0)                        # $t1 = n
+    mul     $a0, $t0, $t1                       # $a0 = m * n
+    jal     mallocInStack                       # call mallocInStack with $a0 as argument
+    move    $s1, $v0                            # $s1 = address of first element of matrix A
 
-print_product:
-    move    $s0, $v0                                # $s0 now stores multiplication result as $s0 = $v0 and $v0 stores the return value of multiply_booth
+    # Allocate memory for matrix B  
+    lw      $t0, 0($s0)                         # $t0 = m
+    lw      $t1, -4($s0)                        # $t1 = n
+    mul     $a0, $t0, $t1                       # $a0 = m * n
+    jal     mallocInStack                       # call mallocInStack with $a0 as argument
+    move    $s2, $v0                            # $s2 = address of first element of matrix B
+
+populate_A: 
+    lw      $t0, 0($s0)                         # $t0 = m
+    lw      $t1, -4($s0)                        # $t1 = n
+    mul     $t2, $t0, $t1                       # $t2 = m * n
+    li      $t3, 0                              # $t3 = i = 0
+    lw      $t4, -8($s0)                        # $t4 = a
+    lw      $t5, -12($s0)                       # $t5 = r
+    move    $t6, $s1                            # $t6 = address of first element of A
+
+# Loop to populate the elements of A in a row-major fashion
+# Note that the elements of A are such that successive elements are placed lower in the stack (w.r.t address)
+populate_loop:
+    bge     $t3, $t2, display_A                 # if i >= m * n, exit loop and jump to display_A
+    sw      $t4, 0($t6)                         # store the value in $t4 to the current matrix element being pointed to by $t6
+    mul     $t4, $t4, $t5                       # $ t4 = $t4 * r (get next term of GP)
+    addi    $t6, -4                             # decrement $t6 by 4 to point to next matrix element
+    addi    $t3, 1                              # i = i + 1
+    j populate_loop                             # continue the loop
+
+display_A:  
+    li      $v0, 4  
+    la      $a0, A_msg  
+    syscall                                     # print A_msg on the console
+
+    lw      $a0, 0($s0)                         # $a0 = m
+    lw      $a1, -4($s0)                        # $a1 = n
+    move    $a2, $s1                            # $a2 = address of first element of A
+    jal     printMatrix                         # call the printMatrix function with $a0, $a1, $a2 as arguments
+
+call_transpose: 
+    lw      $a0, 0($s0)                         # $a0 = m
+    lw      $a1, -4($s0)                        # $a1 = n
+    move    $a2, $s1                            # $a2 = address of first element of A
+    move    $a3, $s2                            # $a3 = address of first element of B
+    jal     transposeMatrix                     # call the transposeMatrix function with $a0, $a1, $a2 and $a3 as arguments
+
+display_B:  
+    li      $v0, 4  
+    la      $a0, B_msg  
+    syscall                                     # print B_msg on the console
+
+    lw      $a0, -4($s0)                        # $a0 = n
+    lw      $a1, 0($s0)                         # $a1 = m
+    move    $a2, $s2                            # $a2 = address of first element of B
+    jal     printMatrix                         # call the printMatrix function with $a0, $a1, $a2 as arguments
+
+free_stack: 
+    move    $sp, $fp                            # before ending the program, restore the stack pointer
+    j       exit                                # unconditional jump to exit
+
+
+# Function to initialise the stack and frame pointers
+initStack:
+    addi    $sp, $sp, -4                        # Decrement stack pointer by 4
+    sw      $fp, 4($sp)                         # Store $fp in stack
+    move    $fp, $sp                            # Make $fp point to current stack top before program execution
+    jr      $ra                                 # jump to return address
+
+
+# Function to push an element (in $a0) to the stack
+pushToStack:
+    addi    $sp, $sp, -4                        # Decrement stack pointer by 4
+    sw      $a0, 4($sp)                         # Store $a0 in stack
+    jr      $ra                                 # jump to return address
+
+
+# Function to allocate memory for m * n integers on stack
+mallocInStack:
+    sll     $t0, $a0, 2                         # $t0 = $a0 * 4 = 4*m*n
+    move    $v0, $sp                            # store beginning address in $v0, so that we can return this value
+    sub     $sp, $sp, $t0                       # Decrement stack pointer to allocate memory for 4*m*n bytes
+    jr      $ra                                 # jump to return address
+
+
+# Function to print a m x n matrix
+# For this function,
+# $t0 is address of current matrix element
+# $t1 is i
+# $t2 is j
+# $t3 is m
+# $t4 is n
+printMatrix:
+    move    $t0, $a2                            # address of first element A
+    move    $t3, $a0                            # $t3 = m
+    move    $t4, $a1                            # $t4 = n
+
+    li      $t1, 0                              # $t1 is current row number (0 to m - 1), let's call it i
     
-    la      $a0, output                             # Loads address of output in a0
-    li      $v0, 4                                  # Loads value 4 in $v0, 4 is the system call code for printing a string to console
-    syscall    
+print_outer_loop:
+    beq     $t1, $t3, return_from_print         # if i == m, exit from the outer loop
+    li      $t2, 0                              # $t2 is current column number (0 to n - 1), let's call it j
 
-    move    $a0, $s0                                # copies $t2 to $a0, $t2 stores the multiplication result of a and b
-    li      $v0, 1                                  # Loads value 1 in $v0, 1 is the system call code for printing an integer to console
-    syscall
+print_inner_loop:
+    beq     $t2, $t4, exit_print_inner_loop     # if j == n, exit from inner loop
+    li      $v0, 1
+    lw      $a0, 0($t0)                         # load the current array element into $a0
+    syscall                                     # print the array element
+    li      $v0, 4  
+    la      $a0, whitespace 
+    syscall                                     # print whitespace
+    addi    $t0, -4;                            # update pointer to array elements to point to next array element
+    addi    $t2, 1                              # j = j + 1
+    j       print_inner_loop                    # continue inner loop
+    
+exit_print_inner_loop:      
+    li      $v0, 4  
+    la      $a0, newline    
+    syscall                                     # print newline
+    addi    $t1, 1                              # i = i + 1
+    j       print_outer_loop                    # continue outer loop
+    
+return_from_print:  
+    jr      $ra                                 # jump to return address
 
-    la      $a0, newline                            # Loads address of newline in a0
-    li      $v0, 4                                  # Loads value 4 in $v0, 4 is the system call code for printing a string to console
-    syscall
 
+# Function to compute and store transpose of a matrix
+# For this function,
+# $t0 is address of current element of A
+# $t1 is address of first element of B
+# $t2 is m
+# $t3 is n
+# $t4 is i
+# $t5 is j
+transposeMatrix:    
+    move    $t0, $a2                            # address of first element of A
+    move    $t1, $a3                            # address of first element of B
+    move    $t2, $a0                            # $t2 = m
+    move    $t3, $a1                            # $t3 = n
+    
+    li      $t4, 0                              # $t4 = i = 0
+    
+transpose_outer_loop:   
+    beq     $t4, $t2, return_from_transpose     # if i == m, exit from the outer loop
+    li      $t5, 0                              # $t5 = j = 0
+
+transpose_inner_loop:
+    beq     $t5, $t3, exit_transpose_inner_loop # if j == n, exit from inner loop
+    lw      $t6, 0($t0)                         # A[i][j]
+    mul     $t7, $t2, $t5                       # $t7 = m * j
+    add     $t7, $t7, $t4                       # $t7 = m * j + i
+    sll     $t7, $t7, 2                         # $t7 = 4 * (m * j + i)
+    sub     $t7, $t1, $t7                       # $t7 now contains the address of B[j][i]
+    sw      $t6, 0($t7)                         # equivalent to B[j][i] = A[i][j]
+    addi    $t0, -4;                            # make $t0 point to next element of matrix A
+    addi    $t5, 1                              # j = j + 1
+    j       transpose_inner_loop                # continue inner loop
+
+exit_transpose_inner_loop:    
+    addi    $t4, 1                              # i = i + 1
+    j       transpose_outer_loop                # continue outer loop
+
+return_from_transpose:
+    jr      $ra                                 # jump to return address
+
+m_lezero:
+    li      $v0, 4
+    la      $a0, m_lezero_msg
+    syscall                                     # print m_lezero_msg on the console
     j       exit
 
-# Function to multiply two numbers using Booth's algorithm
-multiply_booth:
-    # if one or both of a or b is zero
-    move    $v0, $zero                              # initialize $v0 to 0
-    beq     $zero, $a0, exit_multiply_booth         # jump to exit_multiply_booth if a == 0
-    beq     $zero, $a1, exit_multiply_booth         # jump to exit_multiply_booth if b == 0
-
-    # ELSE
-    # let $a0 be Q (let a be Q)
-    # let $a1 be M (let b be M)
-    # $t0 stores -M
-    # $t1 stores n (Q is an n-bit number)
-    # $t2 stores Q0Q-1
-    nor     $t0, $a1, $a1                           # $t0 stores ~M
-    addi    $t0, $t0, 1                             # $t0 stores -M
-
-    move    $t2, $a0                                # $t2 stores Q
-    blt     $zero, $t2, n                           # if Q > 0, jump to n
-    nor     $t2, $t2, $t2
-    addi    $t2, $t2, 1                             # $t2 stores |Q|
-
-n:
-    addi    $t1, $zero, 1                           # $t1 stores n, n initialized to 1
-
-loop1:
-    beq     $t2, $zero, break1                      # checks if $t2 == 0, if yes, jumps to break1
-    sra     $t2, $t2, 1                             # right shift Q by 1-bit, Q = Q/2
-    addi    $t1, $t1, 1                             # $t1 <-- $t1+1, (i.e., n = n+1)
-    j       loop1                                   # unconditional jump to loop1
-
-break1: 
-    sll     $a1, $a1, $t1                           # left shift M by n bits
-    sll     $t0, $t0, $t1                           # left shift -M by n bits
-    move    $t2, $zero                              # $t2 is used for storing Q0Q-1
-    move    $v0, $a0                                # $v0 stores output, initialized to Q
-    move    $t3, $zero
-    move    $t4, $t1                                # $t4 stores n($t4 is the loop2 counter)
-
-loop2:
-    beq     $t4, $zero, break2
-    addi    $t4, $t4, -1                            # $t4 <-- $t4 - 1
-    sll     $t3, $t3, 1                             # $t3 <-- ($t3 << 1)            
-    addi    $t3, $t3, 1                             # $t3 <-- $t3 + 1
-    j       loop2                                   # t3 stores 00000...111(stores 1 in the lower n bits and 0 in the rest)
-
-break2:
-    and     $v0, $v0, $t3                           # v0 stores result, now stores 0000...Q(Q in the lower n bits and 0 in the remaining bits)
-
-loop3:
-    beq     $t1, $zero, exit_multiply_booth         # check n == 0, if yes, jump to exit_multiply_booth
-    addi    $t1, $t1, -1                            # n <-- n-1
-    li      $t3, 1                                  # $t3 = 1
-    and     $t3, $t3, $v0                           # if LSB of $v0 is 0, $t3 = 0, else $t3 = 1
-    sll     $t3, $t3, 1                             # $t3 <-- ($t3 << 1)
-    srl     $t2, $t2, 1
-    or      $t2, $t2, $t3                           # $t2 stores Q0Q-1
-
-equal0:
-    move    $t3, $zero                              # $t3 = 0 
-    beq     $t2, $t3, shift_right                   # check if $t2 == 0, if yes, jump to shift_right(00 Case)
-    addi    $t3, $t3, 1                             # $t3 <-- $t3 + 1
-
-equal1:
-    beq     $t2, $t3, add_m                         # check if $t2 == 1, if yes, jump to add_m(01 Case)
-    addi    $t3, $t3, 1                             # $t3 <-- $t3 + 1
-
-equal2:
-    beq     $t2, $t3, subtract_m                    # check if $t2 == 2, if yes, jump to subtract_m(10 Case)
-    addi    $t3, $t3, 1                             # $t3 <-- $t3 + 1
-
-equal3:
-    j       shift_right                             # unconditional jump to shift_right(11 Case)
-
-add_m:
-    add     $v0, $v0, $a1                           # $v0 <-- $v0 + $a1     ($a1 stores M)
-    j       shift_right                             # unconditional jump to shift_right
-
-subtract_m:
-    add     $v0, $v0, $t0                           # $v0 <-- $v0 + $t0     ($t0 stores -M)
-    j       shift_right                             # unconditional jump to shift_right
-
-shift_right:
-    sra     $v0, $v0, 1                             # $v0 <-- ($v0 >> 1)
-    j       loop3                                   # unconditional jump to loop3
-
-exit_multiply_booth:
-    jr      $ra                                     # jump to return_multiply_booth
-    
+n_lezero:
+    li      $v0, 4
+    la      $a0, n_lezero_msg
+    syscall                                     # print n_lezero_msg on the console
+    j       exit
 
 exit:
-    li      $v0, 10
-    syscall                                         # exit
+    li      $v0, 10                         
+    syscall                                     # syscall for exit
+    

@@ -1,7 +1,7 @@
 # assignment number: 1
 # problem number: 2
 # semester: autumn 2022-23
-# grouop_name = "Group 55"
+# group_name = "Group 55"
 # group_members = ["Kulkarni Pranav Suryakant", "Vineet Amol Pipal"]
 
 # This program will take two positive integers for the user.
