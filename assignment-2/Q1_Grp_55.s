@@ -37,7 +37,7 @@ new_line: .asciiz "\n"
 
 # branch to print product after calculation
 print_product:
-    move $s0, $v0                                                   # move product to $s0
+    move $s0, $a0                                                   # move argiment(product) to $s0
 
     # print the promt before printing the product
     li $v0, 4
@@ -118,7 +118,7 @@ multiply_booth:
     move $v0, $a0                                                   # $v0 = $a0, store integere in $v0
 
     FOR:
-        bgt $t0, 16, print_product                                  # if $t0 is greater than 16, then jump to print_product
+        bgt $t0, 16, END                                            # if $t0 is greater than 16, then jump to END
         add $t0, $t0, 1                                             # else add 1 to $t0
 
         sll $t2, $v0, 31                                            # shift left logical $v0 by 31 bits, this will give us LSB of multiplier at MSB
@@ -159,6 +159,9 @@ multiply_booth:
         move $t1, $t2                                               # $t2(LSB of previous product) = $t1(previos LSB)
 
         j FOR                                                       # jump to FOR loop
+    
+    END:
+        jr $ra                                                      # return back to main function for printing to product
 
 
 # branch for printing warning after entering non 16-bit number
@@ -235,9 +238,11 @@ set_arguments:
 call_booth:
     move $a0, $s0                                                   # $a0 = $s0, provide 1st argument as $s0
     move $a1, $s1                                                   # $a1 = $s1, provide 2nd argument as $s1
-    j multiply_booth
+    jal multiply_booth
 
-    
+    move $a0, $v0                                                   # set argument for print_product function equal to resultant product
+    j print_product                                                 # unconditional jump to print_product branch for printing the product
+
     # end of program
     li      $v0, 10         # terminate the program
     syscall
