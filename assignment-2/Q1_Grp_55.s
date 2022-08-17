@@ -57,6 +57,29 @@ print_product:
     li      $v0, 10         # terminate the program
     syscall
 
+# branch to print product when M=-2^15 and N=-2^15
+print_max_product:
+    li $s0, 1                                                       # set $s0 = 1
+    sll $s0, $s0, 30                                                # $s0 = 2^30
+
+    # print the promt before printing the product
+    li $v0, 4
+    la $a0, product_promt
+    syscall
+
+    li $v0, 1                                                       # system call number 1, as we want to print a int
+    move $a0, $s0                                                   # $a0 = $s0, store integere in $a0
+    syscall                                                         # system call to print a integer  
+
+    # print new line character after printing the product
+    li $v0, 4
+    la $a0, new_line
+    syscall
+
+    # end of program
+    li      $v0, 10         # terminate the program
+    syscall
+
 # branch to calculate product using Booth's algorithm
 multiply_booth:
 # convert input to 16-bit 2s complement form
@@ -154,9 +177,6 @@ throw_error:
 
     b main
 
-# branch multiply_booth, this branch will take arguments from $a0, $a1 
-# and calculate their product using booth's algorithm and store result in $v0
-
 # main program
 main:
     # making first system call to display prompt for asking input for M
@@ -200,6 +220,19 @@ main:
     blt $s1, $s2, throw_error                                       # if $s1 < $s2 goto throw_error
 
     # calculating product of M and Q using Booth's algorithm
+    bne $s1, $s2, set_arguments                                     # if $s1 is equal to -1, then jump to swap
+
+    # when $s1 is -2^15 arithmetic overflow can occur while subtracting it from 0, to avoid it swap $s0 and $s1
+    move $t0, $s0                                                   # $t0 = $s0, temp = $s0
+    move $s0, $s1                                                   # $S0 = $s1, $s0 = $s1
+    move $s1, $t0                                                   # $s1 = $t0, $s1 = temp
+
+    # call booth multiplication function 
+set_arguments:
+    bne $s1, $s2, call_booth                                        # if $s0 is equal to -2^15 and $s1 is -2^15, avoid arithmetic overflow
+    j print_max_product                                             # product printing
+
+call_booth:
     move $a0, $s0                                                   # $a0 = $s0, provide 1st argument as $s0
     move $a1, $s1                                                   # $a1 = $s1, provide 2nd argument as $s1
     j multiply_booth
