@@ -1,0 +1,32 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s64bitAdder_tb_isim_beh.exe -prj /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s64bitAdder_tb_beh.prj work.s64bitAdder_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/halfAdder.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/fullAdder.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s8bitAdder.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s16bitAdder.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s32bitAdder.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s64bitAdder.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s64bitAdder_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 82936 KB
+Fuse CPU Usage: 720 ms
+Compiling module halfAdder
+Compiling module fullAdder
+Compiling module s8bitAdder
+Compiling module s16bitAdder
+Compiling module s32bitAdder
+Compiling module s64bitAdder
+Compiling module s64bitAdder_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s64bitAdder_tb_isim_beh.exe
+Fuse Memory Usage: 2216024 KB
+Fuse CPU Usage: 750 ms
+GCC CPU Usage: 720 ms

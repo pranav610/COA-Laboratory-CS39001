@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/demo/myTest/halfAdder.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/demo/myTest/halfAdder.syr" 
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/demo/myTest/halfAdder.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/demo/myTest/halfAdder.syr" 
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/demo/myTest/halfAdder.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/demo/myTest/halfAdder.syr" 

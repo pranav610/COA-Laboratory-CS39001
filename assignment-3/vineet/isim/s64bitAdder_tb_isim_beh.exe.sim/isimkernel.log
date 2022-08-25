@@ -1,0 +1,29 @@
+Command line:
+   s64bitAdder_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  32809
+
+Thu Aug 25 21:45:14 2022
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 186.343 Meg
+
+ Total Signals          : 1129
+ Total Nets             : 462
+ Total Signal Drivers   : 328
+ Total Blocks           : 209
+ Total Primitive Blocks : 129
+ Total Processes        : 330
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 671
+Total Line Count : 17
+
+ Total Simulation Time: 0.03 sec
+
+ Current Memory Usage: 261.845 Meg
+
+Thu Aug 25 21:46:04 2022
+

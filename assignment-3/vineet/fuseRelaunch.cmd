@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s64bitAdder_tb_isim_beh.exe" -prj "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/vineet/s64bitAdder_tb_beh.prj" "work.s64bitAdder_tb" "work.glbl" 

@@ -1,0 +1,87 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Fri Aug 26 00:40:31 2022
+# Process ID: 14117
+# Log file: /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/planAhead_run_1/planAhead.log
+# Journal file: /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+WARNING: [Common 17-301] Failed to get a license: PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+WARNING: [Common 17-301] Failed to get a license: PlanAhead
+source {/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/pa.fromNetlist.tcl}
+# create_project -name Assgn_3_Grp_55 -dir "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/planAhead_run_1" -part xc7a100tcsg324-1
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_64_bit.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "full_adder_64_bit.ucf" [current_fileset -constrset]
+Adding file '/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_64_bit.ucf' to fileset 'constrs_1'
+# add_files [list {full_adder_64_bit.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tcsg324-1
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design full_adder_64_bit.ngc ...
+WARNING:NetListWriters:298 - No output is written to full_adder_64_bit.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus s2/s1/s2/tempCarry<5 : 1> on block
+   full_adder_64_bit is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus s2/s1/s1/tempCarry<5 : 1> on block
+   full_adder_64_bit is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus s2/s2/s2/tempCarry<5 : 1> on block
+   full_adder_64_bit is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus s2/s2/s1/tempCarry<5 : 1> on block
+   full_adder_64_bit is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus s1/s1/s2/tempCarry<5 : 1> on block
+   full_adder_64_bit is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus s1/s1/s1/tempCarry<5 : 1> on block
+   full_adder_64_bit is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus s1/s2/s2/tempCarry<5 : 1> on block
+   full_adder_64_bit is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus s1/s2/s1/tempCarry<5 : 1> on block
+   full_adder_64_bit is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file full_adder_64_bit.edif ...
+ngc2edif: Total memory usage is 92396 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/Assgn_3_Grp_55.data/cache/full_adder_64_bit_ngc_630dbe45.edif]
+Finished Parsing EDIF File [./planAhead_run_1/Assgn_3_Grp_55.data/cache/full_adder_64_bit_ngc_630dbe45.edif]
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/artix7/drc.xml
+Parsing UCF File [/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_64_bit.ucf]
+Finished Parsing UCF File [/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_64_bit.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 04ea15d4
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:08 . Memory (MB): peak = 3171.480 ; gain = 356.406
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+WARNING: [Common 17-301] Failed to get a license: PlanAhead

@@ -1,0 +1,4 @@
+verilog work "halfAdder.v"
+verilog work "fullAdder.v"
+verilog work "s8bitAdder.v"
+verilog work "s16bitAdder.v"
