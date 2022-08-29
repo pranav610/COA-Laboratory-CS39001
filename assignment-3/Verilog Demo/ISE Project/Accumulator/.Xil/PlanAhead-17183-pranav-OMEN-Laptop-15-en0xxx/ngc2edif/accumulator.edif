@@ -1,0 +1,503 @@
+(edif accumulator
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2022 8 26 1 1 57)
+      (program "Xilinx ngc2edif" (version "P.20131013"))
+      (author "Xilinx. Inc ")
+      (comment "This EDIF netlist is to be used within supported synthesis tools")
+      (comment "for determining resource/timing estimates of the design component")
+      (comment "represented by this netlist.")
+      (comment "Command line: -mdp2sp -w -secure accumulator.ngc accumulator.edif ")))
+  (external UNISIMS
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell FDR
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port C
+              (direction INPUT)
+            )
+            (port D
+              (direction INPUT)
+            )
+            (port R
+              (direction INPUT)
+            )
+            (port Q
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell LUT2
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell LUT4
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
+              (direction INPUT)
+            )
+            (port I2
+              (direction INPUT)
+            )
+            (port I3
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell LUT3
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
+              (direction INPUT)
+            )
+            (port I2
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell LUT6
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
+              (direction INPUT)
+            )
+            (port I2
+              (direction INPUT)
+            )
+            (port I3
+              (direction INPUT)
+            )
+            (port I4
+              (direction INPUT)
+            )
+            (port I5
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell IBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell OBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell BUFGP
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+  )
+
+  (library accumulator_lib
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell accumulator
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port clk
+              (direction INPUT)
+            )
+            (port rst
+              (direction INPUT)
+            )
+            (port (array (rename in "in<3:0>") 4)
+              (direction INPUT))
+            (port (array (rename acc "acc<4:0>") 5)
+              (direction OUTPUT))
+            (designator "xc7a100t-3-csg324")
+            (property TYPE (string "accumulator") (owner "Xilinx"))
+            (property BUS_INFO (string "4:INPUT:in<3:0>") (owner "Xilinx"))
+            (property BUS_INFO (string "5:OUTPUT:acc<4:0>") (owner "Xilinx"))
+            (property SHREG_MIN_SIZE (string "2") (owner "Xilinx"))
+            (property SHREG_EXTRACT_NGC (string "YES") (owner "Xilinx"))
+            (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_TAG (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_ALIAS (string "accumulator_accumulator") (owner "Xilinx"))
+          )
+          (contents
+            (instance (rename mod_out_4 "mod/out_4")
+              (viewRef view_1 (cellRef FDR (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename mod_out_3 "mod/out_3")
+              (viewRef view_1 (cellRef FDR (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename mod_out_2 "mod/out_2")
+              (viewRef view_1 (cellRef FDR (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename mod_out_1 "mod/out_1")
+              (viewRef view_1 (cellRef FDR (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename mod_out_0 "mod/out_0")
+              (viewRef view_1 (cellRef FDR (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename add_addr1_Mxor_out_xo_0_1 "add/addr1/Mxor_out_xo<0>1")
+              (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___0___add/addr1/Mxor_out_xo<0>1") (owner "Xilinx"))
+              (property INIT (string "6") (owner "Xilinx"))
+            )
+            (instance (rename add_addr5_g11_xo_0_1 "add/addr5/g11_xo<0>1")
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "366C") (owner "Xilinx"))
+            )
+            (instance (rename add_addr4_g11_xo_0_1 "add/addr4/g11_xo<0>1")
+              (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "96") (owner "Xilinx"))
+            )
+            (instance (rename add_addr2_g11_xo_0_1 "add/addr2/g11_xo<0>1")
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___0___add/addr1/Mxor_out_xo<0>1") (owner "Xilinx"))
+              (property INIT (string "8778") (owner "Xilinx"))
+            )
+            (instance (rename add_addr3_cout1 "add/addr3/cout1")
+              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "FEE0F880FCC0F000") (owner "Xilinx"))
+            )
+            (instance (rename add_addr3_g11_xo_0_1 "add/addr3/g11_xo<0>1")
+              (viewRef view_1 (cellRef LUT6 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "E11E8778C33C0FF0") (owner "Xilinx"))
+            )
+            (instance (rename in_3_IBUF_renamed_0 "in_3_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename in_2_IBUF_renamed_1 "in_2_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename in_1_IBUF_renamed_2 "in_1_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename in_0_IBUF_renamed_3 "in_0_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename rst_IBUF_renamed_4 "rst_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance acc_4_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance acc_3_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance acc_2_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance acc_1_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance acc_0_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename clk_BUFGP_renamed_5 "clk_BUFGP")
+              (viewRef view_1 (cellRef BUFGP (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (net in_3_IBUF
+              (joined
+                (portRef O (instanceRef in_3_IBUF_renamed_0))
+                (portRef I0 (instanceRef add_addr5_g11_xo_0_1))
+                (portRef I0 (instanceRef add_addr4_g11_xo_0_1))
+              )
+            )
+            (net in_2_IBUF
+              (joined
+                (portRef O (instanceRef in_2_IBUF_renamed_1))
+                (portRef I2 (instanceRef add_addr3_cout1))
+                (portRef I2 (instanceRef add_addr3_g11_xo_0_1))
+              )
+            )
+            (net in_1_IBUF
+              (joined
+                (portRef I3 (instanceRef add_addr2_g11_xo_0_1))
+                (portRef O (instanceRef in_1_IBUF_renamed_2))
+                (portRef I1 (instanceRef add_addr3_cout1))
+                (portRef I1 (instanceRef add_addr3_g11_xo_0_1))
+              )
+            )
+            (net in_0_IBUF
+              (joined
+                (portRef I1 (instanceRef add_addr1_Mxor_out_xo_0_1))
+                (portRef I1 (instanceRef add_addr2_g11_xo_0_1))
+                (portRef O (instanceRef in_0_IBUF_renamed_3))
+                (portRef I0 (instanceRef add_addr3_cout1))
+                (portRef I0 (instanceRef add_addr3_g11_xo_0_1))
+              )
+            )
+            (net clk_BUFGP
+              (joined
+                (portRef C (instanceRef mod_out_0))
+                (portRef C (instanceRef mod_out_1))
+                (portRef C (instanceRef mod_out_2))
+                (portRef C (instanceRef mod_out_3))
+                (portRef C (instanceRef mod_out_4))
+                (portRef O (instanceRef clk_BUFGP_renamed_5))
+              )
+            )
+            (net rst_IBUF
+              (joined
+                (portRef R (instanceRef mod_out_0))
+                (portRef R (instanceRef mod_out_1))
+                (portRef R (instanceRef mod_out_2))
+                (portRef R (instanceRef mod_out_3))
+                (portRef R (instanceRef mod_out_4))
+                (portRef O (instanceRef rst_IBUF_renamed_4))
+              )
+            )
+            (net (rename mod_out_4_ "mod/out<4>")
+              (joined
+                (portRef Q (instanceRef mod_out_4))
+                (portRef I (instanceRef acc_4_OBUF))
+                (portRef I1 (instanceRef add_addr5_g11_xo_0_1))
+              )
+            )
+            (net (rename mod_out_3_ "mod/out<3>")
+              (joined
+                (portRef Q (instanceRef mod_out_3))
+                (portRef I (instanceRef acc_3_OBUF))
+                (portRef I2 (instanceRef add_addr5_g11_xo_0_1))
+                (portRef I1 (instanceRef add_addr4_g11_xo_0_1))
+              )
+            )
+            (net (rename mod_out_2_ "mod/out<2>")
+              (joined
+                (portRef Q (instanceRef mod_out_2))
+                (portRef I (instanceRef acc_2_OBUF))
+                (portRef I3 (instanceRef add_addr3_cout1))
+                (portRef I3 (instanceRef add_addr3_g11_xo_0_1))
+              )
+            )
+            (net (rename mod_out_1_ "mod/out<1>")
+              (joined
+                (portRef Q (instanceRef mod_out_1))
+                (portRef I2 (instanceRef add_addr2_g11_xo_0_1))
+                (portRef I (instanceRef acc_1_OBUF))
+                (portRef I4 (instanceRef add_addr3_cout1))
+                (portRef I4 (instanceRef add_addr3_g11_xo_0_1))
+              )
+            )
+            (net (rename mod_out_0_ "mod/out<0>")
+              (joined
+                (portRef Q (instanceRef mod_out_0))
+                (portRef I0 (instanceRef add_addr1_Mxor_out_xo_0_1))
+                (portRef I0 (instanceRef add_addr2_g11_xo_0_1))
+                (portRef I (instanceRef acc_0_OBUF))
+                (portRef I5 (instanceRef add_addr3_cout1))
+                (portRef I5 (instanceRef add_addr3_g11_xo_0_1))
+              )
+            )
+            (net (rename dff_in_4_ "dff_in<4>")
+              (joined
+                (portRef D (instanceRef mod_out_4))
+                (portRef O (instanceRef add_addr5_g11_xo_0_1))
+              )
+            )
+            (net (rename dff_in_3_ "dff_in<3>")
+              (joined
+                (portRef D (instanceRef mod_out_3))
+                (portRef O (instanceRef add_addr4_g11_xo_0_1))
+              )
+            )
+            (net (rename dff_in_2_ "dff_in<2>")
+              (joined
+                (portRef D (instanceRef mod_out_2))
+                (portRef O (instanceRef add_addr3_g11_xo_0_1))
+              )
+            )
+            (net (rename dff_in_1_ "dff_in<1>")
+              (joined
+                (portRef D (instanceRef mod_out_1))
+                (portRef O (instanceRef add_addr2_g11_xo_0_1))
+              )
+            )
+            (net (rename dff_in_0_ "dff_in<0>")
+              (joined
+                (portRef D (instanceRef mod_out_0))
+                (portRef O (instanceRef add_addr1_Mxor_out_xo_0_1))
+              )
+            )
+            (net (rename add_c_out3 "add/c_out3")
+              (joined
+                (portRef O (instanceRef add_addr3_cout1))
+                (portRef I3 (instanceRef add_addr5_g11_xo_0_1))
+                (portRef I2 (instanceRef add_addr4_g11_xo_0_1))
+              )
+            )
+            (net clk
+              (joined
+                (portRef clk)
+                (portRef I (instanceRef clk_BUFGP_renamed_5))
+              )
+            )
+            (net (rename in_3_ "in<3>")
+              (joined
+                (portRef (member in 0))
+                (portRef I (instanceRef in_3_IBUF_renamed_0))
+              )
+            )
+            (net (rename in_2_ "in<2>")
+              (joined
+                (portRef (member in 1))
+                (portRef I (instanceRef in_2_IBUF_renamed_1))
+              )
+            )
+            (net (rename in_1_ "in<1>")
+              (joined
+                (portRef (member in 2))
+                (portRef I (instanceRef in_1_IBUF_renamed_2))
+              )
+            )
+            (net (rename in_0_ "in<0>")
+              (joined
+                (portRef (member in 3))
+                (portRef I (instanceRef in_0_IBUF_renamed_3))
+              )
+            )
+            (net rst
+              (joined
+                (portRef rst)
+                (portRef I (instanceRef rst_IBUF_renamed_4))
+              )
+            )
+            (net (rename acc_4_ "acc<4>")
+              (joined
+                (portRef (member acc 0))
+                (portRef O (instanceRef acc_4_OBUF))
+              )
+            )
+            (net (rename acc_3_ "acc<3>")
+              (joined
+                (portRef (member acc 1))
+                (portRef O (instanceRef acc_3_OBUF))
+              )
+            )
+            (net (rename acc_2_ "acc<2>")
+              (joined
+                (portRef (member acc 2))
+                (portRef O (instanceRef acc_2_OBUF))
+              )
+            )
+            (net (rename acc_1_ "acc<1>")
+              (joined
+                (portRef (member acc 3))
+                (portRef O (instanceRef acc_1_OBUF))
+              )
+            )
+            (net (rename acc_0_ "acc<0>")
+              (joined
+                (portRef (member acc 4))
+                (portRef O (instanceRef acc_0_OBUF))
+              )
+            )
+          )
+      )
+    )
+  )
+
+  (design accumulator
+    (cellRef accumulator
+      (libraryRef accumulator_lib)
+    )
+    (property PART (string "xc7a100t-3-csg324") (owner "Xilinx"))
+  )
+)
+

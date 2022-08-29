@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Fri Aug 26 01:01:49 2022
+# Process ID: 17183
+# Log file: /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/planAhead_run_3/planAhead.log
+# Journal file: /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/pa.fromNetlist.tcl}

@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Fri Aug 26 01:01:49 2022
+# Process ID: 17183
+# Log file: /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/planAhead_run_3/planAhead.log
+# Journal file: /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+WARNING: [Common 17-301] Failed to get a license: PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+WARNING: [Common 17-301] Failed to get a license: PlanAhead
+source {/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/pa.fromNetlist.tcl}
+# create_project -name Accumulator -dir "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/planAhead_run_3" -part xc7a100tcsg324-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/accumulator.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "timing.ucf" [current_fileset -constrset]
+Adding file '/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/timing.ucf' to fileset 'constrs_1'
+# add_files [list {timing.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tcsg324-3
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design accumulator.ngc ...
+WARNING:NetListWriters:298 - No output is written to accumulator.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file accumulator.edif ...
+ngc2edif: Total memory usage is 91948 kilobytes
+
+Parsing EDIF File [./planAhead_run_3/Accumulator.data/cache/accumulator_ngc_cf3bb221.edif]
+Finished Parsing EDIF File [./planAhead_run_3/Accumulator.data/cache/accumulator_ngc_cf3bb221.edif]
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/artix7/drc.xml
+Parsing UCF File [/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/timing.ucf]
+Finished Parsing UCF File [/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/timing.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+  FDR => FDRE: 5 instances
+
+Phase 0 | Netlist Checksum: bfdbcdce
+link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.465 ; gain = 363.230
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+WARNING: [Common 17-301] Failed to get a license: PlanAhead

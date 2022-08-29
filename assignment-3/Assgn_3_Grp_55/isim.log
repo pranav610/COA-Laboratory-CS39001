@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_64_bit_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_64_bit_tb_isim_beh.wdb 
+Running: /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/substractor_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/substractor_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
@@ -28,5 +28,7 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 10 ns : File "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_64_bit_tb.v" Line 50
-# exit 0
+a =          81277482720, b =            446278127, carry_in = 1, carry_out = 1, a-b =          80831204593
+a =     1400000000000000, b =     1000000000000000, carry_in = 1, carry_out = 1, a-b =      400000000000000
+a =      928391830841483, b =      928391830841483, carry_in = 1, carry_out = 1, a-b =                    0
+Stopped at time : 15 ns : File "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/subtractor_tb.v" Line 80

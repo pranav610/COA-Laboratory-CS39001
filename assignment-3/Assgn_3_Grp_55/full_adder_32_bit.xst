@@ -1,6 +1,9 @@
-set -tmpdir "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/xst/projnav.tmp"
-set -xsthdpdir "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn full_adder_32_bit.prj
+-ofn full_adder_32_bit
+-ofmt NGC
 -p xc7a100t-1-csg324
 -top full_adder_32_bit
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn full_adder_32_bit.prj

@@ -43,10 +43,17 @@ module full_adder_64_bit_tb;
 	);
 
 	initial begin
+		// To print changes
+		$monitor ("a = %d, b = %d, carry_in = %d, carry_out = %d, sum = %d", a, b, cin, cout, sum);
+
 		// Wait 100 ns for global reset to finish
-        
+      // #100;
+
 		// Add stimulus here
 		#5 a = 64'd345; b = 64'd473;
+		#5 a = 64'd18446744073709551615; b = 64'd18446744073709551615;
+		#5 a = 64'd10000000000000000000; b = 64'd16000000000000000000;
+		#5 a = 64'd104582348198348134; b = 64'd67467573419834819; // = 2^64 - 1
 		#5 $finish;
 
 	end
