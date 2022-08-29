@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-08-26T15:58:29</DateModified>
-  <ModuleName>full_adder_8_bit</ModuleName>
-  <SummaryTimeStamp>2022-08-26T15:55:52</SummaryTimeStamp>
+  <DateModified>2022-08-29T22:06:32</DateModified>
+  <ModuleName>full_adder_64_bit</ModuleName>
+  <SummaryTimeStamp>2022-08-29T22:03:51</SummaryTimeStamp>
   <SavedFilePath>/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/iseconfig/full_adder_64_bit.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/</ImplementationReportsDirectory>
   <DateInitialized>2022-08-26T15:58:29</DateInitialized>

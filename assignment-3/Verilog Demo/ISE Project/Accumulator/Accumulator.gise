@@ -209,6 +209,8 @@
     <transform xil_pn:end_ts="1661455841" xil_pn:in_ck="4573878061299923886" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="3739740859865797754" xil_pn:start_ts="1661455835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="accumulator.lso"/>
       <outfile xil_pn:name="accumulator.ngc"/>
@@ -225,7 +227,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661455948" xil_pn:in_ck="4112066522009230842" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="324609642794232238" xil_pn:start_ts="1661455944">
+    <transform xil_pn:end_ts="1661790934" xil_pn:in_ck="4112066522009230842" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="324609642794232238" xil_pn:start_ts="1661790928">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -234,8 +236,9 @@
       <outfile xil_pn:name="accumulator.ngd"/>
       <outfile xil_pn:name="accumulator_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1661455954" xil_pn:in_ck="4113598100994495291" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1661455948">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1661790955" xil_pn:in_ck="4113598100994495291" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1661790934">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="accumulator.pcf"/>
@@ -247,7 +250,7 @@
       <outfile xil_pn:name="accumulator_summary.xml"/>
       <outfile xil_pn:name="accumulator_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1661337312" xil_pn:in_ck="-840474273247477484" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1661337281">
+    <transform xil_pn:end_ts="1661790978" xil_pn:in_ck="-840474273247477484" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1661790955">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -264,6 +267,8 @@
     <transform xil_pn:end_ts="1661337566" xil_pn:in_ck="-6734395225347049149" xil_pn:name="TRAN_postParSimModel" xil_pn:prop_ck="-2018512724125397539" xil_pn:start_ts="1661337551">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="netgen"/>
       <outfile xil_pn:name="netgen/par/accumulator_timesim.nlf"/>
       <outfile xil_pn:name="netgen/par/accumulator_timesim.sdf"/>
@@ -273,6 +278,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
@@ -305,7 +311,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_isim_par.wdb"/>
     </transform>
-    <transform xil_pn:end_ts="1661337312" xil_pn:in_ck="3911429674939588023" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1661337299">
+    <transform xil_pn:end_ts="1661790978" xil_pn:in_ck="3911429674939588023" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1661790969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

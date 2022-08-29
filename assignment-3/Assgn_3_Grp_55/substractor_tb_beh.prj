@@ -1,8 +1,0 @@
-verilog work "half_adder.v"
-verilog work "full_adder.v"
-verilog work "full_adder_8_bit.v"
-verilog work "full_adder_16_bit.v"
-verilog work "full_adder_32_bit.v"
-verilog work "full_adder_64_bit.v"
-verilog work "subtractor_tb.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

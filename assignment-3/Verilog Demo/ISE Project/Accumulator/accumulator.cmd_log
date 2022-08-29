@@ -52,3 +52,7 @@ netgen -intstyle ise -s 3  -pcf accumulator.pcf -sdf_anno true -sdf_path "netgen
 xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/accumulator.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Verilog Demo/ISE Project/Accumulator/accumulator.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc timing.ucf -p xc7a100t-csg324-3 "accumulator.ngc" accumulator.ngd  
 map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o accumulator_map.ncd accumulator.ngd accumulator.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc timing.ucf -p xc7a100t-csg324-3 "accumulator.ngc" accumulator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o accumulator_map.ncd accumulator.ngd accumulator.pcf 
+par -w -intstyle ise -ol high -mt off accumulator_map.ncd accumulator.ncd accumulator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml accumulator.twx accumulator.ncd -o accumulator.twr accumulator.pcf -ucf timing.ucf 

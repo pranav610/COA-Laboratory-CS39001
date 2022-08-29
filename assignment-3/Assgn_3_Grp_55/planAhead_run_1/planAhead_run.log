@@ -4,13 +4,11 @@
     ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
 
 INFO: [Common 17-78] Attempting to get a license: PlanAhead
-WARNING: [Common 17-301] Failed to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
 INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
 Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
 Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
 start_gui
-INFO: [Common 17-78] Attempting to get a license: PlanAhead
-WARNING: [Common 17-301] Failed to get a license: PlanAhead
 source {/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/pa.fromNetlist.tcl}
 # create_project -name Assgn_3_Grp_55 -dir "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/planAhead_run_1" -part xc7a100tcsg324-1
 # set_property design_mode GateLvl [get_property srcset [current_run -impl]]
@@ -79,7 +77,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Phase 0 | Netlist Checksum: 04ea15d4
-link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:08 . Memory (MB): peak = 3171.480 ; gain = 356.406
-INFO: [Common 17-78] Attempting to get a license: PlanAhead
-WARNING: [Common 17-301] Failed to get a license: PlanAhead
-Exiting PlanAhead...
+link_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 3194.855 ; gain = 401.348
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Aug 29 22:02:57 2022...
+INFO: [Common 17-83] Releasing license: PlanAhead
