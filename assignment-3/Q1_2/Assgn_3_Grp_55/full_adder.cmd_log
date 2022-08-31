@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Q1_2/Assgn_3_Grp_55/full_adder.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Q1_2/Assgn_3_Grp_55/full_adder.syr" 

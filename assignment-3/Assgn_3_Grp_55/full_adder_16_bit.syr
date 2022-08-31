@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: full_adder_16_bit.prj
@@ -86,7 +86,7 @@ Equivalent register Removal        : YES
 Optimization Goal                  : Speed
 Optimization Effort                : 1
 Power Reduction                    : NO
-Keep Hierarchy                     : No
+Keep Hierarchy                     : Soft
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
 Global Optimization                : AllClockNets
@@ -187,6 +187,10 @@ Optimizing unit <full_adder_16_bit> ...
 
 Optimizing unit <full_adder_8_bit> ...
 
+Optimizing unit <full_adder> ...
+
+Optimizing unit <half_adder> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block full_adder_16_bit, actual ratio is 0.
@@ -218,9 +222,8 @@ Top Level Output File Name         : full_adder_16_bit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 24
-#      LUT3                        : 8
-#      LUT5                        : 16
+# BELS                             : 80
+#      LUT2                        : 80
 # IO Buffers                       : 50
 #      IBUF                        : 33
 #      OBUF                        : 17
@@ -232,14 +235,14 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   24  out of  63400     0%  
-    Number used as Logic:                24  out of  63400     0%  
+ Number of Slice LUTs:                   80  out of  63400     0%  
+    Number used as Logic:                80  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     24
-   Number with an unused Flip Flop:      24  out of     24   100%  
-   Number with an unused LUT:             0  out of     24     0%  
-   Number of fully used LUT-FF pairs:     0  out of     24     0%  
+ Number of LUT Flip Flop pairs used:     80
+   Number with an unused Flip Flop:      80  out of     80   100%  
+   Number with an unused LUT:             0  out of     80     0%  
+   Number of fully used LUT-FF pairs:     0  out of     80     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -279,7 +282,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.167ns
+   Maximum combinational path delay: 18.717ns
 
 Timing Details:
 ---------------
@@ -287,29 +290,124 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 321 / 17
+  Total number of paths / destination ports: 593 / 17
 -------------------------------------------------------------------------
-Delay:               6.167ns (Levels of Logic = 10)
-  Source:            a<1> (PAD)
-  Destination:       sum<15> (PAD)
+Delay:               18.717ns (Levels of Logic = 70)
+  Source:            a<0> (PAD)
+  Destination:       cout (PAD)
 
-  Data Path: a<1> to sum<15>
+  Data Path: a<0> to cout
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.925  a_1_IBUF (a_1_IBUF)
-     LUT5:I0->O            3   0.124   0.550  s1/f2/cout1 (s1/tempCarry<1>)
-     LUT5:I3->O            3   0.124   0.550  s1/f4/cout1 (s1/tempCarry<3>)
-     LUT5:I3->O            3   0.124   0.550  s1/f6/cout1 (s1/tempCarry<5>)
-     LUT5:I3->O            3   0.124   0.550  s1/f8/cout1 (tempCarry)
-     LUT5:I3->O            3   0.124   0.550  s2/f2/cout1 (s2/tempCarry<1>)
-     LUT5:I3->O            3   0.124   0.550  s2/f4/cout1 (s2/tempCarry<3>)
-     LUT5:I3->O            3   0.124   0.550  s2/f6/cout1 (s2/tempCarry<5>)
-     LUT5:I3->O            1   0.124   0.399  s2/f8/h2/Mxor_sum_xo<0>1 (sum_15_OBUF)
-     OBUF:I->O                 0.000          sum_15_OBUF (sum<15>)
+     IBUF:I->O             2   0.001   0.542  a_0_IBUF (a_0_IBUF)
+     begin scope: 's1:a<0>'
+     begin scope: 's1/f1:a'
+     begin scope: 's1/f1/h1:a'
+     LUT2:I0->O            2   0.124   0.542  Mxor_sum_xo<0>1 (sum)
+     end scope: 's1/f1/h1:sum'
+     begin scope: 's1/f1/h2:a'
+     LUT2:I0->O            1   0.124   0.421  c1 (c)
+     end scope: 's1/f1/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's1/f1:cout'
+     begin scope: 's1/f2:cin'
+     begin scope: 's1/f2/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's1/f2/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's1/f2:cout'
+     begin scope: 's1/f3:cin'
+     begin scope: 's1/f3/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's1/f3/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's1/f3:cout'
+     begin scope: 's1/f4:cin'
+     begin scope: 's1/f4/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's1/f4/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's1/f4:cout'
+     begin scope: 's1/f5:cin'
+     begin scope: 's1/f5/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's1/f5/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's1/f5:cout'
+     begin scope: 's1/f6:cin'
+     begin scope: 's1/f6/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's1/f6/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's1/f6:cout'
+     begin scope: 's1/f7:cin'
+     begin scope: 's1/f7/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's1/f7/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's1/f7:cout'
+     begin scope: 's1/f8:cin'
+     begin scope: 's1/f8/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's1/f8/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's1/f8:cout'
+     end scope: 's1:cout'
+     begin scope: 's2:cin'
+     begin scope: 's2/f1:cin'
+     begin scope: 's2/f1/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's2/f1/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's2/f1:cout'
+     begin scope: 's2/f2:cin'
+     begin scope: 's2/f2/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's2/f2/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's2/f2:cout'
+     begin scope: 's2/f3:cin'
+     begin scope: 's2/f3/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's2/f3/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's2/f3:cout'
+     begin scope: 's2/f4:cin'
+     begin scope: 's2/f4/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's2/f4/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's2/f4:cout'
+     begin scope: 's2/f5:cin'
+     begin scope: 's2/f5/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's2/f5/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's2/f5:cout'
+     begin scope: 's2/f6:cin'
+     begin scope: 's2/f6/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's2/f6/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's2/f6:cout'
+     begin scope: 's2/f7:cin'
+     begin scope: 's2/f7/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's2/f7/h2:c'
+     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
+     end scope: 's2/f7:cout'
+     begin scope: 's2/f8:cin'
+     begin scope: 's2/f8/h2:b'
+     LUT2:I1->O            1   0.124   0.421  c1 (c)
+     end scope: 's2/f8/h2:c'
+     LUT2:I1->O            1   0.124   0.399  cout1 (cout)
+     end scope: 's2/f8:cout'
+     end scope: 's2:cout'
+     OBUF:I->O                 0.000          cout_OBUF (cout)
     ----------------------------------------
-    Total                      6.167ns (0.993ns logic, 5.174ns route)
-                                       (16.1% logic, 83.9% route)
+    Total                     18.717ns (4.093ns logic, 14.624ns route)
+                                       (21.9% logic, 78.1% route)
 
 =========================================================================
 
@@ -319,8 +417,8 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.31 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.31 secs
  
 --> 
 
