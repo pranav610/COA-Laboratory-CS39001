@@ -39,9 +39,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="cla_16_bit.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cla_16_bit_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cla_16_bit_summary.html"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cla_16_bit_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="cla_16_bit_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="cla_16_bit_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cla_16_bit_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="cla_16bit_ripple.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="cla_16bit_ripple.lso"/>
@@ -53,6 +51,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="cla_16bit_ripple.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cla_16bit_ripple_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cla_16bit_ripple_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="cla_16bit_ripple_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cla_16bit_ripple_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="cla_4_bit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="cla_4_bit.lso"/>
@@ -76,7 +75,9 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cla_4_bit_augment_xst.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cla_4_bit_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cla_4_bit_summary.html"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cla_4_bit_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="cla_4_bit_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="cla_4_bit_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cla_4_bit_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="full_adder.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="full_adder.lso"/>
@@ -238,6 +239,7 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="half_adder_xst.xrpt"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="lac_unit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="lac_unit.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="lac_unit.ngc"/>
@@ -253,6 +255,17 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="substractor_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="wrapper_16_bit_cla_ripple.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="wrapper_16_bit_cla_ripple.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="wrapper_16_bit_cla_ripple.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="wrapper_16_bit_cla_ripple.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="wrapper_16_bit_cla_ripple.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="wrapper_16_bit_cla_ripple.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="wrapper_16_bit_cla_ripple.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="wrapper_16_bit_cla_ripple.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="wrapper_16_bit_cla_ripple_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="wrapper_16_bit_cla_ripple_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="wrapper_16_bit_cla_ripple_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="wrapper_cla_16_bit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="wrapper_cla_16_bit.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="wrapper_cla_16_bit.ngc"/>
@@ -274,14 +287,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661886932" xil_pn:in_ck="-1773387286232848828" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1661886932">
+    <transform xil_pn:end_ts="1661944111" xil_pn:in_ck="5021929307893570579" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1661944111">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="cla_16_bit.v"/>
       <outfile xil_pn:name="cla_16_bit_ripple.v"/>
+      <outfile xil_pn:name="cla_16_bit_ripple_tb.v"/>
       <outfile xil_pn:name="cla_16_bit_tb.v"/>
       <outfile xil_pn:name="cla_4_bit.v"/>
       <outfile xil_pn:name="cla_4_bit_augment.v"/>
@@ -293,6 +304,7 @@
       <outfile xil_pn:name="full_adder_32_bit.v"/>
       <outfile xil_pn:name="full_adder_32_bit_tb.v"/>
       <outfile xil_pn:name="full_adder_4_bit.v"/>
+      <outfile xil_pn:name="full_adder_4_bit_tb.v"/>
       <outfile xil_pn:name="full_adder_64_bit.v"/>
       <outfile xil_pn:name="full_adder_64_bit_tb.v"/>
       <outfile xil_pn:name="full_adder_8_bit.v"/>
@@ -303,26 +315,27 @@
       <outfile xil_pn:name="lac_unit.v"/>
       <outfile xil_pn:name="lac_unit_tb.v"/>
       <outfile xil_pn:name="subtractor_tb.v"/>
+      <outfile xil_pn:name="wrapper_16_bit_cla_ripple.v"/>
+      <outfile xil_pn:name="wrapper_cla_16_bit.v"/>
     </transform>
-    <transform xil_pn:end_ts="1661878670" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6877012770394948352" xil_pn:start_ts="1661878670">
+    <transform xil_pn:end_ts="1661944111" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4050203434995641491" xil_pn:start_ts="1661944111">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661878670" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8985373470068880098" xil_pn:start_ts="1661878670">
+    <transform xil_pn:end_ts="1661944111" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6672451598170478325" xil_pn:start_ts="1661944111">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661886875" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5813189328799593231" xil_pn:start_ts="1661886875">
+    <transform xil_pn:end_ts="1661944111" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2425174032937877940" xil_pn:start_ts="1661944111">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1661886932" xil_pn:in_ck="-1773387286232848828" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1661886932">
+    <transform xil_pn:end_ts="1661944111" xil_pn:in_ck="5021929307893570579" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1661944111">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="cla_16_bit.v"/>
       <outfile xil_pn:name="cla_16_bit_ripple.v"/>
+      <outfile xil_pn:name="cla_16_bit_ripple_tb.v"/>
       <outfile xil_pn:name="cla_16_bit_tb.v"/>
       <outfile xil_pn:name="cla_4_bit.v"/>
       <outfile xil_pn:name="cla_4_bit_augment.v"/>
@@ -334,6 +347,7 @@
       <outfile xil_pn:name="full_adder_32_bit.v"/>
       <outfile xil_pn:name="full_adder_32_bit_tb.v"/>
       <outfile xil_pn:name="full_adder_4_bit.v"/>
+      <outfile xil_pn:name="full_adder_4_bit_tb.v"/>
       <outfile xil_pn:name="full_adder_64_bit.v"/>
       <outfile xil_pn:name="full_adder_64_bit_tb.v"/>
       <outfile xil_pn:name="full_adder_8_bit.v"/>
@@ -344,73 +358,76 @@
       <outfile xil_pn:name="lac_unit.v"/>
       <outfile xil_pn:name="lac_unit_tb.v"/>
       <outfile xil_pn:name="subtractor_tb.v"/>
+      <outfile xil_pn:name="wrapper_16_bit_cla_ripple.v"/>
+      <outfile xil_pn:name="wrapper_cla_16_bit.v"/>
     </transform>
-    <transform xil_pn:end_ts="1661886934" xil_pn:in_ck="-1773387286232848828" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6470428843641207119" xil_pn:start_ts="1661886932">
+    <transform xil_pn:end_ts="1661944112" xil_pn:in_ck="5021929307893570579" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5080079996873806871" xil_pn:start_ts="1661944111">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="cla_16_bit_tb_beh.prj"/>
-      <outfile xil_pn:name="cla_16_bit_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="cla_4_bit_tb_beh.prj"/>
+      <outfile xil_pn:name="cla_4_bit_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1661886934" xil_pn:in_ck="-4690386280703523624" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2496385949857596846" xil_pn:start_ts="1661886934">
+    <transform xil_pn:end_ts="1661944112" xil_pn:in_ck="-2811218558934942084" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8856751465686429908" xil_pn:start_ts="1661944112">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="cla_16_bit_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="cla_4_bit_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1661883809" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1661883809">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661939731" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2773793766037994057" xil_pn:start_ts="1661939731">
+    <transform xil_pn:end_ts="1661943742" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-416492624918286482" xil_pn:start_ts="1661943742">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661939731" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-5156593210400349681" xil_pn:start_ts="1661939731">
+    <transform xil_pn:end_ts="1661943742" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="2425174032937877940" xil_pn:start_ts="1661943742">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661939731" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1661939731">
+    <transform xil_pn:end_ts="1661943742" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1661943742">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661939731" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5047745623063599851" xil_pn:start_ts="1661939731">
+    <transform xil_pn:end_ts="1661943742" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2024561726860803120" xil_pn:start_ts="1661943742">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661939731" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1661939731">
+    <transform xil_pn:end_ts="1661943742" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1661943742">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661939731" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4094208636263393561" xil_pn:start_ts="1661939731">
+    <transform xil_pn:end_ts="1661943742" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-6797366797559050370" xil_pn:start_ts="1661943742">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1661939866" xil_pn:in_ck="-8745642840960473291" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-6305600924210203317" xil_pn:start_ts="1661939860">
+    <transform xil_pn:end_ts="1661943771" xil_pn:in_ck="516589651079185304" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="5902570343235038449" xil_pn:start_ts="1661943766">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="cla_16_bit.ngr"/>
-      <outfile xil_pn:name="cla_4_bit_augment.ngr"/>
-      <outfile xil_pn:name="lac_unit.ngr"/>
+      <outfile xil_pn:name="full_adder.ngr"/>
+      <outfile xil_pn:name="full_adder_16_bit.ngr"/>
+      <outfile xil_pn:name="full_adder_32_bit.ngr"/>
+      <outfile xil_pn:name="full_adder_64_bit.lso"/>
+      <outfile xil_pn:name="full_adder_64_bit.ngc"/>
+      <outfile xil_pn:name="full_adder_64_bit.ngr"/>
+      <outfile xil_pn:name="full_adder_64_bit.prj"/>
+      <outfile xil_pn:name="full_adder_64_bit.stx"/>
+      <outfile xil_pn:name="full_adder_64_bit.syr"/>
+      <outfile xil_pn:name="full_adder_64_bit.xst"/>
+      <outfile xil_pn:name="full_adder_64_bit_xst.xrpt"/>
+      <outfile xil_pn:name="full_adder_8_bit.ngr"/>
+      <outfile xil_pn:name="half_adder.ngr"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="wrapper_cla_16_bit.lso"/>
-      <outfile xil_pn:name="wrapper_cla_16_bit.ngc"/>
-      <outfile xil_pn:name="wrapper_cla_16_bit.ngr"/>
-      <outfile xil_pn:name="wrapper_cla_16_bit.prj"/>
-      <outfile xil_pn:name="wrapper_cla_16_bit.stx"/>
-      <outfile xil_pn:name="wrapper_cla_16_bit.syr"/>
-      <outfile xil_pn:name="wrapper_cla_16_bit.xst"/>
-      <outfile xil_pn:name="wrapper_cla_16_bit_xst.xrpt"/>
       <outfile xil_pn:name="xst"/>
     </transform>
     <transform xil_pn:end_ts="1661937780" xil_pn:in_ck="-4222456252438573691" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4482500570227126872" xil_pn:start_ts="1661937780">

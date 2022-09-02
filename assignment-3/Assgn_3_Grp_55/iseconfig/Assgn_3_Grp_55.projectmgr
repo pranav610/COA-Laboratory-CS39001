@@ -41,15 +41,16 @@
          <ClosedNode>/full_adder_64_bit |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_64_bit.v/s2 - full_adder_32_bit/s2 - full_adder_16_bit/s2 - full_adder_8_bit</ClosedNode>
          <ClosedNode>/full_adder_8_bit |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_8_bit.v</ClosedNode>
          <ClosedNode>/half_adder |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|half_adder.v</ClosedNode>
+         <ClosedNode>/wrapper_cla_16_bit |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|wrapper_cla_16_bit.v/g - cla_16_bit</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>s1 - full_adder_16_bit (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_16_bit.v)</SelectedItem>
+         <SelectedItem>Assgn_3_Grp_55</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000192000000020000000000000000000000000200000064ffffffff000000810000000300000002000001920000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b20000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>s1 - full_adder_16_bit (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_16_bit.v)</CurrentItem>
+      <CurrentItem>Assgn_3_Grp_55</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -57,13 +58,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b00000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000024c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000024c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -86,7 +87,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000064000000010001000100000000000000000000000064ffffffff000000810000000000000001000000640000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000f2000000010001000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -107,13 +108,14 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b00000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000024c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000024c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/cla_16_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|cla_16_bit_tb.v</ClosedNode>
          <ClosedNode>/cla_4_bit_augment_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|cla_4_bit_augment_tb.v</ClosedNode>
          <ClosedNode>/cla_4_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|cla_4_bit_tb.v</ClosedNode>
          <ClosedNode>/full_adder_16_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_16_bit_tb.v</ClosedNode>
@@ -126,6 +128,7 @@
          <ClosedNode>/full_adder_16_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_16_bit_tb.v/uut - full_adder_16_bit/s1 - full_adder_8_bit/f7 - full_adder</ClosedNode>
          <ClosedNode>/full_adder_16_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_16_bit_tb.v/uut - full_adder_16_bit/s1 - full_adder_8_bit/f8 - full_adder</ClosedNode>
          <ClosedNode>/full_adder_16_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_16_bit_tb.v/uut - full_adder_16_bit/s2 - full_adder_8_bit</ClosedNode>
+         <ClosedNode>/full_adder_32_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_32_bit_tb.v</ClosedNode>
          <ClosedNode>/full_adder_32_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_32_bit_tb.v/uut - full_adder_32_bit/s1 - full_adder_16_bit</ClosedNode>
          <ClosedNode>/full_adder_32_bit_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_32_bit_tb.v/uut - full_adder_32_bit/s2 - full_adder_16_bit</ClosedNode>
          <ClosedNode>/full_adder_4_bit |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|full_adder_4_bit.v</ClosedNode>
@@ -141,15 +144,17 @@
          <ClosedNode>/substractor_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|subtractor_tb.v</ClosedNode>
          <ClosedNode>/substractor_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|subtractor_tb.v/uut - full_adder_64_bit</ClosedNode>
          <ClosedNode>/subtractor_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|subtractor_tb.v</ClosedNode>
+         <ClosedNode>/wrapper_16_bit_cla_ripple |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|wrapper_16_bit_cla_ripple.v</ClosedNode>
+         <ClosedNode>/wrapper_cla_16_bit |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|assignment-3|Assgn_3_Grp_55|wrapper_cla_16_bit.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>cla_16_bit_tb (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/cla_16_bit_tb.v)</SelectedItem>
+         <SelectedItem>cla_4_bit_tb (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/cla_4_bit_tb.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000199000000020000000000000000000000000200000064ffffffff000000810000000300000002000001990000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b20000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>cla_16_bit_tb (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/cla_16_bit_tb.v)</CurrentItem>
+      <CurrentItem>cla_4_bit_tb (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/cla_4_bit_tb.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -157,13 +162,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b00000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000024c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000024c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -174,10 +179,10 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b00000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000024c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000024c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>ISim Simulator</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000007d0000006b01000000060100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
 </Project>

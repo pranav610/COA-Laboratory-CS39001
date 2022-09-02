@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: full_adder_64_bit.prj
@@ -86,7 +86,7 @@ Equivalent register Removal        : YES
 Optimization Goal                  : Speed
 Optimization Effort                : 1
 Power Reduction                    : NO
-Keep Hierarchy                     : Yes
+Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
 Global Optimization                : AllClockNets
@@ -205,15 +205,7 @@ Macro Statistics
 
 Optimizing unit <full_adder_64_bit> ...
 
-Optimizing unit <full_adder_32_bit> ...
-
-Optimizing unit <full_adder_16_bit> ...
-
 Optimizing unit <full_adder_8_bit> ...
-
-Optimizing unit <full_adder> ...
-
-Optimizing unit <half_adder> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -246,8 +238,9 @@ Top Level Output File Name         : full_adder_64_bit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 320
-#      LUT2                        : 320
+# BELS                             : 96
+#      LUT3                        : 32
+#      LUT5                        : 64
 # IO Buffers                       : 194
 #      IBUF                        : 129
 #      OBUF                        : 65
@@ -259,14 +252,14 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  320  out of  63400     0%  
-    Number used as Logic:               320  out of  63400     0%  
+ Number of Slice LUTs:                   96  out of  63400     0%  
+    Number used as Logic:                96  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    320
-   Number with an unused Flip Flop:     320  out of    320   100%  
-   Number with an unused LUT:             0  out of    320     0%  
-   Number of fully used LUT-FF pairs:     0  out of    320     0%  
+ Number of LUT Flip Flop pairs used:     96
+   Number with an unused Flip Flop:      96  out of     96   100%  
+   Number with an unused LUT:             0  out of     96     0%  
+   Number of fully used LUT-FF pairs:     0  out of     96     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -306,7 +299,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 71.325ns
+   Maximum combinational path delay: 22.343ns
 
 Timing Details:
 ---------------
@@ -314,436 +307,53 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 8513 / 65
+  Total number of paths / destination ports: 4353 / 65
 -------------------------------------------------------------------------
-Delay:               71.325ns (Levels of Logic = 274)
-  Source:            a<0> (PAD)
-  Destination:       cout (PAD)
+Delay:               22.343ns (Levels of Logic = 34)
+  Source:            a<1> (PAD)
+  Destination:       sum<63> (PAD)
 
-  Data Path: a<0> to cout
+  Data Path: a<1> to sum<63>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.542  a_0_IBUF (a_0_IBUF)
-     begin scope: 's1:a<0>'
-     begin scope: 's1/s1:a<0>'
-     begin scope: 's1/s1/s1:a<0>'
-     begin scope: 's1/s1/s1/f1:a'
-     begin scope: 's1/s1/s1/f1/h1:a'
-     LUT2:I0->O            2   0.124   0.542  Mxor_sum_xo<0>1 (sum)
-     end scope: 's1/s1/s1/f1/h1:sum'
-     begin scope: 's1/s1/s1/f1/h2:a'
-     LUT2:I0->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s1/f1/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s1/f1:cout'
-     begin scope: 's1/s1/s1/f2:cin'
-     begin scope: 's1/s1/s1/f2/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s1/f2/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s1/f2:cout'
-     begin scope: 's1/s1/s1/f3:cin'
-     begin scope: 's1/s1/s1/f3/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s1/f3/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s1/f3:cout'
-     begin scope: 's1/s1/s1/f4:cin'
-     begin scope: 's1/s1/s1/f4/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s1/f4/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s1/f4:cout'
-     begin scope: 's1/s1/s1/f5:cin'
-     begin scope: 's1/s1/s1/f5/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s1/f5/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s1/f5:cout'
-     begin scope: 's1/s1/s1/f6:cin'
-     begin scope: 's1/s1/s1/f6/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s1/f6/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s1/f6:cout'
-     begin scope: 's1/s1/s1/f7:cin'
-     begin scope: 's1/s1/s1/f7/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s1/f7/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s1/f7:cout'
-     begin scope: 's1/s1/s1/f8:cin'
-     begin scope: 's1/s1/s1/f8/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s1/f8/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s1/f8:cout'
-     end scope: 's1/s1/s1:cout'
-     begin scope: 's1/s1/s2:cin'
-     begin scope: 's1/s1/s2/f1:cin'
-     begin scope: 's1/s1/s2/f1/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s2/f1/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s2/f1:cout'
-     begin scope: 's1/s1/s2/f2:cin'
-     begin scope: 's1/s1/s2/f2/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s2/f2/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s2/f2:cout'
-     begin scope: 's1/s1/s2/f3:cin'
-     begin scope: 's1/s1/s2/f3/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s2/f3/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s2/f3:cout'
-     begin scope: 's1/s1/s2/f4:cin'
-     begin scope: 's1/s1/s2/f4/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s2/f4/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s2/f4:cout'
-     begin scope: 's1/s1/s2/f5:cin'
-     begin scope: 's1/s1/s2/f5/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s2/f5/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s2/f5:cout'
-     begin scope: 's1/s1/s2/f6:cin'
-     begin scope: 's1/s1/s2/f6/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s2/f6/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s2/f6:cout'
-     begin scope: 's1/s1/s2/f7:cin'
-     begin scope: 's1/s1/s2/f7/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s2/f7/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s2/f7:cout'
-     begin scope: 's1/s1/s2/f8:cin'
-     begin scope: 's1/s1/s2/f8/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s1/s2/f8/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s1/s2/f8:cout'
-     end scope: 's1/s1/s2:cout'
-     end scope: 's1/s1:cout'
-     begin scope: 's1/s2:cin'
-     begin scope: 's1/s2/s1:cin'
-     begin scope: 's1/s2/s1/f1:cin'
-     begin scope: 's1/s2/s1/f1/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s1/f1/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s1/f1:cout'
-     begin scope: 's1/s2/s1/f2:cin'
-     begin scope: 's1/s2/s1/f2/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s1/f2/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s1/f2:cout'
-     begin scope: 's1/s2/s1/f3:cin'
-     begin scope: 's1/s2/s1/f3/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s1/f3/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s1/f3:cout'
-     begin scope: 's1/s2/s1/f4:cin'
-     begin scope: 's1/s2/s1/f4/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s1/f4/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s1/f4:cout'
-     begin scope: 's1/s2/s1/f5:cin'
-     begin scope: 's1/s2/s1/f5/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s1/f5/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s1/f5:cout'
-     begin scope: 's1/s2/s1/f6:cin'
-     begin scope: 's1/s2/s1/f6/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s1/f6/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s1/f6:cout'
-     begin scope: 's1/s2/s1/f7:cin'
-     begin scope: 's1/s2/s1/f7/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s1/f7/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s1/f7:cout'
-     begin scope: 's1/s2/s1/f8:cin'
-     begin scope: 's1/s2/s1/f8/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s1/f8/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s1/f8:cout'
-     end scope: 's1/s2/s1:cout'
-     begin scope: 's1/s2/s2:cin'
-     begin scope: 's1/s2/s2/f1:cin'
-     begin scope: 's1/s2/s2/f1/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s2/f1/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s2/f1:cout'
-     begin scope: 's1/s2/s2/f2:cin'
-     begin scope: 's1/s2/s2/f2/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s2/f2/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s2/f2:cout'
-     begin scope: 's1/s2/s2/f3:cin'
-     begin scope: 's1/s2/s2/f3/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s2/f3/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s2/f3:cout'
-     begin scope: 's1/s2/s2/f4:cin'
-     begin scope: 's1/s2/s2/f4/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s2/f4/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s2/f4:cout'
-     begin scope: 's1/s2/s2/f5:cin'
-     begin scope: 's1/s2/s2/f5/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s2/f5/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s2/f5:cout'
-     begin scope: 's1/s2/s2/f6:cin'
-     begin scope: 's1/s2/s2/f6/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s2/f6/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s2/f6:cout'
-     begin scope: 's1/s2/s2/f7:cin'
-     begin scope: 's1/s2/s2/f7/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s2/f7/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s2/f7:cout'
-     begin scope: 's1/s2/s2/f8:cin'
-     begin scope: 's1/s2/s2/f8/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's1/s2/s2/f8/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's1/s2/s2/f8:cout'
-     end scope: 's1/s2/s2:cout'
-     end scope: 's1/s2:cout'
-     end scope: 's1:cout'
-     begin scope: 's2:cin'
-     begin scope: 's2/s1:cin'
-     begin scope: 's2/s1/s1:cin'
-     begin scope: 's2/s1/s1/f1:cin'
-     begin scope: 's2/s1/s1/f1/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s1/f1/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s1/f1:cout'
-     begin scope: 's2/s1/s1/f2:cin'
-     begin scope: 's2/s1/s1/f2/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s1/f2/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s1/f2:cout'
-     begin scope: 's2/s1/s1/f3:cin'
-     begin scope: 's2/s1/s1/f3/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s1/f3/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s1/f3:cout'
-     begin scope: 's2/s1/s1/f4:cin'
-     begin scope: 's2/s1/s1/f4/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s1/f4/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s1/f4:cout'
-     begin scope: 's2/s1/s1/f5:cin'
-     begin scope: 's2/s1/s1/f5/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s1/f5/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s1/f5:cout'
-     begin scope: 's2/s1/s1/f6:cin'
-     begin scope: 's2/s1/s1/f6/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s1/f6/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s1/f6:cout'
-     begin scope: 's2/s1/s1/f7:cin'
-     begin scope: 's2/s1/s1/f7/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s1/f7/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s1/f7:cout'
-     begin scope: 's2/s1/s1/f8:cin'
-     begin scope: 's2/s1/s1/f8/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s1/f8/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s1/f8:cout'
-     end scope: 's2/s1/s1:cout'
-     begin scope: 's2/s1/s2:cin'
-     begin scope: 's2/s1/s2/f1:cin'
-     begin scope: 's2/s1/s2/f1/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s2/f1/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s2/f1:cout'
-     begin scope: 's2/s1/s2/f2:cin'
-     begin scope: 's2/s1/s2/f2/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s2/f2/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s2/f2:cout'
-     begin scope: 's2/s1/s2/f3:cin'
-     begin scope: 's2/s1/s2/f3/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s2/f3/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s2/f3:cout'
-     begin scope: 's2/s1/s2/f4:cin'
-     begin scope: 's2/s1/s2/f4/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s2/f4/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s2/f4:cout'
-     begin scope: 's2/s1/s2/f5:cin'
-     begin scope: 's2/s1/s2/f5/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s2/f5/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s2/f5:cout'
-     begin scope: 's2/s1/s2/f6:cin'
-     begin scope: 's2/s1/s2/f6/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s2/f6/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s2/f6:cout'
-     begin scope: 's2/s1/s2/f7:cin'
-     begin scope: 's2/s1/s2/f7/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s2/f7/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s2/f7:cout'
-     begin scope: 's2/s1/s2/f8:cin'
-     begin scope: 's2/s1/s2/f8/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s1/s2/f8/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s1/s2/f8:cout'
-     end scope: 's2/s1/s2:cout'
-     end scope: 's2/s1:cout'
-     begin scope: 's2/s2:cin'
-     begin scope: 's2/s2/s1:cin'
-     begin scope: 's2/s2/s1/f1:cin'
-     begin scope: 's2/s2/s1/f1/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s1/f1/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s1/f1:cout'
-     begin scope: 's2/s2/s1/f2:cin'
-     begin scope: 's2/s2/s1/f2/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s1/f2/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s1/f2:cout'
-     begin scope: 's2/s2/s1/f3:cin'
-     begin scope: 's2/s2/s1/f3/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s1/f3/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s1/f3:cout'
-     begin scope: 's2/s2/s1/f4:cin'
-     begin scope: 's2/s2/s1/f4/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s1/f4/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s1/f4:cout'
-     begin scope: 's2/s2/s1/f5:cin'
-     begin scope: 's2/s2/s1/f5/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s1/f5/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s1/f5:cout'
-     begin scope: 's2/s2/s1/f6:cin'
-     begin scope: 's2/s2/s1/f6/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s1/f6/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s1/f6:cout'
-     begin scope: 's2/s2/s1/f7:cin'
-     begin scope: 's2/s2/s1/f7/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s1/f7/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s1/f7:cout'
-     begin scope: 's2/s2/s1/f8:cin'
-     begin scope: 's2/s2/s1/f8/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s1/f8/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s1/f8:cout'
-     end scope: 's2/s2/s1:cout'
-     begin scope: 's2/s2/s2:cin'
-     begin scope: 's2/s2/s2/f1:cin'
-     begin scope: 's2/s2/s2/f1/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s2/f1/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s2/f1:cout'
-     begin scope: 's2/s2/s2/f2:cin'
-     begin scope: 's2/s2/s2/f2/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s2/f2/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s2/f2:cout'
-     begin scope: 's2/s2/s2/f3:cin'
-     begin scope: 's2/s2/s2/f3/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s2/f3/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s2/f3:cout'
-     begin scope: 's2/s2/s2/f4:cin'
-     begin scope: 's2/s2/s2/f4/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s2/f4/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s2/f4:cout'
-     begin scope: 's2/s2/s2/f5:cin'
-     begin scope: 's2/s2/s2/f5/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s2/f5/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s2/f5:cout'
-     begin scope: 's2/s2/s2/f6:cin'
-     begin scope: 's2/s2/s2/f6/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s2/f6/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s2/f6:cout'
-     begin scope: 's2/s2/s2/f7:cin'
-     begin scope: 's2/s2/s2/f7/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s2/f7/h2:c'
-     LUT2:I1->O            2   0.124   0.427  cout1 (cout)
-     end scope: 's2/s2/s2/f7:cout'
-     begin scope: 's2/s2/s2/f8:cin'
-     begin scope: 's2/s2/s2/f8/h2:b'
-     LUT2:I1->O            1   0.124   0.421  c1 (c)
-     end scope: 's2/s2/s2/f8/h2:c'
-     LUT2:I1->O            1   0.124   0.399  cout1 (cout)
-     end scope: 's2/s2/s2/f8:cout'
-     end scope: 's2/s2/s2:cout'
-     end scope: 's2/s2:cout'
-     end scope: 's2:cout'
-     OBUF:I->O                 0.000          cout_OBUF (cout)
+     IBUF:I->O             2   0.001   0.925  a_1_IBUF (a_1_IBUF)
+     LUT5:I0->O            3   0.124   0.550  s1/s1/s1/f2/cout1 (s1/s1/s1/tempCarry<1>)
+     LUT5:I3->O            3   0.124   0.550  s1/s1/s1/f4/cout1 (s1/s1/s1/tempCarry<3>)
+     LUT5:I3->O            3   0.124   0.550  s1/s1/s1/f6/cout1 (s1/s1/s1/tempCarry<5>)
+     LUT5:I3->O            3   0.124   0.550  s1/s1/s1/f8/cout1 (s1/s1/tempCarry)
+     LUT5:I3->O            3   0.124   0.550  s1/s1/s2/f2/cout1 (s1/s1/s2/tempCarry<1>)
+     LUT5:I3->O            3   0.124   0.550  s1/s1/s2/f4/cout1 (s1/s1/s2/tempCarry<3>)
+     LUT5:I3->O            3   0.124   0.550  s1/s1/s2/f6/cout1 (s1/s1/s2/tempCarry<5>)
+     LUT5:I3->O            3   0.124   0.550  s1/s1/s2/f8/cout1 (s1/tempCarry)
+     LUT5:I3->O            3   0.124   0.550  s1/s2/s1/f2/cout1 (s1/s2/s1/tempCarry<1>)
+     LUT5:I3->O            3   0.124   0.550  s1/s2/s1/f4/cout1 (s1/s2/s1/tempCarry<3>)
+     LUT5:I3->O            3   0.124   0.550  s1/s2/s1/f6/cout1 (s1/s2/s1/tempCarry<5>)
+     LUT5:I3->O            3   0.124   0.550  s1/s2/s1/f8/cout1 (s1/s2/tempCarry)
+     LUT5:I3->O            3   0.124   0.550  s1/s2/s2/f2/cout1 (s1/s2/s2/tempCarry<1>)
+     LUT5:I3->O            3   0.124   0.550  s1/s2/s2/f4/cout1 (s1/s2/s2/tempCarry<3>)
+     LUT5:I3->O            3   0.124   0.550  s1/s2/s2/f6/cout1 (s1/s2/s2/tempCarry<5>)
+     LUT5:I3->O            3   0.124   0.550  s1/s2/s2/f8/cout1 (tempCarry)
+     LUT5:I3->O            3   0.124   0.550  s2/s1/s1/f2/cout1 (s2/s1/s1/tempCarry<1>)
+     LUT5:I3->O            3   0.124   0.550  s2/s1/s1/f4/cout1 (s2/s1/s1/tempCarry<3>)
+     LUT5:I3->O            3   0.124   0.550  s2/s1/s1/f6/cout1 (s2/s1/s1/tempCarry<5>)
+     LUT5:I3->O            3   0.124   0.550  s2/s1/s1/f8/cout1 (s2/s1/tempCarry)
+     LUT5:I3->O            3   0.124   0.550  s2/s1/s2/f2/cout1 (s2/s1/s2/tempCarry<1>)
+     LUT5:I3->O            3   0.124   0.550  s2/s1/s2/f4/cout1 (s2/s1/s2/tempCarry<3>)
+     LUT5:I3->O            3   0.124   0.550  s2/s1/s2/f6/cout1 (s2/s1/s2/tempCarry<5>)
+     LUT5:I3->O            3   0.124   0.550  s2/s1/s2/f8/cout1 (s2/tempCarry)
+     LUT5:I3->O            3   0.124   0.550  s2/s2/s1/f2/cout1 (s2/s2/s1/tempCarry<1>)
+     LUT5:I3->O            3   0.124   0.550  s2/s2/s1/f4/cout1 (s2/s2/s1/tempCarry<3>)
+     LUT5:I3->O            3   0.124   0.550  s2/s2/s1/f6/cout1 (s2/s2/s1/tempCarry<5>)
+     LUT5:I3->O            3   0.124   0.550  s2/s2/s1/f8/cout1 (s2/s2/tempCarry)
+     LUT5:I3->O            3   0.124   0.550  s2/s2/s2/f2/cout1 (s2/s2/s2/tempCarry<1>)
+     LUT5:I3->O            3   0.124   0.550  s2/s2/s2/f4/cout1 (s2/s2/s2/tempCarry<3>)
+     LUT5:I3->O            3   0.124   0.550  s2/s2/s2/f6/cout1 (s2/s2/s2/tempCarry<5>)
+     LUT5:I3->O            1   0.124   0.399  s2/s2/s2/f8/h2/Mxor_sum_xo<0>1 (sum_63_OBUF)
+     OBUF:I->O                 0.000          sum_63_OBUF (sum<63>)
     ----------------------------------------
-    Total                     71.325ns (15.997ns logic, 55.328ns route)
-                                       (22.4% logic, 77.6% route)
+    Total                     22.343ns (3.969ns logic, 18.374ns route)
+                                       (17.8% logic, 82.2% route)
 
 =========================================================================
 
@@ -753,8 +363,8 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.57 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.58 secs
  
 --> 
 

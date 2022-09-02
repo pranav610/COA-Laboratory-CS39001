@@ -13,3 +13,4 @@ map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off full_adder_16_bit_map.ncd full_adder_16_bit.ncd full_adder_16_bit.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml full_adder_16_bit.twx full_adder_16_bit.ncd -o full_adder_16_bit.twr full_adder_16_bit.pcf 
 bitgen -intstyle ise -f full_adder_16_bit.ut full_adder_16_bit.ncd 
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_16_bit.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-3/Assgn_3_Grp_55/full_adder_16_bit.syr" 
