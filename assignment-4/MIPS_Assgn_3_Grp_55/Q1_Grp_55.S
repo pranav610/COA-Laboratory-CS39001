@@ -21,7 +21,7 @@
 .data
 input_promt: .asciiz "Enter four positive integers n, a, r and m: "
 error_message: .asciiz "Error: Invalid input"
-print_promt: .asciiz "Matrix:\n"
+print_promt: .asciiz "Matrix A:\n"
 det_promt: .asciiz "Final determinant of the matrix A is: "
 space: .asciiz " "
 new_line: .asciiz "\n"
@@ -204,32 +204,6 @@ END_DET:
 # function procedure to calculate determinant of a n*n matrix (n passed through $a0)
 # starting address passed through $a1
 calDeterminant:
-    # store value of $ra in stack
-    sub $sp, $sp, 4                                                     # decrease stack pointer by 4 bytes to allote memory for argument
-    sw $ra, 0($sp)                                                      # store argument in stack
-
-    move $s0, $a0                                                       # move size of matrix to $t0
-    move $s1, $a1                                                       # move address of matrix to $t1
-    
-    li $v0, 4                                                           # system call number 4, as we want to print a string
-    la $a0, new_line                                                    # print a new line
-    syscall                                                             # system call to print a new line
-
-    li $v0, 4                                                           # system call number 4, as we want to print a string
-    la $a0, print_promt                                                 # print matrix A
-    syscall                                                             # system call to print a string
-
-    move $a0, $s0                                                       # move size of matrix to $a0
-    move $a1, $s0                                                       # move size of matrix to $a1
-    move $a2, $s1                                                       # move address of matrix to $a2
-    jal printMatrix                                                     # call printMatrix to print matrix
-
-    lw $ra, 0($sp)                                                      # load return address from stack
-    add $sp, $sp, 4                                                     # increase stack pointer by 4 bytes to free memory for return address
-
-    move $a0, $s0                                                       # move size of matrix to $a0
-    move $a1, $s1                                                       # move address of matrix to $a1
-
     beq $a0, 1, END_DET                                                 # if size of matrix is 1, go to END_DET
 
     # store value of $ra in stack
