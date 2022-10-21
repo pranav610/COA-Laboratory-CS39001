@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: ALU.prj
@@ -136,10 +136,10 @@ Elaborating module <cla_16_bit>.
 Elaborating module <cla_4_bit_augment>.
 
 Elaborating module <lac_unit>.
-WARNING:HDLCompiler:189 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.v" Line 50: Size mismatch in connection of port <c_in>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.v" Line 51: Size mismatch in connection of port <c_in>. Formal port size is 1-bit while actual signal size is 32-bit.
 
 Elaborating module <shifter>.
-WARNING:HDLCompiler:189 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.v" Line 53: Size mismatch in connection of port <shamt>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.v" Line 54: Size mismatch in connection of port <shamt>. Formal port size is 32-bit while actual signal size is 5-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -455,12 +455,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.41 secs
+Total CPU time to Xst completion: 8.09 secs
  
 --> 
 
 
-Total memory usage is 480616 kilobytes
+Total memory usage is 480624 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)

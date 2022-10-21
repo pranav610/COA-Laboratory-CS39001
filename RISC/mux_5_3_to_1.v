@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    14:15:53 10/21/2022 
+// Create Date:    14:58:09 10/21/2022 
 // Design Name: 
-// Module Name:    diff 
+// Module Name:    mux_5_3_to_1 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,16 +18,19 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-// module to perform the diff operation: i.e. to find the LSB bit where A and B differ
-module diff(
-	input [31:0] A,
-	input [31:0] B,
-	output [4:0] d
+// 3x1 Multiplexer with 5 bit inputs and outputs
+module mux_5_3_to_1(
+	input [4:0] inp1,
+	input [4:0] inp2,
+	input [4:0] inp3,
+	input [1:0] sel,
+	output [4:0] out
     );
-	
-	// calculating the LSB
-	reg [31:0] n = A ^ B;
-	reg [31:0] cnt = n & (n ^ (n-1)); // cnt has 0 bits at every position except the diff LSB of A and B
-	
-
+	 
+	always @(*)
+	begin
+		if (sel == 2'b00) out = inp1;
+		else if (sel == 2'b01) out = inp2;
+		else out = inp3;
+	end
 endmodule
