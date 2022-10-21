@@ -1,0 +1,718 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: counter_4_bit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "counter_4_bit.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "counter_4_bit"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : counter_4_bit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/refresh_counter.v" into library work
+Parsing module <refresh_counter>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_cathode.v" into library work
+Parsing module <bcd_to_cathode>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/BCD_control.v" into library work
+Parsing module <BCD_control>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/anode_control.v" into library work
+Parsing module <anode_control>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/counter.v" into library work
+Parsing module <counter>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/clock_divider_10khz.v" into library work
+Parsing module <clock_divider_10khz>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/binary_to_bcd.v" into library work
+Parsing module <binary_to_bcd>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment.v" into library work
+Parsing module <bcd_to_7_segment>.
+Analyzing Verilog file "/home/pranav/Downloads/clock_divider.v" into library work
+Parsing module <clock_divider>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/counter_4_bit.v" into library work
+Parsing module <counter_4_bit>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <counter_4_bit>.
+
+Elaborating module <clock_divider>.
+
+Elaborating module <clock_divider_10khz>.
+
+Elaborating module <counter>.
+WARNING:HDLCompiler:413 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/counter.v" Line 31: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <binary_to_bcd>.
+WARNING:HDLCompiler:413 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/binary_to_bcd.v" Line 41: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/binary_to_bcd.v" Line 44: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/binary_to_bcd.v" Line 45: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/binary_to_bcd.v" Line 52: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <bcd_to_7_segment>.
+
+Elaborating module <refresh_counter>.
+WARNING:HDLCompiler:413 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/refresh_counter.v" Line 22: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <anode_control>.
+
+Elaborating module <BCD_control>.
+WARNING:HDLCompiler:91 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/BCD_control.v" Line 29: Signal <digit0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/BCD_control.v" Line 31: Signal <digit1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/BCD_control.v" Line 33: Signal <digit2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/BCD_control.v" Line 35: Signal <digit3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <bcd_to_cathode>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <counter_4_bit>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/counter_4_bit.v".
+    Summary:
+	no macro.
+Unit <counter_4_bit> synthesized.
+
+Synthesizing Unit <clock_divider>.
+    Related source file is "/home/pranav/Downloads/clock_divider.v".
+    Found 1-bit register for signal <out_clk>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter[31]_GND_2_o_add_2_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <clock_divider> synthesized.
+
+Synthesizing Unit <clock_divider_10khz>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/clock_divider_10khz.v".
+    Found 1-bit register for signal <out_clk>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter[31]_GND_3_o_add_2_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <clock_divider_10khz> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/counter.v".
+    Found 4-bit register for signal <counter>.
+    Found 4-bit adder for signal <counter[3]_GND_4_o_add_3_OUT> created at line 31.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <binary_to_bcd>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/binary_to_bcd.v".
+    Found 4-bit register for signal <save_in>.
+    Found 4-bit register for signal <tens_temp>.
+    Found 4-bit register for signal <ones_temp>.
+    Found 4-bit register for signal <itr>.
+    Found 4-bit register for signal <tens>.
+    Found 4-bit register for signal <ones>.
+    Found 12-bit register for signal <shift>.
+    Found 4-bit adder for signal <itr[3]_GND_5_o_add_3_OUT> created at line 41.
+    Found 4-bit adder for signal <tens_temp[3]_GND_5_o_add_12_OUT> created at line 44.
+    Found 4-bit adder for signal <ones_temp[3]_GND_5_o_add_15_OUT> created at line 45.
+    Found 4-bit adder for signal <itr[3]_GND_5_o_add_17_OUT> created at line 52.
+    Found 4-bit comparator not equal for signal <n0001> created at line 35
+    Found 4-bit comparator greater for signal <itr[3]_GND_5_o_LessThan_10_o> created at line 43
+    Found 4-bit comparator greater for signal <GND_5_o_itr[3]_LessThan_11_o> created at line 43
+    Found 4-bit comparator lessequal for signal <n0013> created at line 44
+    Found 4-bit comparator lessequal for signal <n0017> created at line 45
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  10 Multiplexer(s).
+Unit <binary_to_bcd> synthesized.
+
+Synthesizing Unit <bcd_to_7_segment>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment.v".
+    Summary:
+	no macro.
+Unit <bcd_to_7_segment> synthesized.
+
+Synthesizing Unit <refresh_counter>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/refresh_counter.v".
+    Found 2-bit register for signal <refresh_counter>.
+    Found 2-bit adder for signal <refresh_counter[1]_GND_7_o_add_1_OUT> created at line 22.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <refresh_counter> synthesized.
+
+Synthesizing Unit <anode_control>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/anode_control.v".
+    Found 4x4-bit Read Only RAM for signal <anode>
+    Summary:
+	inferred   1 RAM(s).
+Unit <anode_control> synthesized.
+
+Synthesizing Unit <BCD_control>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/BCD_control.v".
+    Found 4-bit 3-to-1 multiplexer for signal <out_digit> created at line 27.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <BCD_control> synthesized.
+
+Synthesizing Unit <bcd_to_cathode>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_cathode.v".
+    Found 16x8-bit Read Only RAM for signal <cathode>
+    Summary:
+	inferred   1 RAM(s).
+Unit <bcd_to_cathode> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 8
+ 2-bit adder                                           : 1
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 5
+# Registers                                            : 13
+ 1-bit register                                        : 2
+ 12-bit register                                       : 1
+ 2-bit register                                        : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 7
+# Comparators                                          : 5
+ 4-bit comparator greater                              : 2
+ 4-bit comparator lessequal                            : 2
+ 4-bit comparator not equal                            : 1
+# Multiplexers                                         : 11
+ 12-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 8
+ 4-bit 3-to-1 multiplexer                              : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <anode_control>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_anode> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <refresh_counter> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <anode>         |          |
+    -----------------------------------------------------------------------
+Unit <anode_control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bcd_to_cathode>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cathode> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <digit>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <cathode>       |          |
+    -----------------------------------------------------------------------
+Unit <bcd_to_cathode> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clock_divider>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <clock_divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clock_divider_10khz>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <clock_divider_10khz> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <refresh_counter>.
+The following registers are absorbed into counter <refresh_counter>: 1 register on signal <refresh_counter>.
+Unit <refresh_counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 4
+ 4-bit adder                                           : 4
+# Counters                                             : 4
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 38
+ Flip-Flops                                            : 38
+# Comparators                                          : 5
+ 4-bit comparator greater                              : 2
+ 4-bit comparator lessequal                            : 2
+ 4-bit comparator not equal                            : 1
+# Multiplexers                                         : 11
+ 12-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 8
+ 4-bit 3-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <shift_4> of sequential type is unconnected in block <binary_to_bcd>.
+WARNING:Xst:2677 - Node <shift_5> of sequential type is unconnected in block <binary_to_bcd>.
+WARNING:Xst:2677 - Node <shift_6> of sequential type is unconnected in block <binary_to_bcd>.
+WARNING:Xst:2677 - Node <shift_7> of sequential type is unconnected in block <binary_to_bcd>.
+WARNING:Xst:2677 - Node <shift_8> of sequential type is unconnected in block <binary_to_bcd>.
+WARNING:Xst:2677 - Node <shift_9> of sequential type is unconnected in block <binary_to_bcd>.
+WARNING:Xst:2677 - Node <shift_10> of sequential type is unconnected in block <binary_to_bcd>.
+WARNING:Xst:2677 - Node <shift_11> of sequential type is unconnected in block <binary_to_bcd>.
+
+Optimizing unit <counter_4_bit> ...
+
+Optimizing unit <binary_to_bcd> ...
+WARNING:Xst:1293 - FF/Latch <converter1/shift_0> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <converter1/itr_3> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_31> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_30> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_29> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_28> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_27> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_26> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_25> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_24> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_23> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_22> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_21> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_20> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_19> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_18> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_17> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_16> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_15> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_14> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk2/counter_13> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_31> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_30> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_29> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_28> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_27> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_26> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_25> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_24> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk1/counter_23> has a constant value of 0 in block <counter_4_bit>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <clk1/counter_0> in Unit <counter_4_bit> is equivalent to the following FF/Latch, which will be removed : <clk2/counter_0> 
+INFO:Xst:2261 - The FF/Latch <clk1/counter_1> in Unit <counter_4_bit> is equivalent to the following FF/Latch, which will be removed : <clk2/counter_1> 
+INFO:Xst:2261 - The FF/Latch <clk1/counter_2> in Unit <counter_4_bit> is equivalent to the following FF/Latch, which will be removed : <clk2/counter_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block counter_4_bit, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : counter_4_bit.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 177
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 34
+#      LUT2                        : 27
+#      LUT3                        : 3
+#      LUT4                        : 14
+#      LUT5                        : 5
+#      LUT6                        : 20
+#      MUXCY                       : 34
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 33
+# FlipFlops/Latches                : 67
+#      FD                          : 32
+#      FDCE                        : 4
+#      FDE                         : 12
+#      FDR                         : 19
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 2
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              67  out of  126800     0%  
+ Number of Slice LUTs:                  107  out of  63400     0%  
+    Number used as Logic:               107  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    116
+   Number with an unused Flip Flop:      49  out of    116    42%  
+   Number with an unused LUT:             9  out of    116     7%  
+   Number of fully used LUT-FF pairs:    58  out of    116    50%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    210     7%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                     | Load  |
+-----------------------------------+-----------------------------------------------------------+-------+
+clk                                | BUFGP                                                     | 61    |
+clk1/out_clk                       | NONE(count_4_bit/counter_0)                               | 4     |
+clk2/out_clk                       | NONE(converter2/refresh_counter_wrapper/refresh_counter_0)| 2     |
+-----------------------------------+-----------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.406ns (Maximum Frequency: 293.600MHz)
+   Minimum input arrival time before clock: 0.914ns
+   Maximum output required time after clock: 2.770ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.406ns (frequency: 293.600MHz)
+  Total number of paths / destination ports: 1451 / 88
+-------------------------------------------------------------------------
+Delay:               3.406ns (Levels of Logic = 2)
+  Source:            clk1/counter_14 (FF)
+  Destination:       clk1/counter_17 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clk1/counter_14 to clk1/counter_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.478   0.925  clk1/counter_14 (clk1/counter_14)
+     LUT5:I0->O            1   0.124   0.716  clk1/counter[31]_GND_2_o_equal_2_o<31>2 (clk1/counter[31]_GND_2_o_equal_2_o<31>1)
+     LUT6:I3->O           24   0.124   0.545  clk1/counter[31]_GND_2_o_equal_2_o<31>5 (clk1/counter[31]_GND_2_o_equal_2_o)
+     FDR:R                     0.494          clk1/counter_17
+    ----------------------------------------
+    Total                      3.406ns (1.220ns logic, 2.186ns route)
+                                       (35.8% logic, 64.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk1/out_clk'
+  Clock period: 1.498ns (frequency: 667.557MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               1.498ns (Levels of Logic = 1)
+  Source:            count_4_bit/counter_0 (FF)
+  Destination:       count_4_bit/counter_0 (FF)
+  Source Clock:      clk1/out_clk rising
+  Destination Clock: clk1/out_clk rising
+
+  Data Path: count_4_bit/counter_0 to count_4_bit/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.478   0.445  count_4_bit/counter_0 (count_4_bit/counter_0)
+     INV:I->O              1   0.146   0.399  count_4_bit/Mcount_counter_xor<0>11_INV_0 (Result<0>2)
+     FDCE:D                    0.030          count_4_bit/counter_0
+    ----------------------------------------
+    Total                      1.498ns (0.654ns logic, 0.844ns route)
+                                       (43.7% logic, 56.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk2/out_clk'
+  Clock period: 1.511ns (frequency: 661.813MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.511ns (Levels of Logic = 1)
+  Source:            converter2/refresh_counter_wrapper/refresh_counter_0 (FF)
+  Destination:       converter2/refresh_counter_wrapper/refresh_counter_0 (FF)
+  Source Clock:      clk2/out_clk rising
+  Destination Clock: clk2/out_clk rising
+
+  Data Path: converter2/refresh_counter_wrapper/refresh_counter_0 to converter2/refresh_counter_wrapper/refresh_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.478   0.458  converter2/refresh_counter_wrapper/refresh_counter_0 (converter2/refresh_counter_wrapper/refresh_counter_0)
+     INV:I->O              1   0.146   0.399  converter2/refresh_counter_wrapper/Mcount_refresh_counter_xor<0>11_INV_0 (Result<0>3)
+     FD:D                      0.030          converter2/refresh_counter_wrapper/refresh_counter_0
+    ----------------------------------------
+    Total                      1.511ns (0.654ns logic, 0.857ns route)
+                                       (43.3% logic, 56.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk1/out_clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.914ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       count_4_bit/counter_0 (FF)
+  Destination Clock: clk1/out_clk rising
+
+  Data Path: rst to count_4_bit/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.419  rst_IBUF (rst_IBUF)
+     FDCE:CLR                  0.494          count_4_bit/counter_0
+    ----------------------------------------
+    Total                      0.914ns (0.495ns logic, 0.419ns route)
+                                       (54.2% logic, 45.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk2/out_clk'
+  Total number of paths / destination ports: 64 / 11
+-------------------------------------------------------------------------
+Offset:              2.770ns (Levels of Logic = 3)
+  Source:            converter2/refresh_counter_wrapper/refresh_counter_1 (FF)
+  Destination:       cathode<6> (PAD)
+  Source Clock:      clk2/out_clk rising
+
+  Data Path: converter2/refresh_counter_wrapper/refresh_counter_1 to cathode<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.478   0.829  converter2/refresh_counter_wrapper/refresh_counter_1 (converter2/refresh_counter_wrapper/refresh_counter_1)
+     LUT4:I0->O            7   0.124   0.816  converter2/bcd_controller/Mmux_out_digit41 (converter2/out_digit<3>)
+     LUT4:I0->O            1   0.124   0.399  converter2/bcd_to_cathod_controller/Mram_cathode51 (cathode_5_OBUF)
+     OBUF:I->O                 0.000          cathode_5_OBUF (cathode<5>)
+    ----------------------------------------
+    Total                      2.770ns (0.726ns logic, 2.044ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 56 / 7
+-------------------------------------------------------------------------
+Offset:              2.477ns (Levels of Logic = 3)
+  Source:            converter1/ones_3 (FF)
+  Destination:       cathode<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: converter1/ones_3 to cathode<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.478   0.536  converter1/ones_3 (converter1/ones_3)
+     LUT4:I2->O            7   0.124   0.816  converter2/bcd_controller/Mmux_out_digit41 (converter2/out_digit<3>)
+     LUT4:I0->O            1   0.124   0.399  converter2/bcd_to_cathod_controller/Mram_cathode51 (cathode_5_OBUF)
+     OBUF:I->O                 0.000          cathode_5_OBUF (cathode<5>)
+    ----------------------------------------
+    Total                      2.477ns (0.726ns logic, 1.751ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.406|         |         |         |
+clk1/out_clk   |    2.929|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk1/out_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1/out_clk   |    1.498|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk2/out_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk2/out_clk   |    1.511|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.78 secs
+ 
+--> 
+
+
+Total memory usage is 489200 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   48 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

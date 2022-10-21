@@ -1,0 +1,116 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 1 -n
+3 -fastpaths -xml bcd_to_7_segment.twx bcd_to_7_segment.ncd -o
+bcd_to_7_segment.twr bcd_to_7_segment.pcf
+
+Design file:              bcd_to_7_segment.ncd
+Physical constraint file: bcd_to_7_segment.pcf
+Device,package,speed:     xc7a100t,csg324,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.492|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+switch<0>      |cathode<0>     |    7.983|
+switch<0>      |cathode<1>     |    7.510|
+switch<0>      |cathode<2>     |    7.600|
+switch<0>      |cathode<3>     |    7.713|
+switch<0>      |cathode<4>     |    8.332|
+switch<0>      |cathode<5>     |    7.474|
+switch<0>      |cathode<6>     |    7.778|
+switch<1>      |cathode<0>     |    7.593|
+switch<1>      |cathode<1>     |    7.445|
+switch<1>      |cathode<2>     |    8.276|
+switch<1>      |cathode<3>     |    7.883|
+switch<1>      |cathode<4>     |    7.898|
+switch<1>      |cathode<5>     |    7.402|
+switch<1>      |cathode<6>     |    7.387|
+switch<2>      |cathode<0>     |    8.057|
+switch<2>      |cathode<1>     |    7.908|
+switch<2>      |cathode<2>     |    7.547|
+switch<2>      |cathode<3>     |    8.244|
+switch<2>      |cathode<4>     |    8.106|
+switch<2>      |cathode<5>     |    7.873|
+switch<2>      |cathode<6>     |    7.626|
+switch<3>      |cathode<0>     |    7.091|
+switch<3>      |cathode<1>     |    7.276|
+switch<3>      |cathode<2>     |    6.906|
+switch<3>      |cathode<3>     |    6.703|
+switch<3>      |cathode<4>     |    6.705|
+switch<3>      |cathode<5>     |    7.235|
+switch<3>      |cathode<6>     |    6.890|
+switch<4>      |cathode<0>     |    7.958|
+switch<4>      |cathode<1>     |    7.485|
+switch<4>      |cathode<2>     |    7.575|
+switch<4>      |cathode<3>     |    7.688|
+switch<4>      |cathode<4>     |    8.307|
+switch<4>      |cathode<5>     |    7.449|
+switch<4>      |cathode<6>     |    7.753|
+switch<5>      |cathode<0>     |    7.440|
+switch<5>      |cathode<1>     |    7.292|
+switch<5>      |cathode<2>     |    8.123|
+switch<5>      |cathode<3>     |    7.730|
+switch<5>      |cathode<4>     |    7.745|
+switch<5>      |cathode<5>     |    7.249|
+switch<5>      |cathode<6>     |    7.234|
+switch<6>      |cathode<0>     |    8.273|
+switch<6>      |cathode<1>     |    8.124|
+switch<6>      |cathode<2>     |    7.763|
+switch<6>      |cathode<3>     |    8.460|
+switch<6>      |cathode<4>     |    8.322|
+switch<6>      |cathode<5>     |    8.089|
+switch<6>      |cathode<6>     |    7.842|
+switch<7>      |cathode<0>     |    7.513|
+switch<7>      |cathode<1>     |    7.118|
+switch<7>      |cathode<2>     |    7.197|
+switch<7>      |cathode<3>     |    7.527|
+switch<7>      |cathode<4>     |    7.505|
+switch<7>      |cathode<5>     |    7.336|
+switch<7>      |cathode<6>     |    7.309|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Sep 13 22:05:09 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 753 MB
+
+
+

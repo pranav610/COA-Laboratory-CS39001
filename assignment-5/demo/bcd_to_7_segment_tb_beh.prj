@@ -1,0 +1,7 @@
+verilog work "refresh_counter.v"
+verilog work "bcd_to_cathode.v"
+verilog work "BCD_control.v"
+verilog work "anode_control.v"
+verilog work "bcd_to_7_segment.v"
+verilog work "bcd_to_7_segment_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

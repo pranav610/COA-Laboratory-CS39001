@@ -1,0 +1,19 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment_tb_isim_beh.exe -prj /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment_tb_beh.prj work.bcd_to_7_segment_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/refresh_counter.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_cathode.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/BCD_control.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/anode_control.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:267 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment_tb.v" Line 37: Cannot find port button on this module
+ERROR:HDLCompiler:25 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment_tb.v" Line 38: Module <bcd_to_7_segment> does not have a port named <clk>.
+ERROR:HDLCompiler:25 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment_tb.v" Line 39: Module <bcd_to_7_segment> does not have a port named <switch>.
+ERROR:HDLCompiler:25 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment_tb.v" Line 40: Module <bcd_to_7_segment> does not have a port named <button>.
+WARNING:HDLCompiler:1016 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/bcd_to_7_segment_tb.v" Line 37: Port refresh_clock is not connected to this instance
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

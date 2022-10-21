@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/assignment-5/Verilog_Assgn_1_Grp_55/binary_to_bcd_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="binary_to_bcd_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/binary_to_bcd_tb/tens" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tens[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tens[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/binary_to_bcd_tb/ones" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ones[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ones[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/binary_to_bcd_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/binary_to_bcd_tb/in_4_bit_bin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">in_4_bit_bin[3:0]</obj_property>
+      <obj_property name="ObjectShortName">in_4_bit_bin[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
