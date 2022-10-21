@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" Line 30: Port <arg fmt="%s" index="1">P_out</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" Line 31: Port <arg fmt="%s" index="1">P_out</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.v" Line 50: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">c_in</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.v" Line 53: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">shamt</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">5</arg>-bit.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">fCarry</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v</arg>&quot; line <arg fmt="%s" index="2">30</arg>: Output port &lt;<arg fmt="%s" index="3">P_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">cla1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v</arg>&quot; line <arg fmt="%s" index="2">30</arg>: Output port &lt;<arg fmt="%s" index="3">G_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">cla1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v</arg>&quot; line <arg fmt="%s" index="2">31</arg>: Output port &lt;<arg fmt="%s" index="3">P_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">cla2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v</arg>&quot; line <arg fmt="%s" index="2">31</arg>: Output port &lt;<arg fmt="%s" index="3">G_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">cla2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

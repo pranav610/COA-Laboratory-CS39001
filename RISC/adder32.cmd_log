@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.syr" 

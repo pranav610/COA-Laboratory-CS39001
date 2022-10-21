@@ -1,0 +1,345 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: adder32.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "adder32.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "adder32"
+Output Format                      : NGC
+Target Device                      : xc7a200t-3-fbg484
+
+---- Source Options
+Top Module Name                    : adder32
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/lac_unit.v" into library work
+Parsing module <lac_unit>.
+Analyzing Verilog file "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/cla_4_bit_augment.v" into library work
+Parsing module <cla_4_bit_augment>.
+Analyzing Verilog file "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/cla_16_bit.v" into library work
+Parsing module <cla_16_bit>.
+Analyzing Verilog file "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" into library work
+Parsing module <adder32>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" Line 30: Port P_out is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" Line 31: Port P_out is not connected to this instance
+
+Elaborating module <adder32>.
+
+Elaborating module <cla_16_bit>.
+
+Elaborating module <cla_4_bit_augment>.
+
+Elaborating module <lac_unit>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <adder32>.
+    Related source file is "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v".
+INFO:Xst:3210 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" line 30: Output port <P_out> of the instance <cla1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" line 30: Output port <G_out> of the instance <cla1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" line 31: Output port <P_out> of the instance <cla2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/adder32.v" line 31: Output port <G_out> of the instance <cla2> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <adder32> synthesized.
+
+Synthesizing Unit <cla_16_bit>.
+    Related source file is "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/cla_16_bit.v".
+    Summary:
+	no macro.
+Unit <cla_16_bit> synthesized.
+
+Synthesizing Unit <cla_4_bit_augment>.
+    Related source file is "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/cla_4_bit_augment.v".
+    Summary:
+Unit <cla_4_bit_augment> synthesized.
+
+Synthesizing Unit <lac_unit>.
+    Related source file is "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/lac_unit.v".
+    Summary:
+	no macro.
+Unit <lac_unit> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 16
+ 4-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 16
+ 4-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <adder32> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block adder32, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : adder32.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 48
+#      LUT3                        : 16
+#      LUT5                        : 32
+# IO Buffers                       : 98
+#      IBUF                        : 65
+#      OBUF                        : 33
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a200tfbg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   48  out of  134600     0%  
+    Number used as Logic:                48  out of  134600     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     48
+   Number with an unused Flip Flop:      48  out of     48   100%  
+   Number with an unused LUT:             0  out of     48     0%  
+   Number of fully used LUT-FF pairs:     0  out of     48     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          98
+ Number of bonded IOBs:                  98  out of    285    34%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 7.768ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1153 / 33
+-------------------------------------------------------------------------
+Delay:               7.768ns (Levels of Logic = 18)
+  Source:            A<1> (PAD)
+  Destination:       sum<31> (PAD)
+
+  Data Path: A<1> to sum<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.688  A_1_IBUF (A_1_IBUF)
+     LUT5:I0->O            3   0.097   0.305  cla1/g1/c<2><1>1 (cla1/g1/c<2>)
+     LUT5:I4->O            3   0.097   0.389  cla1/g5/c<0> (cla1/c<0>)
+     LUT5:I3->O            3   0.097   0.305  cla1/g2/c<2><1>1 (cla1/g2/c<2>)
+     LUT5:I4->O            3   0.097   0.389  cla1/g5/c<1><1> (cla1/c<1>)
+     LUT5:I3->O            3   0.097   0.305  cla1/g3/c<2><1>1 (cla1/g3/c<2>)
+     LUT5:I4->O            3   0.097   0.389  cla1/g5/c<2><2> (cla1/c<2>)
+     LUT5:I3->O            3   0.097   0.305  cla1/g4/c<2><1>1 (cla1/g4/c<2>)
+     LUT5:I4->O            3   0.097   0.389  cla1/g5/cout<3> (c)
+     LUT5:I3->O            3   0.097   0.305  cla2/g1/c<2><1>1 (cla2/g1/c<2>)
+     LUT5:I4->O            3   0.097   0.389  cla2/g5/c<0> (cla2/c<0>)
+     LUT5:I3->O            3   0.097   0.305  cla2/g2/c<2><1>1 (cla2/g2/c<2>)
+     LUT5:I4->O            3   0.097   0.389  cla2/g5/c<1><1> (cla2/c<1>)
+     LUT5:I3->O            3   0.097   0.305  cla2/g3/c<2><1>1 (cla2/g3/c<2>)
+     LUT5:I4->O            3   0.097   0.389  cla2/g5/c<2><2> (cla2/c<2>)
+     LUT5:I3->O            3   0.097   0.389  cla2/g4/c<2><1>1 (cla2/g4/c<2>)
+     LUT5:I3->O            1   0.097   0.279  cla2/g4/Mxor_sum_3_xo<0>1 (sum_31_OBUF)
+     OBUF:I->O                 0.000          sum_31_OBUF (sum<31>)
+    ----------------------------------------
+    Total                      7.768ns (1.553ns logic, 6.215ns route)
+                                       (20.0% logic, 80.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.23 secs
+ 
+--> 
+
+
+Total memory usage is 479548 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+
