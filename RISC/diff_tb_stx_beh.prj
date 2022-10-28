@@ -1,0 +1,8 @@
+verilog isim_temp "lac_unit.v"
+verilog isim_temp "cla_4_bit_augment.v"
+verilog isim_temp "cla_16_bit.v"
+verilog isim_temp "binary_to_bcd.v"
+verilog isim_temp "adder32.v"
+verilog isim_temp "diff.v"
+verilog isim_temp "diff_tb.v"
+verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
