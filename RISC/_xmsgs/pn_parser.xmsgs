@@ -8,7 +8,148 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/mux_5_3_to_1.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/PC.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/PC_inc.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/adder32.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/barrel_shifter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/binary_to_bcd.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_16_bit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_4_bit_augment.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/control_unit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/d_flip_flop.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">39</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">40</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">41</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">42</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">43</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">44</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">45</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">47</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">49</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">51</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">52</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">54</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">58</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">59</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">60</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">64</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">65</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">66</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">67</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">68</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">69</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">70</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; Line <arg fmt="%d" index="2">71</arg>. <arg fmt="%s" index="3">Syntax error near &quot;=&quot;.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/lac_unit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_32_2_to_1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_32_3_to_1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/shifter.v&quot; into library work</arg>
 </msg>
 
 </messages>

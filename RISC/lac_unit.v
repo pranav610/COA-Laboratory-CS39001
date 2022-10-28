@@ -18,10 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module lac_unit(P, G, cin, P_out, G_out, cout, c);
+module lac_unit(P, G, cin, cout, c);
 	input [3:0] P, G;
 	input cin;
-	output [3:0] P_out, G_out;
 	output [2:0] c;
 	output cout;
 	
@@ -33,9 +32,9 @@ module lac_unit(P, G, cin, P_out, G_out, cout, c);
 	assign cout = G[3] | (P[3] & G[2]) | (P[3] & P[2] & G[1]) | (P[3] & P[2] & P[1] & G[0]) | (P[3] & P[2] & P[1] & P[0] & cin);
 	
 	// calculation of P = P_3 . P_2 . P_1 . P_0
-	assign P_out = P[3] & P[2] & P[1] & P[0];
+	// assign P_out = P[3] & P[2] & P[1] & P[0];
 	// calculation of G = G_3 + P_3 . G_2 + P_3 . P_2 . G_1 + P_3 . P_2 . P_1 . G_0
-	assign G_out = G[3] | (P[3] & G[2]) | (P[3] & P[2] & G[1]) | (P[3] & P[2] & P[1] & G[0]);
+	// assign G_out = G[3] | (P[3] & G[2]) | (P[3] & P[2] & G[1]) | (P[3] & P[2] & P[1] & G[0]);
 	
 	
 

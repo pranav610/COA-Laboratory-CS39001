@@ -18,12 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module cla_16_bit(a, b, cin, sum, cout, P_out, G_out);
+module cla_16_bit(a, b, cin, sum, cout);
 	input [15:0] a, b;
 	input cin;
 	
 	output [15:0] sum;
-	output [3:0] P_out, G_out;
 	output cout;
 	
 	wire [2:0] c;
@@ -36,7 +35,7 @@ module cla_16_bit(a, b, cin, sum, cout, P_out, G_out);
 	cla_4_bit_augment g4(a[15:12], b[15:12], c[2], sum[15:12], P[3], G[3]);
 	
 	// look ahead carry unit
-	lac_unit g5(.P(P), .G(G), .cin(cin), .P_out(P_out), .G_out(G_out), .cout(cout), .c(c));
+	lac_unit g5(.P(P), .G(G), .cin(cin), .cout(cout), .c(c));
 	
 	
 endmodule
