@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: ALU.prj
@@ -144,7 +144,6 @@ Elaborating module <shifter>.
 Elaborating module <diff>.
 
 Elaborating module <binary_to_bcd>.
-WARNING:HDLCompiler:1127 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.v" Line 58: Assignment to eq ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -152,13 +151,12 @@ WARNING:HDLCompiler:1127 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39
 
 Synthesizing Unit <ALU>.
     Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.v".
-INFO:Xst:3210 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.v" line 58: Output port <eq> of the instance <diff1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.v" line 58: Output port <cout> of the instance <diff1> is unconnected or connected to loadless signal.
-    Found 32-bit 7-to-1 multiplexer for signal <_n0053> created at line 64.
-WARNING:Xst:737 - Found 1-bit latch for signal <fCarry>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <fCarry>.
+    Found 32-bit register for signal <result>.
+    Found 32-bit 7-to-1 multiplexer for signal <_n0051> created at line 63.
     Summary:
-	inferred   1 Latch(s).
-	inferred   5 Multiplexer(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
 Unit <ALU> synthesized.
 
 Synthesizing Unit <adder32>.
@@ -196,6 +194,7 @@ Unit <shifter> synthesized.
 
 Synthesizing Unit <diff>.
     Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v".
+INFO:Xst:3210 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" line 30: Output port <c_out> of the instance <g1> is unconnected or connected to loadless signal.
     Summary:
 Unit <diff> synthesized.
 
@@ -209,9 +208,11 @@ Unit <binary_to_bcd> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Latches                                              : 1
- 1-bit latch                                           : 1
-# Multiplexers                                         : 8
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 32-bit register                                       : 1
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 6
  32-bit 7-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 1
@@ -234,7 +235,10 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 8
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 6
  32-bit 7-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 1
@@ -261,13 +265,48 @@ Optimizing unit <diff> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 0.
+FlipFlop result_31 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop result_30 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_29 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_28 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_27 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_26 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_25 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_23 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_22 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_21 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_20 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_19 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_17 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_16 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop result_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+
 =========================================================================
 
 =========================================================================
@@ -289,15 +328,18 @@ Top Level Output File Name         : ALU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 545
-#      LUT2                        : 27
+# BELS                             : 521
+#      LUT2                        : 24
 #      LUT3                        : 44
-#      LUT4                        : 25
-#      LUT5                        : 141
-#      LUT6                        : 279
-#      MUXF7                       : 29
-# FlipFlops/Latches                : 1
-#      LD                          : 1
+#      LUT4                        : 14
+#      LUT5                        : 138
+#      LUT6                        : 273
+#      MUXF7                       : 28
+# FlipFlops/Latches                : 66
+#      FD                          : 65
+#      FDR                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
 # IO Buffers                       : 108
 #      IBUF                        : 73
 #      OBUF                        : 35
@@ -309,22 +351,24 @@ Selected Device : 7a200tfbg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  516  out of  134600     0%  
-    Number used as Logic:               516  out of  134600     0%  
+ Number of Slice Registers:              32  out of  269200     0%  
+ Number of Slice LUTs:                  493  out of  134600     0%  
+    Number used as Logic:               493  out of  134600     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    516
-   Number with an unused Flip Flop:     516  out of    516   100%  
-   Number with an unused LUT:             0  out of    516     0%  
-   Number of fully used LUT-FF pairs:     0  out of    516     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:    493
+   Number with an unused Flip Flop:     461  out of    493    93%  
+   Number with an unused LUT:             0  out of    493     0%  
+   Number of fully used LUT-FF pairs:    32  out of    493     6%  
+   Number of unique control sets:         2
 
 IO Utilization: 
- Number of IOs:                         108
- Number of bonded IOBs:                 108  out of    285    37%  
-    IOB Flip Flops/Latches:               1
+ Number of IOs:                         109
+ Number of bonded IOBs:                 109  out of    285    38%  
+    IOB Flip Flops/Latches:              34
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -344,15 +388,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------------------+------------------------+-------+
-Clock Signal                                               | Clock buffer(FF name)  | Load  |
------------------------------------------------------------+------------------------+-------+
-ALUop[3]_ALUop[3]_AND_115_o(ALUop[3]_ALUop[3]_AND_115_o1:O)| NONE(*)(fCarry)        | 1     |
------------------------------------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+ena                                | BUFGP                  | 66    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -363,114 +403,72 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 10.610ns
-   Maximum output required time after clock: 0.751ns
-   Maximum combinational path delay: 14.181ns
+   Minimum input arrival time before clock: 11.475ns
+   Maximum output required time after clock: 2.221ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ALUop[3]_ALUop[3]_AND_115_o'
-  Total number of paths / destination ports: 174 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ena'
+  Total number of paths / destination ports: 125479 / 67
 -------------------------------------------------------------------------
-Offset:              10.610ns (Levels of Logic = 25)
-  Source:            a<2> (PAD)
-  Destination:       fCarry (LATCH)
-  Destination Clock: ALUop[3]_ALUop[3]_AND_115_o falling
-
-  Data Path: a<2> to fCarry
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            13   0.001   0.567  a_2_IBUF (a_2_IBUF)
-     LUT3:I0->O            2   0.097   0.688  Mmux_sel_a231 (sel_a<2>)
-     LUT5:I0->O            2   0.097   0.688  add1/cla1/g1/c<3><2>1 (add1/cla1/g1/c<3>)
-     LUT5:I0->O            3   0.097   0.305  add1/cla1/g1/G<3>1 (add1/cla1/G<0>)
-     LUT5:I4->O            3   0.097   0.305  add1/cla1/g2/c<2><1>1 (add1/cla1/g2/c<2>)
-     LUT6:I5->O            1   0.097   0.295  add1/cla1/g5/c<1><1>3 (add1/cla1/g5/c<1><1>2)
-     LUT5:I4->O            3   0.097   0.305  add1/cla1/g5/c<1><1>4 (add1/cla1/c<1>)
-     LUT5:I4->O            3   0.097   0.305  add1/cla1/g3/c<2><1>1 (add1/cla1/g3/c<2>)
-     LUT6:I5->O            1   0.097   0.295  add1/cla1/g5/c<2><2>3 (add1/cla1/g5/c<2><2>2)
-     LUT5:I4->O            3   0.097   0.305  add1/cla1/g5/c<2><2>4 (add1/cla1/c<2>)
-     LUT5:I4->O            3   0.097   0.305  add1/cla1/g4/c<2><1>1 (add1/cla1/g4/c<2>)
-     LUT6:I5->O            1   0.097   0.295  add1/cla1/g5/cout<3>3 (add1/cla1/g5/cout<3>2)
-     LUT5:I4->O            3   0.097   0.305  add1/cla1/g5/cout<3>4 (add1/c)
-     LUT5:I4->O            3   0.097   0.305  add1/cla2/g1/c<2><1>1 (add1/cla2/g1/c<2>)
-     LUT6:I5->O            1   0.097   0.295  add1/cla2/g5/c<0>3 (add1/cla2/g5/c<0>2)
-     LUT5:I4->O            3   0.097   0.305  add1/cla2/g5/c<0>4 (add1/cla2/c<0>)
-     LUT5:I4->O            3   0.097   0.305  add1/cla2/g2/c<2><1>1 (add1/cla2/g2/c<2>)
-     LUT6:I5->O            1   0.097   0.295  add1/cla2/g5/c<1><1>3 (add1/cla2/g5/c<1><1>2)
-     LUT5:I4->O            3   0.097   0.305  add1/cla2/g5/c<1><1>4 (add1/cla2/c<1>)
-     LUT5:I4->O            3   0.097   0.305  add1/cla2/g3/c<2><1>1 (add1/cla2/g3/c<2>)
-     LUT6:I5->O            1   0.097   0.295  add1/cla2/g5/c<2><2>3 (add1/cla2/g5/c<2><2>2)
-     LUT5:I4->O            3   0.097   0.305  add1/cla2/g5/c<2><2>4 (add1/cla2/c<2>)
-     LUT5:I4->O            3   0.097   0.305  add1/cla2/g4/c<2><1>1 (add1/cla2/g4/c<2>)
-     LUT6:I5->O            1   0.097   0.295  add1/cla2/g5/cout<3>3 (add1/cla2/g5/cout<3>2)
-     LUT5:I4->O            1   0.097   0.000  add1/cla2/g5/cout<3>4 (cout)
-     LD:D                     -0.028          fCarry
-    ----------------------------------------
-    Total                     10.610ns (2.329ns logic, 8.281ns route)
-                                       (22.0% logic, 78.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ALUop[3]_ALUop[3]_AND_115_o'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              0.751ns (Levels of Logic = 1)
-  Source:            fCarry (LATCH)
-  Destination:       fCarry (PAD)
-  Source Clock:      ALUop[3]_ALUop[3]_AND_115_o falling
-
-  Data Path: fCarry to fCarry
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.472   0.279  fCarry (fCarry_OBUF)
-     OBUF:I->O                 0.000          fCarry_OBUF (fCarry)
-    ----------------------------------------
-    Total                      0.751ns (0.472ns logic, 0.279ns route)
-                                       (62.8% logic, 37.2% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 136132 / 34
--------------------------------------------------------------------------
-Delay:               14.181ns (Levels of Logic = 23)
+Offset:              11.475ns (Levels of Logic = 20)
   Source:            a<0> (PAD)
-  Destination:       fZero (PAD)
+  Destination:       result_1 (FF)
+  Destination Clock: ena rising
 
-  Data Path: a<0> to fZero
+  Data Path: a<0> to result_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            12   0.001   0.430  a_0_IBUF (a_0_IBUF)
-     LUT2:I0->O            6   0.097   0.579  diff1/Mxor_n_0_xo<0>1 (diff1/diff_32<0>)
-     LUT6:I2->O           10   0.097   0.421  diff1/g1/cla1/g1/G<3>1 (diff1/g1/cla1/G<0>)
+     IBUF:I->O            15   0.001   0.444  a_0_IBUF (a_0_IBUF)
+     LUT2:I0->O            4   0.097   0.570  diff1/Mxor_n_0_xo<0>1 (diff1/diff_32<0>)
+     LUT6:I2->O            6   0.097   0.402  diff1/g1/cla1/g1/G<3>1 (diff1/g1/cla1/G<0>)
      LUT6:I4->O            8   0.097   0.411  diff1/g1/cla1/g5/c<1><1>1 (diff1/g1/cla1/c<1>)
      LUT6:I4->O            7   0.097   0.407  diff1/g1/cla1/g5/c<2><2>1 (diff1/g1/cla1/c<2>)
      LUT6:I4->O           10   0.097   0.421  diff1/g1/cla1/g5/cout<3>1 (diff1/g1/c)
-     LUT6:I4->O            7   0.097   0.539  diff1/g1/cla2/g5/c<0>1 (diff1/g1/cla2/c<0>)
-     LUT3:I0->O            4   0.097   0.707  diff1/diff_32<20>1 (diff1/diff_32<20>)
-     LUT6:I0->O            3   0.097   0.693  diff1/g2/diff[31]_GND_8_o_equal_10_o<31>211 (diff1/g2/diff[31]_GND_8_o_equal_10_o<31>21)
-     LUT6:I1->O            5   0.097   0.530  diff1/g2/diff[31]_PWR_8_o_equal_1_o<31>12 (diff1/g2/diff[31]_PWR_8_o_equal_1_o<31>1)
-     LUT6:I3->O            5   0.097   0.398  diff1/g2/diff_out<2>1 (diff1/g2/diff_out<2>1)
-     LUT5:I3->O            4   0.097   0.525  diff1/g2/diff[31]_GND_8_o_equal_16_o<31>11 (diff1/g2/diff[31]_GND_8_o_equal_16_o<31>1)
-     LUT6:I3->O            2   0.097   0.698  diff1/g2/diff[31]_GND_8_o_equal_19_o<31>1 (diff1/g2/diff[31]_GND_8_o_equal_19_o)
-     LUT6:I0->O            1   0.097   0.693  diff1/g2/diff_out<5>14_SW0 (N60)
-     LUT6:I0->O            2   0.097   0.688  diff1/g2/diff_out<5>14 (diff1/g2/diff_out<5>1)
-     LUT6:I1->O            1   0.097   0.556  Mmux_result1311 (Mmux_result1310)
-     LUT6:I2->O            2   0.097   0.561  Mmux_result1313 (result_1_OBUF)
-     LUT5:I1->O            1   0.097   0.556  fZero3 (fZero3)
-     LUT6:I2->O            1   0.097   0.683  fZero4 (fZero4)
-     LUT5:I0->O            1   0.097   0.683  fZero5 (fZero5)
-     LUT5:I0->O            1   0.097   0.683  fZero6 (fZero6)
-     LUT5:I0->O            1   0.097   0.279  fZero7 (fZero_OBUF)
+     LUT6:I4->O            5   0.097   0.398  diff1/g1/cla2/g5/c<0>1 (diff1/g1/cla2/c<0>)
+     LUT6:I4->O           10   0.097   0.735  diff1/g1/cla2/g5/c<1><1>1 (diff1/g1/cla2/c<1>)
+     LUT6:I0->O            1   0.097   0.683  diff1/g2/diff[31]_GND_8_o_equal_7_o<31>1_SW0 (N22)
+     LUT6:I1->O            5   0.097   0.712  diff1/g2/diff[31]_GND_8_o_equal_7_o<31>1 (diff1/g2/diff[31]_GND_8_o_equal_7_o<31>1)
+     LUT6:I0->O            5   0.097   0.702  diff1/g2/diff[31]_PWR_8_o_equal_1_o<31>11 (diff1/g2/diff[31]_PWR_8_o_equal_1_o<31>1)
+     LUT5:I0->O            3   0.097   0.693  diff1/g2/diff_out<5>31 (diff1/g2/diff_out<5>3)
+     LUT6:I1->O            2   0.097   0.383  diff1/g2/diff[31]_GND_8_o_equal_2_o<31>1 (diff1/g2/diff[31]_GND_8_o_equal_2_o)
+     LUT4:I2->O            2   0.097   0.299  diff1/g2/diff_out<4>53 (diff1/g2/diff_out<4>5)
+     LUT5:I4->O            1   0.097   0.295  diff1/g2/diff_out<5>1_SW0 (N34)
+     LUT6:I5->O            2   0.097   0.698  diff1/g2/diff_out<5>1 (diff1/g2/diff_out<5>1)
+     LUT6:I0->O            1   0.097   0.693  Mmux_res_a[31]_res_shift[31]_mux_18_OUT129_SW0 (N62)
+     LUT6:I0->O            1   0.097   0.295  Mmux_res_a[31]_res_shift[31]_mux_18_OUT129 (Mmux_res_a[31]_res_shift[31]_mux_18_OUT125)
+     LUT6:I5->O            1   0.097   0.379  Mmux_res_a[31]_res_shift[31]_mux_18_OUT1210 (Mmux_res_a[31]_res_shift[31]_mux_18_OUT126)
+     LUT4:I2->O            2   0.097   0.000  Mmux_res_a[31]_res_shift[31]_mux_18_OUT1215 (res_a[31]_res_shift[31]_mux_18_OUT<1>)
+     FD:D                      0.008          result_1
+    ----------------------------------------
+    Total                     11.475ns (1.852ns logic, 9.623ns route)
+                                       (16.1% logic, 83.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ena'
+  Total number of paths / destination ports: 66 / 35
+-------------------------------------------------------------------------
+Offset:              2.221ns (Levels of Logic = 3)
+  Source:            result_13 (FF)
+  Destination:       fZero (PAD)
+  Source Clock:      ena rising
+
+  Data Path: result_13 to fZero
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.693  result_13 (result_13)
+     LUT6:I0->O            1   0.097   0.693  fZero1 (fZero1)
+     LUT6:I0->O            1   0.097   0.279  fZero7 (fZero_OBUF)
      OBUF:I->O                 0.000          fZero_OBUF (fZero)
     ----------------------------------------
-    Total                     14.181ns (2.038ns logic, 12.143ns route)
-                                       (14.4% logic, 85.6% route)
+    Total                      2.221ns (0.555ns logic, 1.666ns route)
+                                       (25.0% logic, 75.0% route)
 
 =========================================================================
 
@@ -480,15 +478,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 22.82 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.51 secs
  
 --> 
 
 
-Total memory usage is 481920 kilobytes
+Total memory usage is 490064 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

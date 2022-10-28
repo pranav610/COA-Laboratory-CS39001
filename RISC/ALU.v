@@ -26,6 +26,7 @@ module ALU(
 	input [31:0] b,
 	input [3:0] ALUop,
 	input [4:0] shamt,
+	input ena, 
 	output reg [31:0] result,
 	output fZero,
 	output fSign,
@@ -34,8 +35,6 @@ module ALU(
 	 
 	wire [31:0] res_a, res_add, res_AND, res_XOR, res_shift; // various results
 	wire [5:0] res_diff;
-	wire eq;
-	wire diff_cout;
 	
 	// for complement
 	wire [31:0] inv_b, sel_b;
@@ -55,21 +54,17 @@ module ALU(
 	assign res_AND = a & b;
 	assign res_XOR = a ^ b;
 	shifter shift1 (.in(a), .shamt(shift), .left(ALUop[1]), .logical(ALUop[0]), .out(res_shift));
-	diff diff1 (.A(a), .B(b), .diff(res_diff), .eq(eq), .cout(diff_cout));
+	diff diff1 (.A(a), .B(b), .diff(res_diff));
 	
-	always @(*)
+	always @(posedge ena)
 	begin
-		if (ALUop[3]) 					result = res_shift;
-		else if (ALUop == 4'b0100) result = res_diff;
-		else if (ALUop == 4'b0010) result = res_AND;
-		else if (ALUop == 4'b0011) result = res_XOR;
-		else if (ALUop == 4'b0001)
-		begin
-			result = res_add;
-			fCarry = cout;
-		end
-		else if (ALUop == 4'b0101)	result = res_add;
-		else							result = res_a;
+		if (ALUop[3]) begin result = res_shift; fCarry = 1'b0; end
+		else if (ALUop == 4'b0100) begin result = res_diff; fCarry = 1'b0; end
+		else if (ALUop == 4'b0010) begin result = res_AND; fCarry = 1'b0; end
+		else if (ALUop == 4'b0011) begin result = res_XOR;	fCarry = 1'b0; end
+		else if (ALUop == 4'b0001) begin result = res_add; fCarry = cout; end
+		else if (ALUop == 4'b0101) begin	result = res_add; fCarry = 1'b0; end
+		else begin result = res_a; fCarry = 1'b0; end
 	end
 	
 	assign fZero = (result == 32'b0);

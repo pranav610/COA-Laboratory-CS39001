@@ -18,13 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module adder32(
-	input [31:0] A,
-	input [31:0] B,
-	input c_in,
-	output [31:0] sum,
-	output c_out
-    );
+module adder32(A, B, c_in, sum, c_out);
+	input [31:0] A, B;
+	input c_in;
+	output [31:0] sum;
+	output c_out;
 	
 	wire c;
 	cla_16_bit cla1 (.a(A[15:0]), .b(B[15:0]), .cin(c_in), .sum(sum[15:0]), .cout(c));
