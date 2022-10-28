@@ -2,12 +2,12 @@ Command line:
    diff_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  57929
+     -socket  53563
 
-Fri Oct 28 15:03:59 2022
+Fri Oct 28 16:30:22 2022
 
 
- Elaboration Time: 0.01 sec
+ Elaboration Time: 0.02 sec
 
  Current Memory Usage: 184.365 Meg
 
@@ -21,9 +21,9 @@ Fri Oct 28 15:03:59 2022
  Total Scalar Nets and Variables : 516
 Total Line Count : 142
 
- Total Simulation Time: 0.09 sec
+ Total Simulation Time: 0.03 sec
 
  Current Memory Usage: 259.867 Meg
 
-Fri Oct 28 15:05:15 2022
+Fri Oct 28 16:30:39 2022
 

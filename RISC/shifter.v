@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module shifter(
 	input signed [31:0] in,		// input number
-	input [31:0] shamt,			// shift amount
+	input [4:0] shamt,			// shift amount
 	input left,						// direction of shifting: 1 for left-shift, 0 otherwise
 	input logical,					// 1 if logical, 0 if arithmetic
 	output reg [31:0] out		// output number, 32 bits

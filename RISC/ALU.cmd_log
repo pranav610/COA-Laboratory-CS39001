@@ -2,3 +2,5 @@ xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.
 xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.syr" 
 xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.syr" 
 xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/RISC/RISC/ALU.syr" 
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.syr" 
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.syr" 
