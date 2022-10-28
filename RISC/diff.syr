@@ -120,32 +120,247 @@ Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/
 Parsing module <adder32>.
 Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" into library work
 Parsing module <diff>.
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 39: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 40: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 41: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 42: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 43: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 44: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 45: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 46: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 47: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 48: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 49: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 50: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 51: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 52: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 53: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 54: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 55: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 56: Syntax error near "=".
-ERROR:HDLCompiler:806 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 57: Syntax error near "=".
-Sorry, too many errors..
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <diff>.
+
+Elaborating module <adder32>.
+
+Elaborating module <cla_16_bit>.
+
+Elaborating module <cla_4_bit_augment>.
+
+Elaborating module <lac_unit>.
+WARNING:HDLCompiler:1127 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 32: Assignment to cout1 ignored, since the identifier is never used
+
+Elaborating module <binary_to_bcd>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <diff>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v".
+INFO:Xst:3210 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" line 32: Output port <c_out> of the instance <g1> is unconnected or connected to loadless signal.
+    Summary:
+Unit <diff> synthesized.
+
+Synthesizing Unit <adder32>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/adder32.v".
+    Summary:
+	no macro.
+Unit <adder32> synthesized.
+
+Synthesizing Unit <cla_16_bit>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_16_bit.v".
+    Summary:
+	no macro.
+Unit <cla_16_bit> synthesized.
+
+Synthesizing Unit <cla_4_bit_augment>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_4_bit_augment.v".
+    Summary:
+Unit <cla_4_bit_augment> synthesized.
+
+Synthesizing Unit <lac_unit>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/lac_unit.v".
+    Summary:
+	no macro.
+Unit <lac_unit> synthesized.
+
+Synthesizing Unit <binary_to_bcd>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/binary_to_bcd.v".
+    Summary:
+	no macro.
+Unit <binary_to_bcd> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 18
+ 32-bit xor2                                           : 2
+ 4-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 18
+ 32-bit xor2                                           : 2
+ 4-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <diff> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block diff, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : diff.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 120
+#      LUT2                        : 24
+#      LUT3                        : 4
+#      LUT4                        : 4
+#      LUT5                        : 21
+#      LUT6                        : 67
+# IO Buffers                       : 71
+#      IBUF                        : 64
+#      OBUF                        : 7
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a200tfbg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  120  out of  134600     0%  
+    Number used as Logic:               120  out of  134600     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    120
+   Number with an unused Flip Flop:     120  out of    120   100%  
+   Number with an unused LUT:             0  out of    120     0%  
+   Number of fully used LUT-FF pairs:     0  out of    120     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          71
+ Number of bonded IOBs:                  71  out of    285    24%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 11.219ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 56302 / 7
+-------------------------------------------------------------------------
+Delay:               11.219ns (Levels of Logic = 19)
+  Source:            A<0> (PAD)
+  Destination:       diff<3> (PAD)
+
+  Data Path: A<0> to diff<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.001   0.398  A_0_IBUF (A_0_IBUF)
+     LUT2:I0->O            5   0.097   0.575  Mxor_n_0_xo<0>1 (diff_32<0>)
+     LUT6:I2->O            6   0.097   0.402  g1/cla1/g1/G<3>1 (g1/cla1/G<0>)
+     LUT6:I4->O            8   0.097   0.411  g1/cla1/g5/c<1><1>1 (g1/cla1/c<1>)
+     LUT6:I4->O            7   0.097   0.407  g1/cla1/g5/c<2><2>1 (g1/cla1/c<2>)
+     LUT6:I4->O            6   0.097   0.402  g1/cla1/g5/cout<3>1 (g1/c)
+     LUT6:I4->O            8   0.097   0.412  g1/cla2/g5/c<0>1 (g1/cla2/c<0>)
+     LUT6:I4->O            8   0.097   0.726  g1/cla2/g5/c<1><1>1 (g1/cla2/c<1>)
+     LUT6:I0->O            6   0.097   0.716  diff_32<27>1 (diff_32<27>)
+     LUT6:I0->O            4   0.097   0.707  g2/diff[31]_PWR_6_o_equal_1_o<31>51 (g2/diff[31]_PWR_6_o_equal_1_o<31>5)
+     LUT6:I0->O            3   0.097   0.693  g2/diff_out<5>31 (g2/diff_out<5>3)
+     LUT6:I1->O            5   0.097   0.530  g2/diff_out<2>11 (g2/diff_out<2>1)
+     LUT5:I2->O            3   0.097   0.703  g2/diff_out<3>11 (g2/diff_out<3>1)
+     LUT6:I0->O            4   0.097   0.525  g2/diff[31]_GND_6_o_equal_15_o<31>11 (g2/diff[31]_GND_6_o_equal_15_o<31>1)
+     LUT4:I1->O            2   0.097   0.687  g2/diff_out<4>53 (g2/diff_out<4>5)
+     LUT5:I0->O            1   0.097   0.295  g2/diff_out<5>1_SW0 (N20)
+     LUT6:I5->O            2   0.097   0.697  g2/diff_out<5>1 (g2/diff_out<5>1)
+     LUT6:I0->O            1   0.097   0.279  g2/diff_out<3> (diff_3_OBUF)
+     OBUF:I->O                 0.000          diff_3_OBUF (diff<3>)
+    ----------------------------------------
+    Total                     11.219ns (1.650ns logic, 9.569ns route)
+                                       (14.7% logic, 85.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.65 secs
+ 
 --> 
 
 
-Total memory usage is 328468 kilobytes
+Total memory usage is 480996 kilobytes
 
-Number of errors   :   19 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

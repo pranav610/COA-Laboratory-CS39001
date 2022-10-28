@@ -5,61 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 39: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 32: Assignment to <arg fmt="%s" index="1">cout1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 40: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 41: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 42: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 43: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 44: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 45: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 46: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 47: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 48: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 49: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 50: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 51: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 52: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 53: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 54: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 55: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 56: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" Line 57: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v</arg>&quot; line <arg fmt="%s" index="2">32</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">g1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 </messages>
