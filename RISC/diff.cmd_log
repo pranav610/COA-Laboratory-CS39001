@@ -27,3 +27,9 @@ xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/
 xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.syr" 
 xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.syr" 
 xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/diff.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/diff.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/diff.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/diff.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a200t-fbg484-3 "diff.ngc" diff.ngd  
+map -intstyle ise -p xc7a200t-fbg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o diff_map.ncd diff.ngd diff.pcf 
+par -w -intstyle ise -ol high -mt off diff_map.ncd diff.ncd diff.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml diff.twx diff.ncd -o diff.twr diff.pcf 

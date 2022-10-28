@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/register_file.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/register_file.syr" 
