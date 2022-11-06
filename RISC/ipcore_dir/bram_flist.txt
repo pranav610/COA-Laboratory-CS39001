@@ -1,0 +1,17 @@
+# Output products list for <bram>
+_xmsgs/pn_parser.xmsgs
+bram/blk_mem_gen_v7_3_readme.txt
+bram/doc/blk_mem_gen_v7_3_vinfo.html
+bram/doc/pg058-blk-mem-gen.pdf
+bram.asy
+bram.gise
+bram.mif
+bram.ngc
+bram.sym
+bram.v
+bram.veo
+bram.xco
+bram.xise
+bram_flist.txt
+bram_xmdf.tcl
+summary.log

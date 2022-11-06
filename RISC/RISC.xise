@@ -85,6 +85,13 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="55"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
+    <file xil_pn:name="ipcore_dir/bram.xco" xil_pn:type="FILE_COREGEN">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="94"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="94"/>
+    </file>
+    <file xil_pn:name="ipcore_dir/bram.xise" xil_pn:type="FILE_COREGENISE">
+      <association xil_pn:name="Implementation" xil_pn:seqID="95"/>
+    </file>
   </files>
 
   <properties>
