@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    14:58:09 10/21/2022 
+// Create Date:    23:49:06 11/07/2022 
 // Design Name: 
 // Module Name:    mux_5_3_to_1 
 // Project Name: 
@@ -18,7 +18,6 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-// 3x1 Multiplexer with 5 bit inputs and outputs
 module mux_5_3_to_1(
 	input [4:0] inp1,
 	input [4:0] inp2,

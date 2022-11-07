@@ -19,6 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module register_file(
+	input[4:0] regWrite,
 	input[4:0] readReg1,
 	input[4:0] readReg2,
 	input[4:0] writeReg,
@@ -38,7 +39,7 @@ module register_file(
 	always @(posedge clk or posedge rst)
 	begin
 		if (rst) for (i = 0; i <= 31; i = i+1) r[i] = 32'b00000000000000000000000000000000;
-		else if (writeReg) r[writeReg] = writeData;
+		else if (regWrite) r[writeReg] = writeData;
 	end
 
 endmodule

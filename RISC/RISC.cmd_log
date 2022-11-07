@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/RISC.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/RISC.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/RISC.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/RISC.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/RISC.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/RISC.syr" 
+xst -intstyle ise -ifn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/RISC.xst" -ofn "/home/vapippal/IIT KGP Docs/SEM 5/COA Lab/COA-Laboratory-CS39001/RISC/RISC.syr" 

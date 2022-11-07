@@ -32,6 +32,12 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ALU.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ALU_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ALU_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="RISC.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="RISC.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RISC.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="RISC.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="RISC.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RISC_xst.xrpt"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
@@ -83,6 +89,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="diff_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="diff_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="diff_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="register_file.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="register_file.lso"/>
@@ -132,51 +139,46 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666953193" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5582382917687234471" xil_pn:start_ts="1666953193">
+    <transform xil_pn:end_ts="1667845315" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5093552655822954682" xil_pn:start_ts="1667845315">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666953193" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="2418735475915442555" xil_pn:start_ts="1666953193">
+    <transform xil_pn:end_ts="1667845777" xil_pn:in_ck="3790822570445487041" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4644892378679727256" xil_pn:start_ts="1667845777">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
+      <outfile xil_pn:name="ipcore_dir/bram.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/bram.v"/>
+      <outfile xil_pn:name="ipcore_dir/instr_bram.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/instr_bram.v"/>
     </transform>
-    <transform xil_pn:end_ts="1666953193" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1666953193">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1666953193" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-4086309668554824773" xil_pn:start_ts="1666953193">
+    <transform xil_pn:end_ts="1667845316" xil_pn:in_ck="-5111985585052236936" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1667845315">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666953193" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8680532996107490311" xil_pn:start_ts="1666953193">
+    <transform xil_pn:end_ts="1667845316" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4093734081200090216" xil_pn:start_ts="1667845316">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1666953193" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3524926072611028411" xil_pn:start_ts="1666953193">
+    <transform xil_pn:end_ts="1667845316" xil_pn:in_ck="-5111985585052236936" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8680532996107490311" xil_pn:start_ts="1667845316">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1666953203" xil_pn:in_ck="340389364800359656" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="7410239533865304216" xil_pn:start_ts="1666953193">
+    <transform xil_pn:end_ts="1667845316" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-6297443630739371790" xil_pn:start_ts="1667845316">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1667845782" xil_pn:in_ck="-1895555453514263936" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2278253337964768091" xil_pn:start_ts="1667845777">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.ngr"/>
+      <outfile xil_pn:name="RISC.lso"/>
+      <outfile xil_pn:name="RISC.prj"/>
+      <outfile xil_pn:name="RISC.syr"/>
+      <outfile xil_pn:name="RISC.xst"/>
+      <outfile xil_pn:name="RISC_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="register_file.lso"/>
-      <outfile xil_pn:name="register_file.ngc"/>
+      <outfile xil_pn:name="adder32.ngr"/>
       <outfile xil_pn:name="register_file.ngr"/>
-      <outfile xil_pn:name="register_file.prj"/>
-      <outfile xil_pn:name="register_file.stx"/>
-      <outfile xil_pn:name="register_file.syr"/>
-      <outfile xil_pn:name="register_file.xst"/>
-      <outfile xil_pn:name="register_file_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
@@ -184,7 +186,6 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 
