@@ -85,6 +85,24 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
+    <file xil_pn:name="ipcore_dir/BRAM.xco" xil_pn:type="FILE_COREGEN">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="61"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="61"/>
+    </file>
+    <file xil_pn:name="ipcore_dir/BROM.xco" xil_pn:type="FILE_COREGEN">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="68"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="68"/>
+    </file>
+    <file xil_pn:name="processor.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="75"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="75"/>
+    </file>
+    <file xil_pn:name="ipcore_dir/BRAM.xise" xil_pn:type="FILE_COREGENISE">
+      <association xil_pn:name="Implementation" xil_pn:seqID="62"/>
+    </file>
+    <file xil_pn:name="ipcore_dir/BROM.xise" xil_pn:type="FILE_COREGENISE">
+      <association xil_pn:name="Implementation" xil_pn:seqID="69"/>
+    </file>
   </files>
 
   <properties>

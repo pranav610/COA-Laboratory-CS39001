@@ -1,0 +1,16 @@
+# Output products list for <BRAM>
+BRAM/blk_mem_gen_v7_3_readme.txt
+BRAM/doc/blk_mem_gen_v7_3_vinfo.html
+BRAM/doc/pg058-blk-mem-gen.pdf
+BRAM.asy
+BRAM.gise
+BRAM.mif
+BRAM.ngc
+BRAM.sym
+BRAM.v
+BRAM.veo
+BRAM.xco
+BRAM.xise
+BRAM_flist.txt
+BRAM_xmdf.tcl
+summary.log

@@ -1,0 +1,17 @@
+# Output products list for <BROM>
+BROM/blk_mem_gen_v7_3_readme.txt
+BROM/doc/blk_mem_gen_v7_3_vinfo.html
+BROM/doc/pg058-blk-mem-gen.pdf
+BROM.asy
+BROM.gise
+BROM.mif
+BROM.ngc
+BROM.sym
+BROM.v
+BROM.veo
+BROM.xco
+BROM.xise
+BROM_flist.txt
+BROM_xmdf.tcl
+_xmsgs/pn_parser.xmsgs
+summary.log

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/ALU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/ALUControl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/Adder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/BranchControl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/Controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/DFF.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/DataMem.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/InstrMem.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/MUX2_1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/MUX3_1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/MUX3x1_5.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/PC.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/RISC.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/RegisterFile.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/Shifter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/pRISC/SignExtend.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

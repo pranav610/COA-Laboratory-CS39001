@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/lethalCodeRISC/instrn_fetch.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/lethalCodeRISC/instrn_fetch.syr" 
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/lethalCodeRISC/instrn_fetch.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/lethalCodeRISC/instrn_fetch.syr" 
+xst -intstyle ise -ifn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/lethalCodeRISC/instrn_fetch.xst" -ofn "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/lethalCodeRISC/instrn_fetch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/lethalRISC/kgp_risc.ucf" -p xc7a100t-csg324-1 "instrn_fetch.ngc" instrn_fetch.ngd  
