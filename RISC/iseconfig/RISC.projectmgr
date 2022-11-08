@@ -10,19 +10,22 @@
          <ClosedNode>/ALU |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|ALU.v</ClosedNode>
          <ClosedNode>/ALU |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|ALU.v/add1 - adder32/cla2 - cla_16_bit</ClosedNode>
          <ClosedNode>/ALU |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|ALU.v/diff1 - diff/g1 - adder32</ClosedNode>
+         <ClosedNode>/demo_wrapper |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|demo_wrapper.v/CPU1 - processor</ClosedNode>
+         <ClosedNode>/demo_wrapper |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|demo_wrapper.v/CPU1 - processor/ALUunit - ALU</ClosedNode>
          <ClosedNode>/diff |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|diff.v/g1 - adder32</ClosedNode>
          <ClosedNode>/diff |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|diff.v/g2 - adder32/cla2 - cla_16_bit</ClosedNode>
+         <ClosedNode>/processor |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|processor.v/ALUunit - ALU</ClosedNode>
          <ClosedNode>/processor |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|processor.v/ALUunit - ALU/add1 - adder32</ClosedNode>
          <ClosedNode>/processor |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|processor.v/ALUunit - ALU/diff1 - diff</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>processor (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor.v)</SelectedItem>
+         <SelectedItem>demo_wrapper (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/demo_wrapper.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b0000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b00000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000012f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000012f0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>processor (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor.v)</CurrentItem>
+      <CurrentItem>demo_wrapper (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/demo_wrapper.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -71,15 +74,15 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001a1000000010000000100000000000000000000000064ffffffff000000810000000000000001000001a10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
-   <SourceProcessView>000000ff00000000000000020000014c0000011d01000000060100000002</SourceProcessView>
+   <SourceProcessView>000000ff00000000000000020000015a000000fc01000000060100000002</SourceProcessView>
    <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -87,20 +90,22 @@
          <ClosedNode>/ALU |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|ALU.v</ClosedNode>
          <ClosedNode>/ALU_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|ALU_tb.v</ClosedNode>
          <ClosedNode>/adder32_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|adder_32_tb.v</ClosedNode>
+         <ClosedNode>/demo_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|demo_tb.v</ClosedNode>
          <ClosedNode>/diff_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|diff_tb.v</ClosedNode>
          <ClosedNode>/diff_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|diff_tb.v/uut - diff/g1 - adder32</ClosedNode>
          <ClosedNode>/processor |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|processor.v</ClosedNode>
+         <ClosedNode>/processor_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|processor_tb.v/uut - processor/ALUunit - ALU</ClosedNode>
          <ClosedNode>/register_file_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|regoster_file_tb.v</ClosedNode>
          <ClosedNode>/shifter_tb |home|pranav|KGP|5th Sem|COA LAB|COA-Laboratory-CS39001|RISC|shifter_tb.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>processor_tb (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor_tb.v)</SelectedItem>
+         <SelectedItem>demo_tb (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/demo_tb.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001e9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001e90000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001c4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001c40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>processor_tb (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor_tb.v)</CurrentItem>
+      <CurrentItem>demo_tb (/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/demo_tb.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

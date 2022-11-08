@@ -18,8 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module processor(clk, rst);
-    input clk, rst;
+module processor(clk, rst, RAMSel, button, out);
+    input clk, rst, RAMSel, button;
+	 output [15:0] out;
 
     // Program counter module with two wires instrAddr, nextInstrAddr
     wire [31:0] instrAddr, nextIntrAddr;
@@ -104,15 +105,40 @@ module processor(clk, rst);
     );  
 
     // Data memory
+	 
     wire ena;
     wire [31:0] memData; 
-    assign ena = MemRead | MemWrite;
+    assign ena = MemRead | MemWrite | button;
+	 
+	 wire [9:0] addraRAM;
+	 reg [9:0] counter;
+	 
+	 always@(posedge button or posedge rst) begin
+		if(rst) begin
+			counter <= -9'd1;
+			end
+		else begin
+			if(counter < 9) begin
+				counter <= counter + 9'd1;
+				end
+		else begin
+			counter <= 9'd0;
+			end
+		end
+	end
+			
+		
+	assign addraRAM = RAMSel ? counter :  {2'b00, ALUres[9:2]};
+	assign out = memData[15:0];
+		
+	 
+	// mux_32_2_to_1  ramMUX(.a0(ALUres), .a1(numAddr), .sel(RAMSel), .out(addraRAM));
 
     BRAM dataMem (
   .clka(~clk), // input clka
   .ena(ena), // input ena
   .wea(MemWrite), // input [0 : 0] wea
-  .addra(ALUres[5:2]), // input [3 : 0] addra
+  .addra(addraRAM), // input [9 : 0] addra
   .dina(readData2), // input [31 : 0] dina
   .douta(memData) // output [31 : 0] douta
 );

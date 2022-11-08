@@ -1,0 +1,723 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: demo_wrapper.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "demo_wrapper.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "demo_wrapper"
+Output Format                      : NGC
+Target Device                      : xc7a200t-3-fbg484
+
+---- Source Options
+Top Module Name                    : demo_wrapper
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/lac_unit.v" into library work
+Parsing module <lac_unit>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_4_bit_augment.v" into library work
+Parsing module <cla_4_bit_augment>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_16_bit.v" into library work
+Parsing module <cla_16_bit>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/binary_to_bcd.v" into library work
+Parsing module <binary_to_bcd>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/adder32.v" into library work
+Parsing module <adder32>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/shifter.v" into library work
+Parsing module <shifter>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" into library work
+Parsing module <diff>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/sign_extend.v" into library work
+Parsing module <sign_extend>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/register_file.v" into library work
+Parsing module <register_file>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/PC.v" into library work
+Parsing module <PC>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_5_3_to_1.v" into library work
+Parsing module <mux_5_3_to_1>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_32_3_to_1.v" into library work
+Parsing module <mux_32_3_to_1>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_32_2_to_1.v" into library work
+Parsing module <mux_32_2_to_1>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ipcore_dir/BROM.v" into library work
+Parsing module <BROM>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ipcore_dir/BRAM.v" into library work
+Parsing module <BRAM>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/d_flip_flop.v" into library work
+Parsing module <d_flip_flop>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/control_unit.v" into library work
+Parsing module <control_unit>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/branch_control.v" into library work
+Parsing module <branch_control>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU_control.v" into library work
+Parsing module <ALU_control>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor.v" into library work
+Parsing module <processor>.
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/demo_wrapper.v" into library work
+Parsing module <demo_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <demo_wrapper>.
+
+Elaborating module <processor>.
+
+Elaborating module <PC>.
+
+Elaborating module <BROM>.
+WARNING:HDLCompiler:1499 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ipcore_dir/BROM.v" Line 39: Empty module <BROM> remains a black box.
+
+Elaborating module <control_unit>.
+
+Elaborating module <mux_5_3_to_1>.
+
+Elaborating module <register_file>.
+
+Elaborating module <ALU_control>.
+
+Elaborating module <sign_extend>.
+
+Elaborating module <mux_32_2_to_1>.
+
+Elaborating module <ALU>.
+
+Elaborating module <adder32>.
+
+Elaborating module <cla_16_bit>.
+
+Elaborating module <cla_4_bit_augment>.
+
+Elaborating module <lac_unit>.
+
+Elaborating module <shifter>.
+
+Elaborating module <diff>.
+
+Elaborating module <binary_to_bcd>.
+
+Elaborating module <d_flip_flop>.
+
+Elaborating module <branch_control>.
+
+Elaborating module <BRAM>.
+WARNING:HDLCompiler:1499 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ipcore_dir/BRAM.v" Line 39: Empty module <BRAM> remains a black box.
+
+Elaborating module <mux_32_3_to_1>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <demo_wrapper>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/demo_wrapper.v".
+    Summary:
+	no macro.
+Unit <demo_wrapper> synthesized.
+
+Synthesizing Unit <processor>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor.v".
+    Found 4-bit register for signal <counter>.
+    Found 4-bit adder for signal <counter[3]_GND_2_o_add_9_OUT> created at line 121.
+    Found 32-bit adder for signal <pc_4> created at line 145.
+    Found 32-bit adder for signal <jmpImmLabel> created at line 147.
+    Found 4-bit comparator greater for signal <counter[3]_PWR_2_o_LessThan_9_o> created at line 120
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <processor> synthesized.
+
+Synthesizing Unit <PC>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/PC.v".
+    Found 32-bit register for signal <out>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <PC> synthesized.
+
+Synthesizing Unit <control_unit>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/control_unit.v".
+    Summary:
+	no macro.
+Unit <control_unit> synthesized.
+
+Synthesizing Unit <mux_5_3_to_1>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_5_3_to_1.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_5_3_to_1> synthesized.
+
+Synthesizing Unit <register_file>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/register_file.v".
+    Found 1024-bit register for signal <n0043[1023:0]>.
+    Found 32-bit 32-to-1 multiplexer for signal <readData1> created at line 36.
+    Found 32-bit 32-to-1 multiplexer for signal <readData2> created at line 37.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+Unit <register_file> synthesized.
+
+Synthesizing Unit <ALU_control>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU_control.v".
+WARNING:Xst:647 - Input <funCode<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <ALU_control> synthesized.
+
+Synthesizing Unit <sign_extend>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/sign_extend.v".
+    Summary:
+	no macro.
+Unit <sign_extend> synthesized.
+
+Synthesizing Unit <mux_32_2_to_1>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_32_2_to_1.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_32_2_to_1> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.v".
+    Found 32-bit 7-to-1 multiplexer for signal <_n0053> created at line 62.
+WARNING:Xst:737 - Found 1-bit latch for signal <fCarry>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Latch(s).
+	inferred   5 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <adder32>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/adder32.v".
+    Summary:
+	no macro.
+Unit <adder32> synthesized.
+
+Synthesizing Unit <cla_16_bit>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_16_bit.v".
+    Summary:
+	no macro.
+Unit <cla_16_bit> synthesized.
+
+Synthesizing Unit <cla_4_bit_augment>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_4_bit_augment.v".
+    Summary:
+Unit <cla_4_bit_augment> synthesized.
+
+Synthesizing Unit <lac_unit>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/lac_unit.v".
+    Summary:
+	no macro.
+Unit <lac_unit> synthesized.
+
+Synthesizing Unit <shifter>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/shifter.v".
+    Found 32-bit shifter arithmetic right for signal <in[31]_shamt[4]_shift_right_2_OUT> created at line 35
+    Found 32-bit shifter logical left for signal <in[31]_shamt[4]_shift_left_5_OUT> created at line 40
+    Found 32-bit shifter logical right for signal <in[31]_shamt[4]_shift_right_6_OUT> created at line 43
+    Summary:
+	inferred   3 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <shifter> synthesized.
+
+Synthesizing Unit <diff>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v".
+INFO:Xst:3210 - "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" line 30: Output port <c_out> of the instance <g1> is unconnected or connected to loadless signal.
+    Summary:
+Unit <diff> synthesized.
+
+Synthesizing Unit <binary_to_bcd>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/binary_to_bcd.v".
+    Summary:
+	no macro.
+Unit <binary_to_bcd> synthesized.
+
+Synthesizing Unit <d_flip_flop>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/d_flip_flop.v".
+    Found 1-bit register for signal <out>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <d_flip_flop> synthesized.
+
+Synthesizing Unit <branch_control>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/branch_control.v".
+    Summary:
+	no macro.
+Unit <branch_control> synthesized.
+
+Synthesizing Unit <mux_32_3_to_1>.
+    Related source file is "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_32_3_to_1.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_32_3_to_1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 1024-bit register                                     : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 53
+ 10-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 43
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 7-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 35
+ 32-bit xor2                                           : 3
+ 4-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/BROM.ngc>.
+Reading core <ipcore_dir/BRAM.ngc>.
+Loading core <BROM> for timing and area information for instance <instrMem>.
+Loading core <BRAM> for timing and area information for instance <dataMem>.
+
+Synthesizing (advanced) Unit <processor>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <processor> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 2
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 1057
+ Flip-Flops                                            : 1057
+# Comparators                                          : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 52
+ 10-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 43
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 7-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 35
+ 32-bit xor2                                           : 3
+ 4-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <demo_wrapper> ...
+
+Optimizing unit <PC> ...
+
+Optimizing unit <processor> ...
+
+Optimizing unit <register_file> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <diff> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block demo_wrapper, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1061
+ Flip-Flops                                            : 1061
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : demo_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2905
+#      GND                         : 3
+#      INV                         : 2
+#      LUT1                        : 28
+#      LUT2                        : 55
+#      LUT3                        : 1089
+#      LUT4                        : 83
+#      LUT5                        : 250
+#      LUT6                        : 1180
+#      MUXCY                       : 58
+#      MUXF7                       : 94
+#      VCC                         : 3
+#      XORCY                       : 60
+# FlipFlops/Latches                : 1062
+#      FDC                         : 7
+#      FDCE                        : 1024
+#      FDP                         : 30
+#      LD                          : 1
+# RAMS                             : 2
+#      RAMB36E1                    : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 3
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a200tfbg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1062  out of  269200     0%  
+ Number of Slice LUTs:                 2687  out of  134600     1%  
+    Number used as Logic:              2687  out of  134600     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2688
+   Number with an unused Flip Flop:    1626  out of   2688    60%  
+   Number with an unused LUT:             1  out of   2688     0%  
+   Number of fully used LUT-FF pairs:  1061  out of   2688    39%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    285     7%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of    365     0%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------+-----------------------------+-------+
+Clock Signal                                                                         | Clock buffer(FF name)       | Load  |
+-------------------------------------------------------------------------------------+-----------------------------+-------+
+button                                                                               | IBUF+BUFG                   | 4     |
+clk                                                                                  | BUFGP                       | 1059  |
+CPU1/ALUunit/ALUop[3]_ALUop[3]_AND_182_o(CPU1/ALUunit/ALUop[3]_ALUop[3]_AND_182_o1:O)| NONE(*)(CPU1/ALUunit/fCarry)| 1     |
+-------------------------------------------------------------------------------------+-----------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                           | Buffer(FF name)                                                                                                                                    | Load  |
+-----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+CPU1/dataMem/N1(CPU1/dataMem/XST_GND:G)  | NONE(CPU1/dataMem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram) | 2     |
+CPU1/instrMem/N1(CPU1/instrMem/XST_GND:G)| NONE(CPU1/instrMem/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 2     |
+-----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.987ns (Maximum Frequency: 125.202MHz)
+   Minimum input arrival time before clock: 0.825ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'button'
+  Clock period: 1.041ns (frequency: 960.430MHz)
+  Total number of paths / destination ports: 15 / 4
+-------------------------------------------------------------------------
+Delay:               1.041ns (Levels of Logic = 1)
+  Source:            CPU1/counter_3 (FF)
+  Destination:       CPU1/counter_3 (FF)
+  Source Clock:      button rising
+  Destination Clock: button rising
+
+  Data Path: CPU1/counter_3 to CPU1/counter_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.361   0.575  CPU1/counter_3 (CPU1/counter_3)
+     LUT4:I0->O            1   0.097   0.000  CPU1/Mcount_counter21 (CPU1/Mcount_counter2)
+     FDC:D                     0.008          CPU1/counter_2
+    ----------------------------------------
+    Total                      1.041ns (0.466ns logic, 0.575ns route)
+                                       (44.8% logic, 55.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.987ns (frequency: 125.202MHz)
+  Total number of paths / destination ports: 90865966 / 1088
+-------------------------------------------------------------------------
+Delay:               7.987ns (Levels of Logic = 13)
+  Source:            CPU1/regFile/r_0_851 (FF)
+  Destination:       CPU1/pc/out_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: CPU1/regFile/r_0_851 to CPU1/pc/out_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.361   0.566  CPU1/regFile/r_0_851 (CPU1/regFile/r_0_851)
+     LUT6:I2->O            1   0.097   0.556  CPU1/regFile/Mmux_readData2_831 (CPU1/regFile/Mmux_readData2_831)
+     LUT6:I2->O            1   0.097   0.000  CPU1/regFile/Mmux_readData2_310 (CPU1/regFile/Mmux_readData2_310)
+     MUXF7:I1->O           4   0.279   0.309  CPU1/regFile/Mmux_readData2_2_f7_9 (CPU1/readData2<19>)
+     LUT4:I3->O            9   0.097   0.593  CPU1/ALUsrcMUX/Mmux_out111 (CPU1/selReadData2<19>)
+     LUT6:I2->O            2   0.097   0.688  CPU1/ALUunit/diff1/g1/cla2/g5/c<0>1_SW0 (N138)
+     LUT6:I1->O           23   0.097   0.393  CPU1/ALUunit/diff1/g1/cla2/g5/c<1><1>1 (CPU1/ALUunit/diff1/g1/cla2/c<1>)
+     LUT6:I5->O            4   0.097   0.697  CPU1/ALUunit/diff1/g2/diff[31]_PWR_19_o_equal_1_o<31>41 (CPU1/ALUunit/diff1/g2/diff[31]_PWR_19_o_equal_1_o<31>4)
+     LUT6:I1->O            2   0.097   0.299  CPU1/ALUunit/diff1/g2/diff[31]_GND_19_o_equal_7_o<31> (CPU1/ALUunit/diff1/g2/diff[31]_GND_19_o_equal_7_o)
+     LUT6:I5->O            2   0.097   0.688  CPU1/ALUunit/diff1/g2/diff_out<5>1_SW1 (N112)
+     LUT6:I1->O            2   0.097   0.688  CPU1/ALUunit/Mmux_result2614 (CPU1/ALUres<3>)
+     LUT6:I1->O            1   0.097   0.295  CPU1/ALUunit/fZero3 (CPU1/ALUunit/fZero2)
+     LUT6:I5->O           32   0.097   0.402  CPU1/branch_controller/out3 (CPU1/flagBranch)
+     LUT6:I5->O            1   0.097   0.000  CPU1/mBrnchSel/Mmux_out121 (CPU1/nextIntrAddr<1>)
+     FDC:D                     0.008          CPU1/pc/out_1
+    ----------------------------------------
+    Total                      7.987ns (1.812ns logic, 6.175ns route)
+                                       (22.7% logic, 77.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'button'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              0.825ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       CPU1/counter_3 (FF)
+  Destination Clock: button rising
+
+  Data Path: rst to CPU1/counter_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1061   0.001   0.475  rst_IBUF (rst_IBUF)
+     FDC:CLR                   0.349          CPU1/counter_0
+    ----------------------------------------
+    Total                      0.825ns (0.350ns logic, 0.475ns route)
+                                       (42.4% logic, 57.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1057 / 1057
+-------------------------------------------------------------------------
+Offset:              0.825ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       CPU1/carryDFF/out (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to CPU1/carryDFF/out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1061   0.001   0.475  rst_IBUF (rst_IBUF)
+     FDC:CLR                   0.349          CPU1/carryDFF/out
+    ----------------------------------------
+    Total                      0.825ns (0.350ns logic, 0.475ns route)
+                                       (42.4% logic, 57.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CPU1/ALUunit/ALUop[3]_ALUop[3]_AND_182_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    6.878|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock button
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+button         |    1.041|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+CPU1/ALUunit/ALUop[3]_ALUop[3]_AND_182_o|         |    0.759|         |         |
+clk                                     |    7.987|         |    2.841|         |
+----------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 29.29 secs
+ 
+--> 
+
+
+Total memory usage is 496876 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -32,8 +32,6 @@ always @(*) begin
 		     ALUop = 4'b0001;
 		 else if (opCode == 6'b001001)
 		     ALUop = 4'b0101;
-		 else if(opCode == 6'b001111)
-			  ALUop = 4'b0100;
        else 
            ALUop = 4'b0000;		 
 	 end
