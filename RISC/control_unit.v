@@ -18,32 +18,19 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module control_unit(
-    input  [5:0] opcode,
-	 output memRead,
-	 output memWrite,
-	 output regWrite,
-	 output [1:0] regDst,
-	 output [1:0] mem2Reg,
-	 output aluSrc,
-	 output lblSel,
-	 output jmpSel
-    );
+module control_unit(opCode, regDest, regWrite, ALUsrc, MemRead, MemWrite, MemToReg, LblSel, JumpAddr);  
+	 input  [5:0] opCode;
+	 output regWrite, ALUsrc, MemRead, MemWrite, LblSel, JumpAddr;
+	 output [1:0] regDest, MemToReg;
 	 
-	 
-	 assign jmpSel = ~opcode[4] & ~opcode[3];
-	 assign lblSel = opcode[5] & opcode[4];
-	 assign mem2Reg = opcode[5:4];
-	 assign memWrite = (opcode == 6'b011000);
-	 assign memRead = (opcode == 6'b010000);
-	 assign aluSrc = opcode[4] | opcode[3];
-	 
-	 assign regWrite = (~opcode[5] & ~opcode[4]) |
-							 (~opcode[5] & ~opcode[3]) |
-							 ( opcode[1] &  opcode[0]);
-							 
-	 assign regDst[0] = opcode[4];
-	 assign regDst[1] = opcode[5];
-	 
-
+	 assign regDest = {opCode[5], opCode[4]};
+	 assign regWrite = (~opCode[5] & ~opCode[4]) |
+							 (~opCode[5] & ~opCode[3]) |
+							 ( opCode[1] &  opCode[0]);
+	 assign ALUsrc = opCode[4] | opCode[3];
+	 assign MemRead = (opCode == 6'b010000);
+	 assign MemWrite = (opCode == 6'b011000);
+	 assign MemToReg = opCode[5:4];
+	 assign LblSel = opCode[5] & opCode[4];
+	 assign JumpAddr = ~opCode[4] & ~opCode[3];
 endmodule

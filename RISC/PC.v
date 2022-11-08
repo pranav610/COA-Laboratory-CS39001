@@ -19,16 +19,14 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 // module for program counter
-module PC(
-	input [31:0] nextInstrAddr,
-	input clk,
-	input rst,
-	output reg [31:0] instrAddr
-    );
+module PC(clk, rst, in, out);
+	input [31:0] in;
+	input clk, rst;
+	output reg [31:0] out;
 	
 	always @(posedge clk or posedge rst) 
 	begin
-		if (rst) instrAddr <= -32'd4;
-		else instrAddr <= nextInstrAddr;
+		if (rst) out <= -32'd4;
+		else out <= in;
 	end
 endmodule

@@ -38,13 +38,11 @@
 
 module BROM(
   clka,
-  ena,
   addra,
   douta
 );
 
 input clka;
-input ena;
 input [9 : 0] addra;
 output [31 : 0] douta;
 
@@ -65,7 +63,7 @@ output [31 : 0] douta;
     .C_ENABLE_32BIT_ADDRESS(0),
     .C_FAMILY("artix7"),
     .C_HAS_AXI_ID(0),
-    .C_HAS_ENA(1),
+    .C_HAS_ENA(0),
     .C_HAS_ENB(0),
     .C_HAS_INJECTERR(0),
     .C_HAS_MEM_OUTPUT_REGS_A(0),
@@ -115,10 +113,10 @@ output [31 : 0] douta;
   )
   inst (
     .CLKA(clka),
-    .ENA(ena),
     .ADDRA(addra),
     .DOUTA(douta),
     .RSTA(),
+    .ENA(),
     .REGCEA(),
     .WEA(),
     .DINA(),

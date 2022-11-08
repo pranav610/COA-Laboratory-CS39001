@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff_tb_isim_beh.exe -prj /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff_tb_beh.prj diff_tb work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor_tb_isim_beh.exe -prj /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor_tb_beh.prj work.processor_tb work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
@@ -8,25 +8,64 @@ Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/
 Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/cla_16_bit.v" into library work
 Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/binary_to_bcd.v" into library work
 Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/adder32.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/shifter.v" into library work
 Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff.v" into library work
-Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff_tb.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/sign_extend.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/register_file.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/PC.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_5_3_to_1.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_32_3_to_1.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/mux_32_2_to_1.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ipcore_dir/BROM.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ipcore_dir/BRAM.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/d_flip_flop.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/control_unit.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/branch_control.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU_control.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/ALU.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor.v" into library work
+Analyzing Verilog file "/home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor_tb.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 82940 KB
-Fuse CPU Usage: 740 ms
+Fuse Memory Usage: 85288 KB
+Fuse CPU Usage: 770 ms
+Compiling module PC
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="artix...
+Compiling module BROM
+Compiling module control_unit
+Compiling module mux_5_3_to_1
+Compiling module register_file
+Compiling module ALU_control
+Compiling module sign_extend
+Compiling module mux_32_2_to_1
 Compiling module cla_4_bit_augment
 Compiling module lac_unit
 Compiling module cla_16_bit
 Compiling module adder32
+Compiling module shifter
 Compiling module binary_to_bcd
 Compiling module diff
-Compiling module diff_tb
+Compiling module ALU
+Compiling module d_flip_flop
+Compiling module branch_control
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="artix...
+Compiling module BRAM
+Compiling module mux_32_3_to_1
+Compiling module processor
+Compiling module processor_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 8 Verilog Units
-Built simulation executable /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/diff_tb_isim_beh.exe
-Fuse Memory Usage: 2216372 KB
-Fuse CPU Usage: 790 ms
-GCC CPU Usage: 880 ms
+Compiled 32 Verilog Units
+Built simulation executable /home/pranav/KGP/5th Sem/COA LAB/COA-Laboratory-CS39001/RISC/processor_tb_isim_beh.exe
+Fuse Memory Usage: 2221656 KB
+Fuse CPU Usage: 1030 ms
+GCC CPU Usage: 6120 ms

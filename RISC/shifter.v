@@ -26,18 +26,23 @@ module shifter(
 	output reg [31:0] out		// output number, 32 bits
     );
 
-	always @(*)
-	begin
-		if (!logical)
-		begin
-			if (!left) out = in >>> shamt;
-			else out = in;
-		end
-		
-		else
-		begin
-			if (!left) out = in >> shamt;
-			else out = in << shamt;
-		end
-	end
+    always @(*) begin
+        if (logical == 0) begin
+            if (left == 1) begin
+                out = in;				 // arithmetic left shift
+            end
+            else begin
+                out = in >>> shamt;  // arithmetic right shift
+            end
+        end
+        else begin
+            if (left == 1) begin
+                out = in << shamt;   // logical left shift
+            end
+            else begin
+                out = in >> shamt;   // logical right shift
+            end
+        end
+    end
+
 endmodule

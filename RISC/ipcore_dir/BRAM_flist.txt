@@ -13,4 +13,5 @@ BRAM.xco
 BRAM.xise
 BRAM_flist.txt
 BRAM_xmdf.tcl
+_xmsgs/pn_parser.xmsgs
 summary.log

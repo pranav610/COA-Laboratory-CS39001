@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    23:55:57 10/20/2022 
+// Create Date:    02:50:15 10/24/2022 
 // Design Name: 
 // Module Name:    d_flip_flop 
 // Project Name: 
@@ -18,15 +18,16 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module d_flip_flop(
-	input clk,
-	input rst,
-	input d,
-	output reg q
-    );
-	always @(posedge clk)
-	begin
-		if (!rst)	q <= 0;
-		else			q <= d;
-	end
+module d_flip_flop(in, clk, rst, out);
+	
+	input in, clk, rst;
+	output reg out;
+    
+	 
+	 always @(posedge clk or posedge rst) begin
+	     if(rst)
+		      out <= 1'b0;
+		  else 
+				out <= in;
+	 end
 endmodule
